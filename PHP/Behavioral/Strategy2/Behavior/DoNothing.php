@@ -7,20 +7,21 @@
  * file that was distributed with this source code.
  */
 
-namespace PHP\Behavioral\Strategy\Behavior;
+namespace PHP\Behavioral\Strategy2\Behavior;
 
 /**
- * BehaviorInterface
+ * DoNothing
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-interface BehaviorInterface
+class DoNothing implements BehaviorInterface
 {
     /**
-     * Just an action: fly, walk etc.
-     *
-     * @return string
+     * {@inheritdoc}
      */
-    public function action(): string;
+    public function action(): string
+    {
+        return '';
+    }
 }

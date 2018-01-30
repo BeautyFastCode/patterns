@@ -7,20 +7,21 @@
  * file that was distributed with this source code.
  */
 
-namespace PHP\Behavioral\Strategy\Behavior;
+namespace PHP\Behavioral\Strategy2;
 
 /**
- * BehaviorInterface
+ * Ship
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-interface BehaviorInterface
+class Ship extends BaseUnit
 {
     /**
-     * Just an action: fly, walk etc.
-     *
-     * @return string
+     * @{inheritdoc}
      */
-    public function action(): string;
+    public function speak(): string
+    {
+        return sprintf("%s says: I'm the %s\n", $this->getClassName(), $this->getName());
+    }
 }

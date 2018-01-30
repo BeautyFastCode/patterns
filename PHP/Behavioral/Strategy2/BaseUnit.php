@@ -1,7 +1,7 @@
 <?php
 
 /*
- * (c)
+ * (c) BeautyFastCode.com
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -12,12 +12,12 @@ namespace PHP\Behavioral\Strategy2;
 use PHP\Behavioral\Strategy2\Behavior\BehaviorInterface;
 
 /**
- * Unit
+ * BaseUnit
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-class Unit
+abstract class BaseUnit
 {
     /**
      * The name of the Unit
@@ -52,14 +52,30 @@ class Unit
     }
 
     /**
-     * Says something
+     * Do some action, the behavior changes
+     *
+     * @return string
      */
-    public function speak()
+    public function action(): string
     {
-        printf("%s says: I'm the %s\n", $this->className, $this->name);
+        return $this->behavior->action();
+    }
 
-        // behavior changes
-        $this->behavior->action();
+    /**
+     * Says something
+     *
+     * @return string
+     */
+    abstract public function speak(): string;
+
+    /**
+     * Returns the name of the Unit
+     *
+     * @return string
+     */
+    protected function getName(): string
+    {
+        return $this->name;
     }
 
     /**
@@ -67,7 +83,7 @@ class Unit
      *
      * @return string
      */
-    public function getClassName()
+    protected function getClassName(): string
     {
         return (new \ReflectionClass($this))->getShortName();
     }

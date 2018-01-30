@@ -34,8 +34,11 @@ class StrategyTest extends TestCase
 
         printf("\n");
 
-        $flying->speak();
-        $walking->speak();
+        printf($flying->speak());
+        printf($flying->behaviorAction());
+
+        printf($walking->speak());
+        printf($walking->behaviorAction());
 
         // Always true :-)
         $this->assertEquals(true, true);

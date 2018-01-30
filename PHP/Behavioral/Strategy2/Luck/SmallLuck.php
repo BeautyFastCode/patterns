@@ -7,20 +7,21 @@
  * file that was distributed with this source code.
  */
 
-namespace PHP\Behavioral\Strategy\Behavior;
+namespace PHP\Behavioral\Strategy2\Luck;
 
 /**
- * BehaviorInterface
+ * SmallLuck
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-interface BehaviorInterface
+class SmallLuck implements LuckInterface
 {
     /**
-     * Just an action: fly, walk etc.
-     *
-     * @return string
+     * {@inheritdoc}
      */
-    public function action(): string;
+    public function random(): int
+    {
+        return rand(1, 10);
+    }
 }

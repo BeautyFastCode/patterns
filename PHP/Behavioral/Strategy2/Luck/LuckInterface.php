@@ -7,20 +7,20 @@
  * file that was distributed with this source code.
  */
 
-namespace PHP\Behavioral\Strategy\Behavior;
+namespace PHP\Behavioral\Strategy2\Luck;
 
 /**
- * BehaviorInterface
+ * LuckInterface
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-interface BehaviorInterface
+interface LuckInterface
 {
     /**
-     * Just an action: fly, walk etc.
+     * Luck is always random
      *
-     * @return string
+     * @return int
      */
-    public function action(): string;
+    public function random(): int;
 }

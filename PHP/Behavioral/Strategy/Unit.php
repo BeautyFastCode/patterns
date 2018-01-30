@@ -1,7 +1,7 @@
 <?php
 
 /*
- * (c)
+ * (c) BeautyFastCode.com
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -41,8 +41,8 @@ class Unit
     private $behavior;
 
     /**
-     * @param string $name The name of the Unit
-     * @param        $behavior
+     * @param string            $name     The name of the Unit
+     * @param BehaviorInterface $behavior The behavior of the Unit
      */
     public function __construct($name, BehaviorInterface $behavior)
     {
@@ -53,13 +53,22 @@ class Unit
 
     /**
      * Says something
+     *
+     * @return string
      */
-    public function speak()
+    public function speak(): string
     {
-        printf("%s says: I'm the %s\n", $this->className, $this->name);
+        return sprintf("%s says: I'm the %s\n", $this->className, $this->name);
+    }
 
-        // behavior changes
-        $this->behavior->action();
+    /**
+     * Behavior changes depends of interface
+     *
+     * @return string
+     */
+    public function behaviorAction(): string
+    {
+        return $this->behavior->action();
     }
 
     /**
@@ -67,7 +76,7 @@ class Unit
      *
      * @return string
      */
-    public function getClassName()
+    private function getClassName(): string
     {
         return (new \ReflectionClass($this))->getShortName();
     }
