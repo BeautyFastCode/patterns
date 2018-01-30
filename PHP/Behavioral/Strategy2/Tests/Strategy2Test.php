@@ -7,27 +7,27 @@
  * file that was distributed with this source code.
  */
 
-namespace PHP\Behavioral\Strategy\Tests;
+namespace PHP\Behavioral\Strategy2\Tests;
 
-use PHP\Behavioral\Strategy\Behavior\FlyBehavior;
-use PHP\Behavioral\Strategy\Behavior\WalkBehavior;
-use PHP\Behavioral\Strategy\Unit;
+use PHP\Behavioral\Strategy2\Behavior\FlyBehavior;
+use PHP\Behavioral\Strategy2\Behavior\WalkBehavior;
+use PHP\Behavioral\Strategy2\Unit;
 use PHPUnit\Framework\TestCase;
 
 /**
- * StrategyTest
+ * Strategy2Test
  *
  * @author    <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-class StrategyTest extends TestCase
+class Strategy2Test extends TestCase
 {
     /**
      * Main loop
      */
     public function testMain()
     {
-        printf("\n--- Design Pattern Strategy ---\n");
+        printf("\n--- Design Pattern Strategy - Example 2 ---\n");
 
         $flying = new Unit('Ship', new FlyBehavior());
         $walking = new Unit('Robot', new WalkBehavior());
