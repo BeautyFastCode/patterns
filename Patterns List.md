@@ -5,12 +5,11 @@
 - `Design Patterns PHP` - 36
 - `Head First` - 23
 
-- jeden z książki, jeden z Design Patterns PHP, jeden sam wymyślę
-- PHP7, ES6
-
 ---
+
 - [x] **name** - nazwa - krótki opis jedno zdanie
   - kod, schemat UML, dłuższy opis
+  
 ---
 
 ## Creation patterns
@@ -35,6 +34,7 @@
 - [ ] **Singleton** -
 
 - num: `10`
+
 ---
 
 ## Structural patterns
@@ -53,6 +53,7 @@
 - [ ] **Twin** -
 
 - num: `12`
+
 ---
 
 ## Behavioral patterns
@@ -69,7 +70,7 @@
 - [ ] **Servant** -
 - [ ] **Specification** -
 - [ ] **State** -
-- [ ] **Strategy** -
+- [x] **Strategy** - Strategia
 - [ ] **Template method** -
 - [ ] **Visitor** -
 
