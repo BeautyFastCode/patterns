@@ -7,17 +7,17 @@
  * file that was distributed with this source code.
  */
 
-namespace PHP\Behavioral\Strategy;
+namespace PHP\Behavioral\Strategy2\Unit;
 
-use PHP\Behavioral\Strategy\Behavior\BehaviorInterface;
+use PHP\Behavioral\Strategy2\Behavior\BehaviorInterface;
 
 /**
- * Unit
+ * BaseUnit
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-class Unit
+abstract class BaseUnit
 {
     /**
      * The name of the Unit
@@ -41,8 +41,8 @@ class Unit
     private $behavior;
 
     /**
-     * @param string            $name     The name of the Unit
-     * @param BehaviorInterface $behavior The behavior of the Unit
+     * @param string $name The name of the Unit
+     * @param        $behavior
      */
     public function __construct($name, BehaviorInterface $behavior)
     {
@@ -52,23 +52,30 @@ class Unit
     }
 
     /**
+     * Do some action, the behavior changes
+     *
+     * @return string
+     */
+    public function action(): string
+    {
+        return $this->behavior->action();
+    }
+
+    /**
      * Says something
      *
      * @return string
      */
-    public function speak(): string
-    {
-        return sprintf("%s says: I'm the %s\n", $this->className, $this->name);
-    }
+    abstract public function speak(): string;
 
     /**
-     * Behavior changes depends of interface
+     * Returns the name of the Unit
      *
      * @return string
      */
-    public function behaviorAction(): string
+    protected function getName(): string
     {
-        return $this->behavior->action();
+        return $this->name;
     }
 
     /**
@@ -76,7 +83,7 @@ class Unit
      *
      * @return string
      */
-    private function getClassName(): string
+    protected function getClassName(): string
     {
         return (new \ReflectionClass($this))->getShortName();
     }

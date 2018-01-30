@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace PHP\Behavioral\Strategy2;
+namespace PHP\Behavioral\Strategy2\Unit;
 
 use PHP\Behavioral\Strategy2\Luck\LuckInterface;
 

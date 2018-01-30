@@ -11,10 +11,10 @@ namespace PHP\Behavioral\Strategy2\Tests;
 
 use PHP\Behavioral\Strategy2\Behavior\FlyBehavior;
 use PHP\Behavioral\Strategy2\Behavior\WalkBehavior;
-use PHP\Behavioral\Strategy2\Hero;
 use PHP\Behavioral\Strategy2\Luck\BigLuck;
-use PHP\Behavioral\Strategy2\Robot;
-use PHP\Behavioral\Strategy2\Ship;
+use PHP\Behavioral\Strategy2\Unit\Hero;
+use PHP\Behavioral\Strategy2\Unit\Robot;
+use PHP\Behavioral\Strategy2\Unit\Ship;
 use PHPUnit\Framework\TestCase;
 
 /**

@@ -11,7 +11,7 @@ namespace PHP\Behavioral\Strategy\Tests;
 
 use PHP\Behavioral\Strategy\Behavior\FlyBehavior;
 use PHP\Behavioral\Strategy\Behavior\WalkBehavior;
-use PHP\Behavioral\Strategy\Unit;
+use PHP\Behavioral\Strategy\Unit\Unit;
 use PHPUnit\Framework\TestCase;
 
 /**
