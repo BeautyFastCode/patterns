@@ -9,6 +9,10 @@
 
 namespace PHP\Behavioral\Strategy3\Tests;
 
+use DateTime;
+use PHP\Behavioral\Strategy3\Basket;
+use PHP\Behavioral\Strategy3\Product;
+use PHP\Behavioral\Strategy3\Sort\IdSort;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -28,14 +32,14 @@ class Strategy3Test extends TestCase
     {
         return [
             [
-                new Product(32, 'new', 2.99 . '2018-01-12'),
-                new Product(2, 'fresh', 0.99 . '2017-11-12'),
-                new Product(10, 'bestseller', 99.99 . '2018-03-15'),
+                new Product(32, 'new', 2.99, new DateTime('2018-01-12')),
+                new Product(2, 'fresh', 0.99, new DateTime('2017-11-12')),
+                new Product(10, 'bestseller', 99.99, new DateTime('2018-03-15')),
             ],
             [
-                new Product(32, 'new', 2.99 . '2018-01-12'),
-                new Product(2, 'fresh', 0.99 . '2017-11-12'),
-                new Product(10, 'bestseller', 99.99 . '2018-03-15'),
+                new Product(32, 'new', 2.99, new DateTime('2018-01-12')),
+                new Product(2, 'fresh', 0.99, new DateTime('2017-11-12')),
+                new Product(10, 'bestseller', 99.99, new DateTime('2018-03-15')),
             ],
         ];
     }
