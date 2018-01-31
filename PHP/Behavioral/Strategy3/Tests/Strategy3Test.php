@@ -32,20 +32,37 @@ class Strategy3Test extends TestCase
     {
         return [
             [
-                new Product(32, 'new', 2.99, new DateTime('2018-01-12')),
-                new Product(2, 'fresh', 0.99, new DateTime('2017-11-12')),
-                new Product(10, 'bestseller', 99.99, new DateTime('2018-03-15')),
+                // products
+                [
+                    new Product(32, 'new', 2.99, new DateTime('2018-01-12')),
+                    new Product(2, 'fresh', 0.99, new DateTime('2017-11-12')),
+                    new Product(10, 'bestseller', 99.99, new DateTime('2018-03-15')),
+                ],
+
+                // expected
+                [
+                    new Product(2, 'fresh', 0.99, new DateTime('2017-11-12')),
+                    new Product(10, 'bestseller', 99.99, new DateTime('2018-03-15')),
+                    new Product(32, 'new', 2.99, new DateTime('2018-01-12')),
+                ],
             ],
             [
-                new Product(32, 'new', 2.99, new DateTime('2018-01-12')),
-                new Product(2, 'fresh', 0.99, new DateTime('2017-11-12')),
-                new Product(10, 'bestseller', 99.99, new DateTime('2018-03-15')),
+                [
+                    new Product(5, 'bread', 2.49, new DateTime('2018-01-01')),
+                    new Product(1, 'milky', 4.99, new DateTime('2018-01-09')),
+                    new Product(42, 'butter', 6.99, new DateTime('2017-01-22')),
+                ],
+                [
+                    new Product(1, 'milky', 4.99, new DateTime('2018-01-09')),
+                    new Product(5, 'bread', 2.49, new DateTime('2018-01-01')),
+                    new Product(42, 'butter', 6.99, new DateTime('2017-01-22')),
+                ],
             ],
         ];
     }
 
     /**
-     * Test sorting ascending by product id
+     * Tests sorting ascending by product id
      *
      * @param array $products
      * @param array $expected
@@ -58,8 +75,10 @@ class Strategy3Test extends TestCase
         foreach ($products as $product) {
             $basket->addProduct($product);
         }
-        $result = $basket->sortProductsBy(new IdSort());
 
+        $this->assertEquals(3, $basket->numberProducts());
+
+        $result = $basket->sortProductsBy(new IdSort());
         $this->assertEquals($expected, $result);
     }
 

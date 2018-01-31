@@ -45,6 +45,16 @@ class Basket
     }
 
     /**
+     * Returns the number of products
+     *
+     * @return int
+     */
+    public function numberProducts(): int
+    {
+        return count($this->products);
+    }
+
+    /**
      * Returns the sorted products, according to the property selected by using the interface
      *
      * @param SortInterface $sort
