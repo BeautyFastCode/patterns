@@ -30,29 +30,32 @@ class Strategy2Test extends TestCase
      */
     public function testMain()
     {
-        printf("\n--- Design Pattern Strategy - Example 2 ---\n");
+        $expected = [
+            "Ship says: I'm the Galactic Destructor\n",
+            "I can fly\n",
+            "I'm Atom. I'm the Hero. The Hero don't speak, and do nothing.\n The Hero has the Power 50 MW\n",
+            "",
+            "Robot says: I'm the Cyborg\n",
+            "I can walk\n",
+            "I don't have luck\n",
+            "I'm lucky. I have 4619 luckness\n",
+        ];
 
         $ship = new Ship('Galactic Destructor', new FlyBehavior());
         $hero = new Hero('Atom', 50);
         $robot = new Robot('Cyborg', new WalkBehavior());
 
-        printf("\n");
+        $this->assertEquals($expected[0], $ship->speak());
+        $this->assertEquals($expected[1], $ship->action());
 
-        printf($ship->speak());
-        printf($ship->action());
-        printf("\n");
+        $this->assertEquals($expected[2], $hero->speak());
+        $this->assertEquals($expected[3], $hero->action());
 
-        printf($hero->speak());
-        printf($hero->action());
-        printf("\n");
+        $this->assertEquals($expected[4], $robot->speak());
+        $this->assertEquals($expected[5], $robot->action());
+        $this->assertEquals($expected[6], $robot->getLuck());
 
-        printf($robot->speak());
-        printf($robot->action());
-        printf($robot->getLuck());
         $robot->setLuck(new BigLuck());
-        printf($robot->getLuck());
-
-        // Always true :-)
-        $this->assertEquals(true, true);
+        $this->assertTrue(true, $robot->getLuck());
     }
 }

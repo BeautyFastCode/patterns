@@ -27,20 +27,20 @@ class StrategyTest extends TestCase
      */
     public function testMain()
     {
-        printf("\n--- Design Pattern Strategy ---\n");
+        $expected = [
+            "Unit says: I'm the Ship\n",
+            "I can fly\n",
+            "Unit says: I'm the Robot\n",
+            "I can walk\n"
+        ];
 
         $flying = new Unit('Ship', new FlyBehavior());
         $walking = new Unit('Robot', new WalkBehavior());
 
-        printf("\n");
+        $this->assertEquals($expected[0], $flying->speak());
+        $this->assertEquals($expected[1], $flying->behaviorAction());
 
-        printf($flying->speak());
-        printf($flying->behaviorAction());
-
-        printf($walking->speak());
-        printf($walking->behaviorAction());
-
-        // Always true :-)
-        $this->assertEquals(true, true);
+        $this->assertEquals($expected[2], $walking->speak());
+        $this->assertEquals($expected[3], $walking->behaviorAction());
     }
 }
