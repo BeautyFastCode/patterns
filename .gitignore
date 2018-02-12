@@ -2,4 +2,5 @@
 sample-code/
 .vscode/
 PHP/vendor/
+PHP/log/
 docs/
