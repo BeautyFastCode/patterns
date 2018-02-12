@@ -66,6 +66,13 @@ $ vendor/bin/phpcpd ./ --exclude vendor --exclude log --log-pmd=log/copy-paste.x
 
 ---
 
+PHP Mess Detector
+```
+$ vendor/bin/phpmd Behavioral html codesize --reportfile log/mess.html
+
+$ vendor/bin/phpmd Behavioral html \
+    cleancode,codesize,controversial,design,naming,unusedcode --reportfile log/mess.html 
+```
 
 
 
