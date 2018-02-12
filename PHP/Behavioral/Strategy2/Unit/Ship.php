@@ -10,7 +10,7 @@
 namespace PHP\Behavioral\Strategy2\Unit;
 
 /**
- * Ship
+ * Ship.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -18,7 +18,7 @@ namespace PHP\Behavioral\Strategy2\Unit;
 class Ship extends BaseUnit
 {
     /**
-     * @{inheritdoc}
+     * {@inheritdoc}
      */
     public function speak(): string
     {

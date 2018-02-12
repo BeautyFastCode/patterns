@@ -19,7 +19,7 @@ use PHP\Behavioral\Strategy2\Unit\Ship;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Strategy2Test
+ * Strategy2Test.
  *
  * @author    <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -27,7 +27,7 @@ use PHPUnit\Framework\TestCase;
 class Strategy2Test extends TestCase
 {
     /**
-     * Main loop
+     * Main loop.
      */
     public function testMain()
     {
@@ -35,7 +35,7 @@ class Strategy2Test extends TestCase
             "Ship says: I'm the Galactic Destructor\n",
             "I can fly\n",
             "I'm Atom. I'm the Hero. The Hero don't speak, and do nothing.\n The Hero has the Power 50 MW\n",
-            "",
+            '',
             "Robot says: I'm the Cyborg\n",
             "I can walk\n",
             "I don't have luck\n",

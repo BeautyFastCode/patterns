@@ -12,7 +12,7 @@ namespace PHP\Behavioral\Strategy3\Sort;
 use PHP\Behavioral\Strategy3\Product;
 
 /**
- * IdSort - sorts a Products by id
+ * IdSort - sorts a Products by id.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -24,15 +24,15 @@ class IdSort implements SortInterface
      */
     public function sort($products, $criteria): array
     {
-        if ($criteria == Order::ASC) {
+        if (Order::ASC == $criteria) {
             usort($products, [
-                IdSort::class,
-                "sortAsc",
+                self::class,
+                'sortAsc',
             ]);
-        } elseif ($criteria == Order::DESC) {
+        } elseif (Order::DESC == $criteria) {
             usort($products, [
-                IdSort::class,
-                "sortDesc",
+                self::class,
+                'sortDesc',
             ]);
         }
 

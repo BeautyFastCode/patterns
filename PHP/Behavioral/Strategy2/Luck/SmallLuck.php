@@ -10,7 +10,7 @@
 namespace PHP\Behavioral\Strategy2\Luck;
 
 /**
- * SmallLuck
+ * SmallLuck.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com

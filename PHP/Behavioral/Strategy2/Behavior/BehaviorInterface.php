@@ -10,7 +10,7 @@
 namespace PHP\Behavioral\Strategy2\Behavior;
 
 /**
- * BehaviorInterface
+ * BehaviorInterface.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com

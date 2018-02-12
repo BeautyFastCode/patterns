@@ -10,7 +10,7 @@
 namespace PHP\Behavioral\Strategy2\Luck;
 
 /**
- * LuckInterface
+ * LuckInterface.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -18,7 +18,7 @@ namespace PHP\Behavioral\Strategy2\Luck;
 interface LuckInterface
 {
     /**
-     * Luck is always random
+     * Luck is always random.
      *
      * @return int
      */

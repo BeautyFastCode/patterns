@@ -12,7 +12,7 @@ namespace PHP\Behavioral\Strategy\Unit;
 use PHP\Behavioral\Strategy\Behavior\BehaviorInterface;
 
 /**
- * Unit
+ * Unit.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -20,21 +20,21 @@ use PHP\Behavioral\Strategy\Behavior\BehaviorInterface;
 class Unit
 {
     /**
-     * The name of the Unit
+     * The name of the Unit.
      *
      * @var string
      */
     private $name;
 
     /**
-     * The short class name
+     * The short class name.
      *
      * @var string
      */
     private $className;
 
     /**
-     * What behavior have unit
+     * What behavior have unit.
      *
      * @var BehaviorInterface
      */
@@ -52,7 +52,7 @@ class Unit
     }
 
     /**
-     * Says something
+     * Says something.
      *
      * @return string
      */
@@ -62,7 +62,7 @@ class Unit
     }
 
     /**
-     * Behavior changes depends of interface
+     * Behavior changes depends of interface.
      *
      * @return string
      */
@@ -72,7 +72,7 @@ class Unit
     }
 
     /**
-     * Returns the short class name
+     * Returns the short class name.
      *
      * @return string
      */

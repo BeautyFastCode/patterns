@@ -15,7 +15,7 @@ use PHP\Behavioral\Strategy\Unit\Unit;
 use PHPUnit\Framework\TestCase;
 
 /**
- * StrategyTest
+ * StrategyTest.
  *
  * @author    <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -23,7 +23,7 @@ use PHPUnit\Framework\TestCase;
 class StrategyTest extends TestCase
 {
     /**
-     * Main loop
+     * Main loop.
      */
     public function testMain()
     {
@@ -31,7 +31,7 @@ class StrategyTest extends TestCase
             "Unit says: I'm the Ship\n",
             "I can fly\n",
             "Unit says: I'm the Robot\n",
-            "I can walk\n"
+            "I can walk\n",
         ];
 
         $flying = new Unit('Ship', new FlyBehavior());

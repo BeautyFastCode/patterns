@@ -10,7 +10,7 @@
 namespace PHP\Behavioral\Strategy2\Behavior;
 
 /**
- * DoNothing
+ * DoNothing.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com

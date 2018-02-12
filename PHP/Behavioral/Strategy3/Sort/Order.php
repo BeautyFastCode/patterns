@@ -10,7 +10,7 @@
 namespace PHP\Behavioral\Strategy3\Sort;
 
 /**
- * Order
+ * Order.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -18,14 +18,14 @@ namespace PHP\Behavioral\Strategy3\Sort;
 class Order
 {
     /**
-     * Ascending
+     * Ascending.
      *
      * @var string
      */
     const ASC = 'ASC';
 
     /**
-     * Descending
+     * Descending.
      *
      * @var string
      */

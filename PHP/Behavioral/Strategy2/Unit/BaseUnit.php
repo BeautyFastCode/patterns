@@ -12,7 +12,7 @@ namespace PHP\Behavioral\Strategy2\Unit;
 use PHP\Behavioral\Strategy2\Behavior\BehaviorInterface;
 
 /**
- * BaseUnit
+ * BaseUnit.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -20,28 +20,28 @@ use PHP\Behavioral\Strategy2\Behavior\BehaviorInterface;
 abstract class BaseUnit
 {
     /**
-     * The name of the Unit
+     * The name of the Unit.
      *
      * @var string
      */
     private $name;
 
     /**
-     * The short class name
+     * The short class name.
      *
      * @var string
      */
     private $className;
 
     /**
-     * What behavior have unit
+     * What behavior have unit.
      *
      * @var BehaviorInterface
      */
     private $behavior;
 
     /**
-     * @param string $name The name of the Unit
+     * @param string $name     The name of the Unit
      * @param        $behavior
      */
     public function __construct($name, BehaviorInterface $behavior)
@@ -52,7 +52,7 @@ abstract class BaseUnit
     }
 
     /**
-     * Do some action, the behavior changes
+     * Do some action, the behavior changes.
      *
      * @return string
      */
@@ -62,14 +62,14 @@ abstract class BaseUnit
     }
 
     /**
-     * Says something
+     * Says something.
      *
      * @return string
      */
     abstract public function speak(): string;
 
     /**
-     * Returns the name of the Unit
+     * Returns the name of the Unit.
      *
      * @return string
      */
@@ -79,7 +79,7 @@ abstract class BaseUnit
     }
 
     /**
-     * Returns the short class name
+     * Returns the short class name.
      *
      * @return string
      */

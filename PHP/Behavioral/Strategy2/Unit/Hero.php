@@ -12,7 +12,7 @@ namespace PHP\Behavioral\Strategy2\Unit;
 use PHP\Behavioral\Strategy2\Behavior\DoNothing;
 
 /**
- * Hero
+ * Hero.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -20,7 +20,7 @@ use PHP\Behavioral\Strategy2\Behavior\DoNothing;
 class Hero extends BaseUnit
 {
     /**
-     * The power of the Hero
+     * The power of the Hero.
      *
      * @var int
      */

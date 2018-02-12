@@ -14,7 +14,7 @@ use PHP\Behavioral\Strategy3\Product;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ProductTest - test cases for Product class
+ * ProductTest - test cases for Product class.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -24,7 +24,7 @@ class ProductTest extends TestCase
     public function testCreateProduct()
     {
         $date = new DateTime('2019-03-16');
-        $product = new Product(1, "milky", 4.99, $date);
+        $product = new Product(1, 'milky', 4.99, $date);
 
         $this->assertEquals(1, $product->getId());
         $this->assertEquals('milky', $product->getName());

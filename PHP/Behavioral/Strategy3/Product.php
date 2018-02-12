@@ -12,7 +12,7 @@ namespace PHP\Behavioral\Strategy3;
 use DateTime;
 
 /**
- * Product
+ * Product.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -20,28 +20,28 @@ use DateTime;
 class Product
 {
     /**
-     * The product catalog id
+     * The product catalog id.
      *
      * @var int
      */
     private $id;
 
     /**
-     * The product name
+     * The product name.
      *
      * @var string
      */
     private $name;
 
     /**
-     * The product price
+     * The product price.
      *
      * @var float
      */
     private $price;
 
     /**
-     * The product usefulness date
+     * The product usefulness date.
      *
      * @var DateTime
      */
@@ -62,7 +62,7 @@ class Product
     }
 
     /**
-     * Returns the product catalog id
+     * Returns the product catalog id.
      *
      * @return int
      */
@@ -72,7 +72,7 @@ class Product
     }
 
     /**
-     * Returns the product name
+     * Returns the product name.
      *
      * @return string
      */
@@ -82,7 +82,7 @@ class Product
     }
 
     /**
-     * Returns the product price
+     * Returns the product price.
      *
      * @return float
      */
@@ -92,7 +92,7 @@ class Product
     }
 
     /**
-     * Returns the product usefulness date
+     * Returns the product usefulness date.
      *
      * @return DateTime
      */

@@ -17,7 +17,7 @@ use PHP\Behavioral\Strategy3\Sort\Order;
 use PHPUnit\Framework\TestCase;
 
 /**
- * NameSortTest - test cases for sorting a Products by name
+ * NameSortTest - test cases for sorting a Products by name.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -25,7 +25,7 @@ use PHPUnit\Framework\TestCase;
 class NameSortTest extends TestCase
 {
     /**
-     * Sample products
+     * Sample products.
      *
      * @codeCoverageIgnore
      *
@@ -65,7 +65,7 @@ class NameSortTest extends TestCase
     }
 
     /**
-     * Test sorting by a name ascending
+     * Test sorting by a name ascending.
      *
      * @param $products
      * @param $expected
@@ -87,7 +87,7 @@ class NameSortTest extends TestCase
     }
 
     /**
-     * Sample products
+     * Sample products.
      *
      * @codeCoverageIgnore
      *
@@ -127,7 +127,7 @@ class NameSortTest extends TestCase
     }
 
     /**
-     * Test sorting by a name descending
+     * Test sorting by a name descending.
      *
      * @param $products
      * @param $expected

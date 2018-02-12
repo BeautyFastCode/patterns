@@ -12,7 +12,7 @@ namespace PHP\Behavioral\Strategy2\Unit;
 use PHP\Behavioral\Strategy2\Luck\LuckInterface;
 
 /**
- * Robot
+ * Robot.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -20,14 +20,14 @@ use PHP\Behavioral\Strategy2\Luck\LuckInterface;
 class Robot extends BaseUnit
 {
     /**
-     * How lucky the Robot is
+     * How lucky the Robot is.
      *
      * @var LuckInterface
      */
     private $luck;
 
     /**
-     * @{inheritdoc}
+     * {@inheritdoc}
      */
     public function speak(): string
     {
@@ -35,19 +35,17 @@ class Robot extends BaseUnit
     }
 
     /**
-     * Get the luck
+     * Get the luck.
      *
      * @return string
      */
     public function getLuck(): string
     {
-        if ($this->luck instanceof LuckInterface && $this->luck !== null) {
-
-            $luck = "";
+        if ($this->luck instanceof LuckInterface && null !== $this->luck) {
             if ($this->luck->random() > 10) {
-                $luck = "big";
+                $luck = 'big';
             } else {
-                $luck = "small";
+                $luck = 'small';
             }
 
             return sprintf("I'm lucky. I have %s luck\n", $luck);
@@ -57,13 +55,13 @@ class Robot extends BaseUnit
     }
 
     /**
-     * Set the luck
+     * Set the luck.
      *
      * @param LuckInterface $luck
      *
      * @return Robot
      */
-    public function setLuck(LuckInterface $luck): Robot
+    public function setLuck(LuckInterface $luck): self
     {
         $this->luck = $luck;
 

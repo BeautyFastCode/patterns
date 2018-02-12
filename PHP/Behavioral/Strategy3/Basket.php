@@ -12,7 +12,7 @@ namespace PHP\Behavioral\Strategy3;
 use PHP\Behavioral\Strategy3\Sort\SortInterface;
 
 /**
- * Basket
+ * Basket.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -20,14 +20,14 @@ use PHP\Behavioral\Strategy3\Sort\SortInterface;
 class Basket
 {
     /**
-     * The products in the basket
+     * The products in the basket.
      *
      * @var array
      */
     private $products;
 
     /**
-     * Class constructor
+     * Class constructor.
      */
     public function __construct()
     {
@@ -35,7 +35,7 @@ class Basket
     }
 
     /**
-     * Add a product to the basket
+     * Add a product to the basket.
      *
      * @param Product $product
      */
@@ -45,7 +45,7 @@ class Basket
     }
 
     /**
-     * Returns the number of products
+     * Returns the number of products.
      *
      * @return int
      */
@@ -56,7 +56,7 @@ class Basket
 
     /**
      * Returns the sorted products,
-     * according to the property selected by using the interface
+     * according to the property selected by using the interface.
      *
      * @param SortInterface $sort
      * @param string        $criteria

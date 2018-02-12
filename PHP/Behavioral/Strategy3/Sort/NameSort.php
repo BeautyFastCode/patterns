@@ -12,28 +12,27 @@ namespace PHP\Behavioral\Strategy3\Sort;
 use PHP\Behavioral\Strategy3\Product;
 
 /**
- * NameSort - sorts a Products by name
+ * NameSort - sorts a Products by name.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
 class NameSort implements SortInterface
 {
-
     /**
      * {@inheritdoc}
      */
     public function sort($products, $criteria): array
     {
-        if ($criteria == Order::ASC) {
+        if (Order::ASC == $criteria) {
             usort($products, [
-                NameSort::class,
-                "sortAsc",
+                self::class,
+                'sortAsc',
             ]);
-        } elseif ($criteria == Order::DESC) {
+        } elseif (Order::DESC == $criteria) {
             usort($products, [
-                NameSort::class,
-                "sortDesc",
+                self::class,
+                'sortDesc',
             ]);
         }
 

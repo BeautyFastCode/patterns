@@ -17,7 +17,7 @@ use PHP\Behavioral\Strategy3\Sort\Order;
 use PHPUnit\Framework\TestCase;
 
 /**
- * IdSortTest - test cases for sorting a Products by id
+ * IdSortTest - test cases for sorting a Products by id.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -25,7 +25,7 @@ use PHPUnit\Framework\TestCase;
 class IdSortTest extends TestCase
 {
     /**
-     * Sample products
+     * Sample products.
      *
      * @codeCoverageIgnore
      *
@@ -65,7 +65,7 @@ class IdSortTest extends TestCase
     }
 
     /**
-     * Tests sorting ascending by product id
+     * Tests sorting ascending by product id.
      *
      * @param array $products
      * @param array $expected
@@ -87,7 +87,7 @@ class IdSortTest extends TestCase
     }
 
     /**
-     * Sample products
+     * Sample products.
      *
      * @codeCoverageIgnore
      *
@@ -127,7 +127,7 @@ class IdSortTest extends TestCase
     }
 
     /**
-     * Tests sorting descending by product id
+     * Tests sorting descending by product id.
      *
      * @param array $products
      * @param array $expected

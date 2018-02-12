@@ -12,7 +12,7 @@ namespace PHP\Behavioral\Strategy3\Sort;
 use PHP\Behavioral\Strategy3\Product;
 
 /**
- * SortInterface
+ * SortInterface.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -20,17 +20,17 @@ use PHP\Behavioral\Strategy3\Product;
 interface SortInterface
 {
     /**
-     * Sort the Products by some criteria
+     * Sort the Products by some criteria.
      *
-     * @param array $products
-     * @param string  $criteria
+     * @param array  $products
+     * @param string $criteria
      *
      * @return array
      */
     public function sort($products, $criteria): array;
 
     /**
-     * Sort ascending the Product property
+     * Sort ascending the Product property.
      *
      * @param Product $a
      * @param Product $b
@@ -40,7 +40,7 @@ interface SortInterface
     public function sortAsc(Product $a, Product $b): int;
 
     /**
-     * Sort descending the Product property
+     * Sort descending the Product property.
      *
      * @param Product $a
      * @param Product $b
