@@ -55,14 +55,16 @@ class Basket
     }
 
     /**
-     * Returns the sorted products, according to the property selected by using the interface
+     * Returns the sorted products,
+     * according to the property selected by using the interface
      *
      * @param SortInterface $sort
+     * @param string        $criteria
      *
      * @return array
      */
-    public function sortProductsBy(SortInterface $sort): array
+    public function sortProductsBy(SortInterface $sort, $criteria): array
     {
-        return $this->products;
+        return $sort->sort($this->products, $criteria);
     }
 }

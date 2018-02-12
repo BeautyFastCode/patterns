@@ -13,6 +13,7 @@ use DateTime;
 use PHP\Behavioral\Strategy3\Basket;
 use PHP\Behavioral\Strategy3\Product;
 use PHP\Behavioral\Strategy3\Sort\IdSort;
+use PHP\Behavioral\Strategy3\Sort\Order;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -28,7 +29,7 @@ class Strategy3Test extends TestCase
      *
      * @return array
      */
-    public function provideProducts()
+    public function provideProducts(): array
     {
         return [
             [
@@ -66,6 +67,7 @@ class Strategy3Test extends TestCase
      *
      * @param array $products
      * @param array $expected
+     *
      * @dataProvider provideProducts
      */
     public function testSortIdAscId($products, $expected)
@@ -78,7 +80,7 @@ class Strategy3Test extends TestCase
 
         $this->assertEquals(3, $basket->numberProducts());
 
-        $result = $basket->sortProductsBy(new IdSort());
+        $result = $basket->sortProductsBy(new IdSort(), Order::ASC);
         $this->assertEquals($expected, $result);
     }
 

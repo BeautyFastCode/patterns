@@ -9,6 +9,8 @@
 
 namespace PHP\Behavioral\Strategy3\Sort;
 
+use PHP\Behavioral\Strategy3\Product;
+
 /**
  * SortInterface
  *
@@ -18,26 +20,32 @@ namespace PHP\Behavioral\Strategy3\Sort;
 interface SortInterface
 {
     /**
-     * Ascending
+     * Sort the Products by some criteria
      *
-     * @var string
-     */
-    const ASC = 'ASC';
-
-    /**
-     * Descending
-     *
-     * @var string
-     */
-    const DESC = 'DESC';
-
-    /**
-     * Sort the Product property
-     *
-     * @param $array
-     * @param $criteria
+     * @param array $products
+     * @param string  $criteria
      *
      * @return array
      */
-    public function sort($array, $criteria): array;
+    public function sort($products, $criteria): array;
+
+    /**
+     * Sort ascending the Product property
+     *
+     * @param Product $a
+     * @param Product $b
+     *
+     * @return int
+     */
+    public function sortAsc(Product $a, Product $b): int;
+
+    /**
+     * Sort descending the Product property
+     *
+     * @param Product $a
+     * @param Product $b
+     *
+     * @return int
+     */
+    public function sortDesc(Product $a, Product $b): int;
 }
