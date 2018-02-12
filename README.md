@@ -8,18 +8,24 @@
 
 # Tools for PHP
 
-The `PHP Unit` tests
+#### The `PHP Unit` tests
+
 ```
 $ vendor/bin/phpunit
 ```
 
-The `PHP Coding Standard Fixer` a tool to automatically fix PHP coding standards issues
+#### The `PHP Coding Standard Fixer` 
+
+a tool to automatically fix PHP coding standards issues
+
 ```
 $ vendor/bin/php-cs-fixer fix --verbose 
 ```
 
-`PHP_CodeSniffer` tokenizes PHP, JavaScript and CSS files
-and detects violations of a defined set of coding standards.
+#### `PHP_CodeSniffer`
+
+tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.
+ 
 ``` 
 $ vendor/bin/phpcs -h       # detect violations
 $ vendor/bin/phpcbf -h      # automatically correct coding standard violations
@@ -58,15 +64,14 @@ $ vendor/bin/phpcs --standard=PSR2 \
 
 ```
 
-PHP `Copy/Paste Detector` (PHPCPD)
+#### PHP `Copy/Paste Detector` (PHPCPD)
 
 ```
 $ vendor/bin/phpcpd ./ --exclude vendor --exclude log --log-pmd=log/copy-paste.xml 
 ```
 
----
+#### PHP `Mess Detector`
 
-PHP `Mess Detector`
 ```
 $ vendor/bin/phpmd Behavioral html codesize --reportfile log/mess.html
 
@@ -74,8 +79,12 @@ $ vendor/bin/phpmd Behavioral html \
     cleancode,codesize,controversial,design,naming,unusedcode --reportfile log/mess.html 
 ```
 
-The `PHP_Depend` shows you the quality of your design in the terms of extensibility,
-reusability and maintainability. 
+#### The `PHP_Depend`
+ 
+shows you the quality of your design in the terms of extensibility, reusability and maintainability.
+ 
+ - [Abstraction Instability Chart](https://pdepend.org/documentation/handbook/reports/abstraction-instability-chart.html)
+ - [Overview Pyramid](https://pdepend.org/documentation/handbook/reports/overview-pyramid.html)
 
 ```
 $ vendor/bin/pdepend --summary-xml=log/depend/summary.xml \ 
@@ -84,7 +93,11 @@ $ vendor/bin/pdepend --summary-xml=log/depend/summary.xml \
                      Behavioral
 ```
 
-- [Abstraction Instability Chart](https://pdepend.org/documentation/handbook/reports/abstraction-instability-chart.html)
-- [Overview Pyramid](https://pdepend.org/documentation/handbook/reports/overview-pyramid.html)
+#### `PHPLOC`
 
+A tool for quickly measuring the size of a PHP project. 
+
+```
+$ vendor/bin/phploc Behavioral
+```
 ---
