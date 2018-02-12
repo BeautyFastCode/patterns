@@ -8,17 +8,17 @@
 
 # Tools for PHP
 
-The PHP Unit tests
+The `PHP Unit` tests
 ```
 $ vendor/bin/phpunit
 ```
 
-A tool to automatically fix PHP coding standards issues
+The `PHP Coding Standard Fixer` a tool to automatically fix PHP coding standards issues
 ```
 $ vendor/bin/php-cs-fixer fix --verbose 
 ```
 
-PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files
+`PHP_CodeSniffer` tokenizes PHP, JavaScript and CSS files
 and detects violations of a defined set of coding standards.
 ``` 
 $ vendor/bin/phpcs -h       # detect violations
@@ -57,4 +57,17 @@ $ vendor/bin/phpcs --standard=PSR2 \
     Behavioral
 
 ```
+
+PHP Copy/Paste Detector (PHPCPD)
+
+```
+$ vendor/bin/phpcpd ./ --exclude vendor --exclude log --log-pmd=log/copy-paste.xml 
+```
+
+---
+
+
+
+
+
 ---
