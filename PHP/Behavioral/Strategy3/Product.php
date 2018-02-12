@@ -20,11 +20,11 @@ use DateTime;
 class Product
 {
     /**
-     * The product catalog id.
+     * The product catalog key.
      *
      * @var int
      */
-    private $id;
+    private $key;
 
     /**
      * The product name.
@@ -48,27 +48,27 @@ class Product
     private $date;
 
     /**
-     * @param int      $id    The product catalog id
+     * @param int      $key   The product catalog key
      * @param string   $name  The product name
      * @param float    $price The product price
      * @param DateTime $date  The product usefulness date
      */
-    public function __construct($id, $name, $price, $date)
+    public function __construct($key, $name, $price, $date)
     {
-        $this->id = $id;
+        $this->key = $key;
         $this->name = $name;
         $this->price = $price;
         $this->date = $date;
     }
 
     /**
-     * Returns the product catalog id.
+     * Returns the product catalog key.
      *
      * @return int
      */
-    public function getId(): int
+    public function getKey(): int
     {
-        return $this->id;
+        return $this->key;
     }
 
     /**

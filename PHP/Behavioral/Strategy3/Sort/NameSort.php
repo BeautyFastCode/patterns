@@ -42,16 +42,16 @@ class NameSort implements SortInterface
     /**
      * {@inheritdoc}
      */
-    public function sortAsc(Product $a, Product $b): int
+    public function sortAsc(Product $productA, Product $productB): int
     {
-        return $a->getName() <=> $b->getName();
+        return $productA->getName() <=> $productB->getName();
     }
 
     /**
      * {@inheritdoc}
      */
-    public function sortDesc(Product $a, Product $b): int
+    public function sortDesc(Product $productA, Product $productB): int
     {
-        return ($a->getName() < $b->getName()) ? 1 : (($a->getName() > $b->getName()) ? -1 : 0);
+        return ($productA->getName() < $productB->getName()) ? 1 : (($productA->getName() > $productB->getName()) ? -1 : 0);
     }
 }

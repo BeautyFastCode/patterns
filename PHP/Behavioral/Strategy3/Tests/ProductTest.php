@@ -26,7 +26,7 @@ class ProductTest extends TestCase
         $date = new DateTime('2019-03-16');
         $product = new Product(1, 'milky', 4.99, $date);
 
-        $this->assertEquals(1, $product->getId());
+        $this->assertEquals(1, $product->getKey());
         $this->assertEquals('milky', $product->getName());
         $this->assertEquals(4.99, $product->getPrice());
         $this->assertEquals($date, $product->getDate());

@@ -32,20 +32,20 @@ interface SortInterface
     /**
      * Sort ascending the Product property.
      *
-     * @param Product $a
-     * @param Product $b
+     * @param Product $productA
+     * @param Product $productB
      *
      * @return int
      */
-    public function sortAsc(Product $a, Product $b): int;
+    public function sortAsc(Product $productA, Product $productB): int;
 
     /**
      * Sort descending the Product property.
      *
-     * @param Product $a
-     * @param Product $b
+     * @param Product $productA
+     * @param Product $productB
      *
      * @return int
      */
-    public function sortDesc(Product $a, Product $b): int;
+    public function sortDesc(Product $productA, Product $productB): int;
 }

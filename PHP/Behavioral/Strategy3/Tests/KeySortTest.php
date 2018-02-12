@@ -12,17 +12,17 @@ namespace PHP\Behavioral\Strategy3\Tests;
 use DateTime;
 use PHP\Behavioral\Strategy3\Basket;
 use PHP\Behavioral\Strategy3\Product;
-use PHP\Behavioral\Strategy3\Sort\IdSort;
+use PHP\Behavioral\Strategy3\Sort\KeySort;
 use PHP\Behavioral\Strategy3\Sort\Order;
 use PHPUnit\Framework\TestCase;
 
 /**
- * IdSortTest - test cases for sorting a Products by id.
+ * KeySortTest - test cases for sorting a Products by id.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-class IdSortTest extends TestCase
+class KeySortTest extends TestCase
 {
     /**
      * Sample products.
@@ -31,7 +31,7 @@ class IdSortTest extends TestCase
      *
      * @return array
      */
-    public function provideProductsIdAsc(): array
+    public function provideProductsKeyAsc(): array
     {
         return [
             [
@@ -65,14 +65,14 @@ class IdSortTest extends TestCase
     }
 
     /**
-     * Tests sorting ascending by product id.
+     * Tests sorting ascending by product key.
      *
      * @param array $products
      * @param array $expected
      *
-     * @dataProvider provideProductsIdAsc
+     * @dataProvider provideProductsKeyAsc
      */
-    public function testSortIdAsc($products, $expected)
+    public function testSortKeyAsc($products, $expected)
     {
         $basket = new Basket();
 
@@ -82,7 +82,7 @@ class IdSortTest extends TestCase
 
         $this->assertEquals(3, $basket->numberProducts());
 
-        $result = $basket->sortProductsBy(new IdSort(), Order::ASC);
+        $result = $basket->sortProductsBy(new KeySort(), Order::ASC);
         $this->assertEquals($expected, $result);
     }
 
@@ -93,7 +93,7 @@ class IdSortTest extends TestCase
      *
      * @return array
      */
-    public function provideProductsIdDesc(): array
+    public function provideProductsKeyDesc(): array
     {
         return [
             [
@@ -127,14 +127,14 @@ class IdSortTest extends TestCase
     }
 
     /**
-     * Tests sorting descending by product id.
+     * Tests sorting descending by product key.
      *
      * @param array $products
      * @param array $expected
      *
-     * @dataProvider provideProductsIdDesc
+     * @dataProvider provideProductsKeyDesc
      */
-    public function testSortIdDesc($products, $expected)
+    public function testSortKeyDesc($products, $expected)
     {
         $basket = new Basket();
 
@@ -144,7 +144,7 @@ class IdSortTest extends TestCase
 
         $this->assertEquals(3, $basket->numberProducts());
 
-        $result = $basket->sortProductsBy(new IdSort(), Order::DESC);
+        $result = $basket->sortProductsBy(new KeySort(), Order::DESC);
         $this->assertEquals($expected, $result);
     }
 }

@@ -12,12 +12,12 @@ namespace PHP\Behavioral\Strategy3\Sort;
 use PHP\Behavioral\Strategy3\Product;
 
 /**
- * IdSort - sorts a Products by id.
+ * KeySort - sorts a Products by key.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-class IdSort implements SortInterface
+class KeySort implements SortInterface
 {
     /**
      * {@inheritdoc}
@@ -42,21 +42,21 @@ class IdSort implements SortInterface
     /**
      * {@inheritdoc}
      */
-    public function sortAsc(Product $a, Product $b): int
+    public function sortAsc(Product $productA, Product $productB): int
     {
         /*
          * <=> spaceship operator
          *
          * return ($a < $b) ? -1 : (($a > $b) ? 1 : 0);
          */
-        return $a->getId() <=> $b->getId();
+        return $productA->getKey() <=> $productB->getKey();
     }
 
     /**
      * {@inheritdoc}
      */
-    public function sortDesc(Product $a, Product $b): int
+    public function sortDesc(Product $productA, Product $productB): int
     {
-        return ($a->getId() < $b->getId()) ? 1 : (($a->getId() > $b->getId()) ? -1 : 0);
+        return ($productA->getKey() < $productB->getKey()) ? 1 : (($productA->getKey() > $productB->getKey()) ? -1 : 0);
     }
 }
