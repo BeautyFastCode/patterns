@@ -8,13 +8,13 @@
 
 # Tools for PHP
 
-#### The `PHP Unit` tests
+#### 1. The `PHP Unit` tests
 
 ```
 $ vendor/bin/phpunit
 ```
 
-#### The `PHP Coding Standard Fixer` 
+#### 2. The `PHP Coding Standard Fixer` 
 
 a tool to automatically fix PHP coding standards issues
 
@@ -22,7 +22,7 @@ a tool to automatically fix PHP coding standards issues
 $ vendor/bin/php-cs-fixer fix --verbose 
 ```
 
-#### `PHP_CodeSniffer`
+#### 3. `PHP_CodeSniffer`
 
 tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.
  
@@ -64,13 +64,13 @@ $ vendor/bin/phpcs --standard=PSR2 \
 
 ```
 
-#### PHP `Copy/Paste Detector` (PHPCPD)
+#### 4. PHP `Copy/Paste Detector` (PHPCPD)
 
 ```
 $ vendor/bin/phpcpd ./ --exclude vendor --exclude log --log-pmd=log/copy-paste.xml 
 ```
 
-#### PHP `Mess Detector`
+#### 5. PHP `Mess Detector`
 
 ```
 $ vendor/bin/phpmd Behavioral html codesize --reportfile log/mess.html
@@ -79,7 +79,7 @@ $ vendor/bin/phpmd Behavioral html \
     cleancode,codesize,controversial,design,naming,unusedcode --reportfile log/mess.html 
 ```
 
-#### The `PHP_Depend`
+#### 6. The `PHP_Depend`
  
 shows you the quality of your design in the terms of extensibility, reusability and maintainability.
  
@@ -93,7 +93,7 @@ $ vendor/bin/pdepend --summary-xml=log/depend/summary.xml \
                      Behavioral
 ```
 
-#### `PHPLOC`
+#### 7. `PHPLOC`
 
 A tool for quickly measuring the size of a PHP project. 
 
@@ -101,7 +101,7 @@ A tool for quickly measuring the size of a PHP project.
 $ vendor/bin/phploc Behavioral
 ```
 
-#### `phpDocumentor`
+#### 8. `phpDocumentor`
 
 phpDocumentor is an application that is capable of analyzing your PHP source code and DocBlock comments
  to generate a complete set of API Documentation.
