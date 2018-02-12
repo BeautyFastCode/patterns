@@ -4,3 +4,6 @@ sample-code/
 PHP/vendor/
 PHP/log/
 docs/
+PHP/.php_cs
+PHP/.php_cs.cache
+js/

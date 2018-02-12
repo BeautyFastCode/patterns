@@ -10,7 +10,11 @@
 
 
 ```
-$ ./vendor/bin/phpunit      The PHP Unit tests
+# The PHP Unit tests
+$ vendor/bin/phpunit
+
+# A tool to automatically fix PHP coding standards issues
+$ vendor/bin/php-cs-fixer fix --verbose 
 ```
 
 
