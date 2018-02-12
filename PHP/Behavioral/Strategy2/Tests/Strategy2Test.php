@@ -12,6 +12,7 @@ namespace PHP\Behavioral\Strategy2\Tests;
 use PHP\Behavioral\Strategy2\Behavior\FlyBehavior;
 use PHP\Behavioral\Strategy2\Behavior\WalkBehavior;
 use PHP\Behavioral\Strategy2\Luck\BigLuck;
+use PHP\Behavioral\Strategy2\Luck\SmallLuck;
 use PHP\Behavioral\Strategy2\Unit\Hero;
 use PHP\Behavioral\Strategy2\Unit\Robot;
 use PHP\Behavioral\Strategy2\Unit\Ship;
@@ -38,7 +39,8 @@ class Strategy2Test extends TestCase
             "Robot says: I'm the Cyborg\n",
             "I can walk\n",
             "I don't have luck\n",
-            "I'm lucky. I have 4619 luckness\n",
+            "I'm lucky. I have big luck\n",
+            "I'm lucky. I have small luck\n",
         ];
 
         $ship = new Ship('Galactic Destructor', new FlyBehavior());
@@ -56,6 +58,9 @@ class Strategy2Test extends TestCase
         $this->assertEquals($expected[6], $robot->getLuck());
 
         $robot->setLuck(new BigLuck());
-        $this->assertTrue(true, $robot->getLuck());
+        $this->assertEquals($expected[7], $robot->getLuck());
+
+        $robot->setLuck(new SmallLuck());
+        $this->assertEquals($expected[8], $robot->getLuck());
     }
 }

@@ -42,7 +42,15 @@ class Robot extends BaseUnit
     public function getLuck(): string
     {
         if ($this->luck instanceof LuckInterface && $this->luck !== null) {
-            return sprintf("I'm lucky. I have %s luckness\n", $this->luck->random());
+
+            $luck = "";
+            if ($this->luck->random() > 10) {
+                $luck = "big";
+            } else {
+                $luck = "small";
+            }
+
+            return sprintf("I'm lucky. I have %s luck\n", $luck);
         } else {
             return sprintf("I don't have luck\n");
         }
