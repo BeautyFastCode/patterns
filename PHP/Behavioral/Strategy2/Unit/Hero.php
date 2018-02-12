@@ -43,9 +43,11 @@ class Hero extends BaseUnit
      */
     public function speak(): string
     {
-        return sprintf("I'm %s. I'm the %s. The Hero don't speak, and do nothing.\n The Hero has the Power %s MW\n",
+        return sprintf(
+            "I'm %s. I'm the %s. The Hero don't speak, and do nothing.\n The Hero has the Power %s MW\n",
             $this->getName(),
             $this->getClassName(),
-            $this->power);
+            $this->power
+        );
     }
 }
