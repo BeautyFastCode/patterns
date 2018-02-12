@@ -100,4 +100,24 @@ A tool for quickly measuring the size of a PHP project.
 ```
 $ vendor/bin/phploc Behavioral
 ```
+
+#### `phpDocumentor`
+
+phpDocumentor is an application that is capable of analyzing your PHP source code and DocBlock comments
+ to generate a complete set of API Documentation.
+
+```
+$ ./phpDocumentor.phar run -d Behavioral -t docs
+$ ./phpDocumentor.phar run -d Behavioral -t docs --template="checkstyle" 
+$ ./phpDocumentor.phar run -d Behavioral -t docs --template=responsive
+```
+
+Via docker
+
+```
+$ docker pull phpdoc/phpdoc:develop
+$ docker run --rm -v $(pwd):/data phpdoc/phpdoc:develop
+$ docker run --rm -v $(pwd):/data phpdoc/phpdoc run -d Behavioral -t docs
+```
+
 ---

@@ -7,3 +7,5 @@ docs/
 PHP/.php_cs
 PHP/.php_cs.cache
 js/
+PHP/phpDocumentor.phar
+PHP/docs/
