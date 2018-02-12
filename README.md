@@ -58,7 +58,7 @@ $ vendor/bin/phpcs --standard=PSR2 \
 
 ```
 
-PHP Copy/Paste Detector (PHPCPD)
+PHP `Copy/Paste Detector` (PHPCPD)
 
 ```
 $ vendor/bin/phpcpd ./ --exclude vendor --exclude log --log-pmd=log/copy-paste.xml 
@@ -66,7 +66,7 @@ $ vendor/bin/phpcpd ./ --exclude vendor --exclude log --log-pmd=log/copy-paste.x
 
 ---
 
-PHP Mess Detector
+PHP `Mess Detector`
 ```
 $ vendor/bin/phpmd Behavioral html codesize --reportfile log/mess.html
 
@@ -74,7 +74,17 @@ $ vendor/bin/phpmd Behavioral html \
     cleancode,codesize,controversial,design,naming,unusedcode --reportfile log/mess.html 
 ```
 
+The `PHP_Depend` shows you the quality of your design in the terms of extensibility,
+reusability and maintainability. 
 
+```
+$ vendor/bin/pdepend --summary-xml=log/depend/summary.xml \ 
+                     --jdepend-chart=log/depend/jdepend.svg \
+                     --overview-pyramid=log/depend/pyramid.svg \
+                     Behavioral
+```
 
+- [Abstraction Instability Chart](https://pdepend.org/documentation/handbook/reports/abstraction-instability-chart.html)
+- [Overview Pyramid](https://pdepend.org/documentation/handbook/reports/overview-pyramid.html)
 
 ---
