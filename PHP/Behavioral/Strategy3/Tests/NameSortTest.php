@@ -12,25 +12,26 @@ namespace PHP\Behavioral\Strategy3\Tests;
 use DateTime;
 use PHP\Behavioral\Strategy3\Basket;
 use PHP\Behavioral\Strategy3\Product;
-use PHP\Behavioral\Strategy3\Sort\IdSort;
 use PHP\Behavioral\Strategy3\Sort\NameSort;
 use PHP\Behavioral\Strategy3\Sort\Order;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Strategy3Test
+ * NameSortTest - test cases for sorting a Products by name
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-class Strategy3Test extends TestCase
+class NameSortTest extends TestCase
 {
     /**
      * Sample products
      *
+     * @codeCoverageIgnore
+     *
      * @return array
      */
-    public function provideProductsIdAsc(): array
+    public function provideProductsNameAsc(): array
     {
         return [
             [
@@ -43,8 +44,8 @@ class Strategy3Test extends TestCase
 
                 // expected
                 [
-                    new Product(2, 'fresh', 0.99, new DateTime('2017-11-12')),
                     new Product(10, 'bestseller', 99.99, new DateTime('2018-03-15')),
+                    new Product(2, 'fresh', 0.99, new DateTime('2017-11-12')),
                     new Product(32, 'new', 2.99, new DateTime('2018-01-12')),
                 ],
             ],
@@ -55,23 +56,23 @@ class Strategy3Test extends TestCase
                     new Product(42, 'butter', 6.99, new DateTime('2017-01-22')),
                 ],
                 [
-                    new Product(1, 'milky', 4.99, new DateTime('2018-01-09')),
                     new Product(5, 'bread', 2.49, new DateTime('2018-01-01')),
                     new Product(42, 'butter', 6.99, new DateTime('2017-01-22')),
+                    new Product(1, 'milky', 4.99, new DateTime('2018-01-09')),
                 ],
             ],
         ];
     }
 
     /**
-     * Tests sorting ascending by product id
+     * Test sorting by a name ascending
      *
-     * @param array $products
-     * @param array $expected
+     * @param $products
+     * @param $expected
      *
-     * @dataProvider provideProductsIdAsc
+     * @dataProvider provideProductsNameAsc
      */
-    public function testSortIdAsc($products, $expected)
+    public function testSortNameAsc($products, $expected)
     {
         $basket = new Basket();
 
@@ -81,12 +82,14 @@ class Strategy3Test extends TestCase
 
         $this->assertEquals(3, $basket->numberProducts());
 
-        $result = $basket->sortProductsBy(new IdSort(), Order::ASC);
+        $result = $basket->sortProductsBy(new NameSort(), Order::ASC);
         $this->assertEquals($expected, $result);
     }
 
     /**
      * Sample products
+     *
+     * @codeCoverageIgnore
      *
      * @return array
      */
