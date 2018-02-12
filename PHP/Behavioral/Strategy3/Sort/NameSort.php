@@ -12,13 +12,14 @@ namespace PHP\Behavioral\Strategy3\Sort;
 use PHP\Behavioral\Strategy3\Product;
 
 /**
- * IdSort - sorts a Products by id
+ * NameSort - sorts a Products by name
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-class IdSort implements SortInterface
+class NameSort implements SortInterface
 {
+
     /**
      * {@inheritdoc}
      */
@@ -26,12 +27,12 @@ class IdSort implements SortInterface
     {
         if ($criteria == Order::ASC) {
             usort($products, [
-                IdSort::class,
+                NameSort::class,
                 "sortAsc",
             ]);
         } elseif ($criteria == Order::DESC) {
             usort($products, [
-                IdSort::class,
+                NameSort::class,
                 "sortDesc",
             ]);
         }
@@ -44,12 +45,7 @@ class IdSort implements SortInterface
      */
     public function sortAsc(Product $a, Product $b): int
     {
-        /*
-         * <=> spaceship operator
-         *
-         * return ($a < $b) ? -1 : (($a > $b) ? 1 : 0);
-         */
-        return $a->getId() <=> $b->getId();
+        return $a->getName() <=> $b->getName();
     }
 
     /**
@@ -57,6 +53,6 @@ class IdSort implements SortInterface
      */
     public function sortDesc(Product $a, Product $b): int
     {
-        return ($a->getId() < $b->getId()) ? 1 : (($a->getId() > $b->getId()) ? -1 : 0);
+        return ($a->getName() < $b->getName()) ? 1 : (($a->getName() > $b->getName()) ? -1 : 0);
     }
 }
