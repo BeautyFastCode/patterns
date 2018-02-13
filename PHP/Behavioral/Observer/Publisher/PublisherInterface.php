@@ -45,7 +45,7 @@ interface PublisherInterface
     public function sendMessage($message);
 
     /**
-     * Returns the amount subscribers from subscriber list.
+     * Returns the amount of subscribers from subscriber list.
      *
      * @return int
      */

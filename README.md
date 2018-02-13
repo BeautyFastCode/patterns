@@ -3,7 +3,7 @@
 | Lp. | Pattern | Category | PHP |
 | --- | ------- | -------- | --- |
 | 1. | Strategy | Behavioral | 3x |
-| 2. | Observer or Publish/Subscribe | Behavioral | x |
+| 2. | Observer or Publish/Subscribe | Behavioral | 2x |
 
 ---
 
