@@ -1,9 +1,12 @@
 {
     "name": "patterns/php",
     "description": "Sample code for design patterns in PHP",
+    "keywords": ["php", "php7", "patterns", "design"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Bogumił Brzeziński",
+            "homepage": "http://beautyfastcode.com/",
             "email": "beautyfastcode@gmail.com"
         }
     ],

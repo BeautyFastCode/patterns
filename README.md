@@ -1,4 +1,4 @@
-# Patterns
+# Design Patterns in PHP7
 
 | Lp. | Pattern | Category | PHP |
 | --- | ------- | -------- | --- |
