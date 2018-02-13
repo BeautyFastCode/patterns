@@ -45,7 +45,7 @@ jobs:
       - save_cache:
           paths:
             - ./PHP/vendor
-          key: v1-dependencies-{{ checksum "composer.json" }}
+          key: v1-dependencies-{{ checksum "PHP/composer.json" }}
 
       # run tests!
       - run:
