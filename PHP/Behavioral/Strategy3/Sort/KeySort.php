@@ -24,7 +24,7 @@ class KeySort implements SortInterface
      */
     public function sort($products, $criteria): array
     {
-        if (Order::ASC == $criteria) {
+        if (Order::ASC != $criteria) {
             usort($products, [
                 self::class,
                 'sortAsc',
