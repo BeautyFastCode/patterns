@@ -10,12 +10,12 @@
 namespace PHP\Structural\Decorator\Ingredient;
 
 /**
- * TomatoSauce
+ * JalapenoSauce
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-class TomatoSauce extends PizzaDecorator
+class JalapenoSauce extends PizzaDecorator
 {
     /**
      * The decorator for ingredients
@@ -39,6 +39,6 @@ class TomatoSauce extends PizzaDecorator
      */
     public function getCost(): float
     {
-        return $this->pizza->getCost() + 1.00;
+        return $this->pizza->getCost() + 4.50;
     }
 }
