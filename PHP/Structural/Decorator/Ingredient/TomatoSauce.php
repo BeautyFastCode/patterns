@@ -9,6 +9,8 @@
 
 namespace PHP\Structural\Decorator\Ingredient;
 
+use PHP\Structural\Decorator\Base\PizzaDecorator;
+
 /**
  * TomatoSauce
  *
@@ -18,35 +20,19 @@ namespace PHP\Structural\Decorator\Ingredient;
 class TomatoSauce extends PizzaDecorator
 {
     /**
-     * The pizza plus ingredients.
-     *
-     * @var PizzaDecorator
-     */
-    private $pizza;
-
-    /**
-     * Class constructor
-     *
-     * @param PizzaDecorator $pizza The pizza plus ingredients
+     * {@inheritdoc}
      */
     public function __construct(PizzaDecorator $pizza)
     {
-        $this->pizza = $pizza;
+        parent::__construct($pizza);
+        $this->setDescription('TomatoSauce');
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getCost(): float
+    public function calculateCost(): float
     {
-        return $this->pizza->getCost() + 1.00;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getDescription(): string
-    {
-        return sprintf('%s TomatoSauce', $this->pizza->getDescription());
+        return $this->getPizza()->calculateCost() + 1.00;
     }
 }

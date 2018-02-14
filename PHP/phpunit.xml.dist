@@ -11,6 +11,7 @@
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">Behavioral/</directory>
+            <directory suffix=".php">Structural/</directory>
         </whitelist>
         <blacklist>
             <directory>./vendor</directory>

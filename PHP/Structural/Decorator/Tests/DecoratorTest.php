@@ -29,32 +29,41 @@ class DecoratorTest extends TestCase
      */
     public function testMain()
     {
-        // todo: small, medium, big
-
         $pizza = new Pizza('Pizza');
-        $this->assertEquals(10.0, $pizza->getCost());
-        $this->assertEquals('Pizza + ingredients:', $pizza->getDescription());
+
+        $this->assertEquals(10.0, $pizza->calculateCost());
+        $this->assertEquals(1, $pizza->amountIngredients());
+        $this->assertEquals('Pizza', $pizza->listIngredients());
 
         $pizza = new TomatoSauce($pizza);
-        $this->assertEquals(11.0, $pizza->getCost());
-        $this->assertEquals('Pizza + ingredients: TomatoSauce', $pizza->getDescription());
+        $this->assertEquals(11.0, $pizza->calculateCost());
+        $this->assertEquals(2, $pizza->amountIngredients());
+        $this->assertEquals('Pizza, TomatoSauce', $pizza->listIngredients());
 
         // Pizza Funghi
         $funghi = new Pizza('Funghi');
         $funghi = new Mushrooms($funghi);
         $funghi = new TomatoSauce($funghi);
 
-        $this->assertEquals(13.50, $funghi->getCost());
-        $this->assertEquals('Funghi + ingredients: Mushrooms TomatoSauce', $funghi->getDescription());
+        $this->assertEquals(13.50, $funghi->calculateCost());
+        $this->assertEquals(3, $funghi->amountIngredients());
+        $this->assertEquals('Funghi, Mushrooms, TomatoSauce', $funghi->listIngredients());
 
         // Pizza Rimini
         $rimini = new TomatoSauce(new Mushrooms(new Salami(new Pizza('Rimini'))));
-        $this->assertEquals(18.0, $rimini->getCost());
-        $this->assertEquals('Rimini + ingredients: Salami Mushrooms TomatoSauce', $rimini->getDescription());
+
+        $this->assertEquals(4, $rimini->amountIngredients());
+        $this->assertEquals(18.0, $rimini->calculateCost());
+        $this->assertEquals('Rimini, Salami, Mushrooms, TomatoSauce', $rimini->listIngredients());
 
         // Pizza Extra Hot
         $extraHot = new JalapenoSauce(new Mushrooms(new Salami(new Pizza('Extra Hot'))));
-        $this->assertEquals(21.5, $extraHot->getCost());
-        $this->assertEquals('Extra Hot + ingredients: Salami Mushrooms JalapenoSauce', $extraHot->getDescription());
+
+        $this->assertEquals(21.5, $extraHot->calculateCost());
+        $this->assertEquals(4, $extraHot->amountIngredients());
+        $this->assertEquals(
+            'Extra Hot, Salami, Mushrooms, Jalapeno Sauce',
+            $extraHot->listIngredients()
+        );
     }
 }
