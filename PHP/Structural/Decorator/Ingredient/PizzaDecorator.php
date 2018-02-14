@@ -18,28 +18,16 @@ namespace PHP\Structural\Decorator\Ingredient;
 abstract class PizzaDecorator
 {
     /**
-     * Price of a pizza.
-     *
-     * @var float
-     */
-    private $price;
-
-    /**
-     * Returns a pizza costs.
+     * Calculate and returns a pizza costs.
      *
      * @return float
      */
     abstract public function getCost(): float;
 
     /**
-     * Sets the basic price of a pizza.
+     * Returns a pizza description.
      *
-     * @param float $price
-     *
-     * @return float
+     * @return string
      */
-    public function setBasePrice(float $price)
-    {
-        return $this->price = $price;
-    }
+    abstract public function getDescription(): string;
 }

@@ -31,11 +31,13 @@ class DecoratorTest extends TestCase
     {
         // todo: small, medium, big
 
-        $pizza = new Pizza('new');
+        $pizza = new Pizza('Pizza');
         $this->assertEquals(10.0, $pizza->getCost());
+        $this->assertEquals('Pizza + ingredients:', $pizza->getDescription());
 
         $pizza = new TomatoSauce($pizza);
         $this->assertEquals(11.0, $pizza->getCost());
+        $this->assertEquals('Pizza + ingredients: TomatoSauce', $pizza->getDescription());
 
         // Pizza Funghi
         $funghi = new Pizza('Funghi');
@@ -43,13 +45,16 @@ class DecoratorTest extends TestCase
         $funghi = new TomatoSauce($funghi);
 
         $this->assertEquals(13.50, $funghi->getCost());
+        $this->assertEquals('Funghi + ingredients: Mushrooms TomatoSauce', $funghi->getDescription());
 
         // Pizza Rimini
         $rimini = new TomatoSauce(new Mushrooms(new Salami(new Pizza('Rimini'))));
         $this->assertEquals(18.0, $rimini->getCost());
+        $this->assertEquals('Rimini + ingredients: Salami Mushrooms TomatoSauce', $rimini->getDescription());
 
         // Pizza Extra Hot
         $extraHot = new JalapenoSauce(new Mushrooms(new Salami(new Pizza('Extra Hot'))));
         $this->assertEquals(21.5, $extraHot->getCost());
+        $this->assertEquals('Extra Hot + ingredients: Salami Mushrooms JalapenoSauce', $extraHot->getDescription());
     }
 }

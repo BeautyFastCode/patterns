@@ -20,29 +20,51 @@ use PHP\Structural\Decorator\Ingredient\PizzaDecorator;
 class Pizza extends PizzaDecorator
 {
     /**
-     * The name of the pizza.
+     * The description of the pizza.
      *
      * @var string
      */
-    private $name;
+    private $description;
+
+    /**
+     * The price of the pizza.
+     *
+     * @var float
+     */
+    private $price;
+
+    /**
+     * The amount of ingredients.
+     *
+     * @var int
+     */
+    public $amountIngredients;
 
     /**
      * Class constructor
      *
-     * @param string $name The name of the pizza
+     * @param string $description The description of the pizza
      */
-    public function __construct($name)
+    public function __construct($description)
     {
-        $this->name = $name;
+        $this->description = $description;
+        $this->price = 10.00;
+        $this->amountIngredients = 1;
     }
 
     /**
-     * Returns the pizza costs.
-     *
-     * @return float
+     * {@inheritdoc}
      */
     public function getCost(): float
     {
-        return $this->setBasePrice(10.00);
+        return $this->price;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getDescription(): string
+    {
+        return sprintf('%s + ingredients:', $this->description);
     }
 }
