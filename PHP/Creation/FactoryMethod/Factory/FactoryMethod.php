@@ -9,6 +9,7 @@
 
 namespace PHP\Creation\FactoryMethod\Factory;
 
+use PHP\Creation\FactoryMethod\Exception\CreatePizzaNotFoundException;
 use PHP\Creation\FactoryMethod\Pizza\Pizza;
 
 /**
@@ -25,6 +26,7 @@ abstract class FactoryMethod
      * @param $pizzaName string The Pizza name
      *
      * @return Pizza
+     * @throws CreatePizzaNotFoundException
      */
     abstract protected function createPizza($pizzaName): Pizza;
 
