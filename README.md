@@ -9,6 +9,7 @@
 | 5. | Static Factory | Creation | x |
 | 6. | Simple Factory | Creation | x |
 | 7. | Abstract Factory | Creation | x |
+| 8. | Singleton Factory | Creation | x |
 
 ---
 
