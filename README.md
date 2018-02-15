@@ -6,6 +6,9 @@
 | 2. | Observer or Publish/Subscribe | Behavioral | 2x |
 | 3. | Decorator | Structural | x |
 | 4. | Factory method | Creation | x |
+| 5. | Static Factory | Creation | x |
+| 6. | Simple Factory | Creation | x |
+| 7. | Abstract Factory | Creation | x |
 
 ---
 
