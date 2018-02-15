@@ -38,6 +38,10 @@ class FactoryMethodTest extends TestCase
         $this->assertEquals('Italian', $pizza->getName());
         $this->assertEquals(10.00, $pizza->getPrice());
 
+        $pizza = $americanFactory->orderPizza('Hawaii');
+        $this->assertEquals('Hawaii', $pizza->getName());
+        $this->assertEquals(15.50, $pizza->getPrice());
+
         $pizza = $italianFactory->orderPizza('Italian');
         $this->assertEquals('Italian', $pizza->getName());
         $this->assertEquals(7.50, $pizza->getPrice());
