@@ -11,6 +11,8 @@
 | 7. | Abstract Factory | Creation | x |
 | 8. | Singleton | Creation | x |
 | 9. | Command | Behavioral | x |
+| 10. | Adapter, Wrapper, Translator | Structural | x |
+| 11. | Facade | Structural | x |
 
 ---
 
