@@ -17,23 +17,31 @@ namespace PHP\Behavioral\Command;
  */
 class Android
 {
+    /**
+     * @param $direction
+     *
+     * @return string
+     */
     public function move($direction): string
     {
-        return sprintf('Android moving %s.', $direction);
+        return sprintf('Android moves %s.', $direction);
     }
 
+    /**
+     * @return string
+     */
     public function stop(): string
     {
         return sprintf('Android stops.');
     }
 
+    /**
+     * @param $direction
+     *
+     * @return string
+     */
     public function rotate($direction): string
     {
-        return sprintf('Android rotating %s.', $direction);
-    }
-
-    public function shot(): string
-    {
-        return sprintf('Android shots.');
+        return sprintf('Android rotates %s.', $direction);
     }
 }

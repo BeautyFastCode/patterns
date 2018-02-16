@@ -10,17 +10,17 @@
 namespace PHP\Behavioral\Command\Commands;
 
 /**
- * CommandInterface
+ * UndoableCommandInterface
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-interface CommandInterface
+interface UndoableCommandInterface extends CommandInterface
 {
     /**
-     * Execute a command.
+     * This command can be undone.
      *
-     * @return string The response
+     * @return string
      */
-    public function execute(): string;
+    public function undo(): string;
 }

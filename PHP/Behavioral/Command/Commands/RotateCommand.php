@@ -12,12 +12,12 @@ namespace PHP\Behavioral\Command\Commands;
 use PHP\Behavioral\Command\Android;
 
 /**
- * MoveCommand
+ * RotateCommand
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-class MoveCommand implements CommandInterface
+class RotateCommand implements UndoableCommandInterface
 {
     /**
      * Who executes the command.
@@ -27,7 +27,7 @@ class MoveCommand implements CommandInterface
     private $android;
 
     /**
-     * Move direction.
+     * Rotate direction.
      *
      * @var string
      */
@@ -37,7 +37,7 @@ class MoveCommand implements CommandInterface
      * Class constructor
      *
      * @param Android $android   Who executes the command
-     * @param string  $direction Move direction
+     * @param string  $direction Rotate direction
      */
     public function __construct(Android $android, $direction)
     {
@@ -48,8 +48,22 @@ class MoveCommand implements CommandInterface
     /**
      * {@inheritdoc}
      */
-    public function execute():string
+    public function execute(): string
     {
-        return $this->android->move($this->direction);
+        return $this->android->rotate($this->direction);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function undo(): string
+    {
+        $undoDirection = Direction::LEFT;
+
+        if ($this->direction === Direction::LEFT) {
+            $undoDirection = Direction::RIGHT;
+        }
+
+        return $this->android->rotate($undoDirection);
     }
 }

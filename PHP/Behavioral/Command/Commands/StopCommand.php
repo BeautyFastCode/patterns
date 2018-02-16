@@ -12,12 +12,12 @@ namespace PHP\Behavioral\Command\Commands;
 use PHP\Behavioral\Command\Android;
 
 /**
- * MoveCommand
+ * StopCommand
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-class MoveCommand implements CommandInterface
+class StopCommand implements CommandInterface
 {
     /**
      * Who executes the command.
@@ -27,22 +27,13 @@ class MoveCommand implements CommandInterface
     private $android;
 
     /**
-     * Move direction.
-     *
-     * @var string
-     */
-    private $direction;
-
-    /**
      * Class constructor
      *
-     * @param Android $android   Who executes the command
-     * @param string  $direction Move direction
+     * @param Android $android Who executes the command
      */
-    public function __construct(Android $android, $direction)
+    public function __construct(Android $android)
     {
         $this->android = $android;
-        $this->direction = $direction;
     }
 
     /**
@@ -50,6 +41,6 @@ class MoveCommand implements CommandInterface
      */
     public function execute():string
     {
-        return $this->android->move($this->direction);
+        return $this->android->stop();
     }
 }

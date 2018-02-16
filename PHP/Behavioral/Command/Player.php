@@ -10,6 +10,7 @@
 namespace PHP\Behavioral\Command;
 
 use PHP\Behavioral\Command\Commands\CommandInterface;
+use PHP\Behavioral\Command\Commands\UndoableCommandInterface;
 
 /**
  * The player `invoke` commands for the android.
@@ -20,16 +21,38 @@ use PHP\Behavioral\Command\Commands\CommandInterface;
 class Player
 {
     /**
+     * The command that the player invoke.
+     *
      * @var CommandInterface
      */
     private $command;
 
+    /**
+     * Invoke the command.
+     *
+     * @return string
+     */
     public function execute(): string
     {
         return $this->command->execute();
     }
 
     /**
+     * Undo the command.
+     *
+     * @return string
+     */
+    public function undo(): string
+    {
+        if($this->command instanceof UndoableCommandInterface) {
+            return $this->command->undo();
+        }
+        return sprintf('This command cannot be undone.');
+    }
+
+    /**
+     * Sets the command.
+     *
      * @param CommandInterface $command
      */
     public function setCommand(CommandInterface $command)

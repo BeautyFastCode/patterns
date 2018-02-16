@@ -39,9 +39,9 @@ class Direction
     const TOP = 'top';
 
     /**
-     * Direction bottom.
+     * Direction down.
      *
      * @var string
      */
-    const BOTTOM = 'bottom';
+    const DOWN = 'down';
 }
