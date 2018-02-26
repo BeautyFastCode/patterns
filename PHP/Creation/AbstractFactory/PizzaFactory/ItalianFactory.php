@@ -36,7 +36,7 @@ class ItalianFactory extends PizzaFactory
         $italianIngredient = new ItalianIngredientFactory();
 
         switch ($pizzaName) {
-            case  PizzaTypes::ITALIAN:
+            case PizzaTypes::ITALIAN:
                 return new ItalianPizza($italianIngredient);
 
             case PizzaTypes::MARGHERITA:
