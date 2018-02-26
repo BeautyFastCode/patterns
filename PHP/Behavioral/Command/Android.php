@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -18,11 +18,11 @@ namespace PHP\Behavioral\Command;
 class Android
 {
     /**
-     * @param $direction
+     * @param string $direction
      *
      * @return string
      */
-    public function move($direction): string
+    public function move(string $direction): string
     {
         return sprintf('Android moves %s.', $direction);
     }
@@ -36,11 +36,11 @@ class Android
     }
 
     /**
-     * @param $direction
+     * @param string $direction
      *
      * @return string
      */
-    public function rotate($direction): string
+    public function rotate(string $direction): string
     {
         return sprintf('Android rotates %s.', $direction);
     }

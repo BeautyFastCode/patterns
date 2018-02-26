@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -48,10 +48,12 @@ class Subscriber implements SplObserver
     /**
      * {@inheritdoc}
      */
-    public function update(SplSubject $subject)
+    public function update(SplSubject $subject): void
     {
         /* @var Publisher $subject */
         $this->messages[] = $subject->getMessage();
+
+        return;
     }
 
     /**
@@ -67,8 +69,10 @@ class Subscriber implements SplObserver
     /**
      * Remove all messages.
      */
-    public function removeMessages()
+    public function removeMessages(): void
     {
         $this->messages = [];
+
+        return;
     }
 }

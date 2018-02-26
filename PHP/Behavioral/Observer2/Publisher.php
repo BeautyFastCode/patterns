@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -47,7 +47,7 @@ class Publisher implements SplSubject
      *
      * @param string $name The publisher name
      */
-    public function __construct($name)
+    public function __construct(string $name)
     {
         $this->subscribers = new SplObjectStorage();
         $this->name = $name;
@@ -56,40 +56,48 @@ class Publisher implements SplSubject
     /**
      * {@inheritdoc}
      */
-    public function attach(SplObserver $observer)
+    public function attach(SplObserver $observer): void
     {
         $this->subscribers->attach($observer);
+
+        return;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function detach(SplObserver $observer)
+    public function detach(SplObserver $observer): void
     {
         /* @var Subscriber $observer */
         $observer->removeMessages();
         $this->subscribers->detach($observer);
+
+        return;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function notify()
+    public function notify(): void
     {
         foreach ($this->subscribers as $subscriber) {
             $subscriber->update($this);
         }
+
+        return;
     }
 
     /**
      * Create message for subscribers, and notify them.
      *
-     * @param $message
+     * @param string $message
      */
-    public function sendMessage($message)
+    public function sendMessage(string $message): void
     {
         $this->message = sprintf("%s: %s\n", $this->name, $message);
         $this->notify();
+
+        return;
     }
 
     /**

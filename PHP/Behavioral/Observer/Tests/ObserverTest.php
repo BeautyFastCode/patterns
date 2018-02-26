@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -24,7 +24,7 @@ class ObserverTest extends TestCase
     /**
      * The main test for Observer pattern.
      */
-    public function testMain()
+    public function testMain(): void
     {
         $publisher = new Publisher('IT News');
 
@@ -68,5 +68,7 @@ class ObserverTest extends TestCase
         $this->assertEquals(3, $subscriberA->getNumMessages());
         $this->assertEquals(0, $subscriberB->getNumMessages());
         $this->assertEquals(3, $subscriberC->getNumMessages());
+
+        return;
     }
 }

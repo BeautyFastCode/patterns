@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -38,7 +38,7 @@ class Publisher implements PublisherInterface
      *
      * @param string $name The publisher name
      */
-    public function __construct($name)
+    public function __construct(string $name)
     {
         $this->subscribers = [];
         $this->name = $name;
@@ -70,13 +70,15 @@ class Publisher implements PublisherInterface
     /**
      * {@inheritdoc}
      */
-    public function sendMessage($message)
+    public function sendMessage(string $message): void
     {
         $message = sprintf("%s: %s\n", $this->name, $message);
 
         foreach ($this->subscribers as $subscriber) {
             $subscriber->setMessage($message);
         }
+
+        return;
     }
 
     /**

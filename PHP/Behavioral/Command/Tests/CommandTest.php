@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -27,7 +27,7 @@ class CommandTest extends TestCase
     /**
      * Main test for Command design pattern.
      */
-    public function testMain()
+    public function testMain(): void
     {
         $player = new Player();
         $android = new Android();
@@ -40,12 +40,14 @@ class CommandTest extends TestCase
 
         $player->setCommand(new StopCommand($android));
         $this->assertEquals('Android stops.', $player->execute());
+
+        return;
     }
 
     /**
      * Test undoable command.
      */
-    public function testUndo()
+    public function testUndo(): void
     {
         $player = new Player();
         $android = new Android();
@@ -57,5 +59,7 @@ class CommandTest extends TestCase
         $player->setCommand(new MoveCommand($android, 'down'));
         $this->assertEquals('Android moves down.', $player->execute());
         $this->assertEquals('This command cannot be undone.', $player->undo());
+
+        return;
     }
 }

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -27,14 +27,14 @@ interface SubscriberInterface
     /**
      * Set the message.
      *
-     * @param $message
+     * @param string $message
      */
-    public function setMessage($message);
+    public function setMessage(string $message): void;
 
     /**
      * Remove all messages.
      */
-    public function removeMessages();
+    public function removeMessages(): void;
 
     /**
      * Get subscriber name.

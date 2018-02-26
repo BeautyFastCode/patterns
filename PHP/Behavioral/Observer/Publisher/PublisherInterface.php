@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -42,7 +42,7 @@ interface PublisherInterface
      *
      * @param $message string The message for subscribers
      */
-    public function sendMessage($message);
+    public function sendMessage(string $message): void;
 
     /**
      * Returns the amount of subscribers from subscriber list.

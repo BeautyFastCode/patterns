@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -39,7 +39,7 @@ class MoveCommand implements CommandInterface
      * @param Android $android   Who executes the command
      * @param string  $direction Move direction
      */
-    public function __construct(Android $android, $direction)
+    public function __construct(Android $android, string $direction)
     {
         $this->android = $android;
         $this->direction = $direction;

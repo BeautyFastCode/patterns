@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -56,8 +56,10 @@ class Player
      *
      * @param CommandInterface $command
      */
-    public function setCommand(CommandInterface $command)
+    public function setCommand(CommandInterface $command): void
     {
         $this->command = $command;
+
+        return;
     }
 }

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -53,17 +53,21 @@ class Subscriber implements SubscriberInterface
     /**
      * {@inheritdoc}
      */
-    public function setMessage($message)
+    public function setMessage(string $message): void
     {
         $this->messages[] = $message;
+
+        return;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function removeMessages()
+    public function removeMessages(): void
     {
         $this->messages = [];
+
+        return;
     }
 
     /**
