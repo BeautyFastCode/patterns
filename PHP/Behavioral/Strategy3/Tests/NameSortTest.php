@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * (c) BeautyFastCode.com
  *
@@ -67,12 +69,12 @@ class NameSortTest extends TestCase
     /**
      * Test sorting by a name ascending.
      *
-     * @param $products
-     * @param $expected
+     * @param array $products
+     * @param array $expected
      *
      * @dataProvider provideProductsNameAsc
      */
-    public function testSortNameAsc($products, $expected)
+    public function testSortNameAsc(array $products, array $expected): void
     {
         $basket = new Basket();
 
@@ -84,6 +86,8 @@ class NameSortTest extends TestCase
 
         $result = $basket->sortProductsBy(new NameSort(), Order::ASC);
         $this->assertEquals($expected, $result);
+
+        return;
     }
 
     /**
@@ -129,12 +133,12 @@ class NameSortTest extends TestCase
     /**
      * Test sorting by a name descending.
      *
-     * @param $products
-     * @param $expected
+     * @param array $products
+     * @param array $expected
      *
      * @dataProvider provideProductsNameDesc
      */
-    public function testSortNameDesc($products, $expected)
+    public function testSortNameDesc(array $products, array $expected): void
     {
         $basket = new Basket();
 
@@ -146,5 +150,7 @@ class NameSortTest extends TestCase
 
         $result = $basket->sortProductsBy(new NameSort(), Order::DESC);
         $this->assertEquals($expected, $result);
+
+        return;
     }
 }

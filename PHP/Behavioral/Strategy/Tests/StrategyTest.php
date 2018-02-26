@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * (c)
  *
@@ -25,7 +27,7 @@ class StrategyTest extends TestCase
     /**
      * Main loop.
      */
-    public function testMain()
+    public function testMain(): void
     {
         $expected = [
             "Unit says: I'm the Ship\n",
@@ -42,5 +44,7 @@ class StrategyTest extends TestCase
 
         $this->assertEquals($expected[2], $walking->speak());
         $this->assertEquals($expected[3], $walking->behaviorAction());
+
+        return;
     }
 }

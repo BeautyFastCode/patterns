@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * (c) BeautyFastCode.com
  *
@@ -22,7 +24,7 @@ class NameSort implements SortInterface
     /**
      * {@inheritdoc}
      */
-    public function sort($products, $criteria): array
+    public function sort(array $products, string $criteria): array
     {
         if (Order::ASC == $criteria) {
             usort($products, [
@@ -44,7 +46,8 @@ class NameSort implements SortInterface
      */
     public function sortAsc(Product $productA, Product $productB): int
     {
-        return $productA->getName() <=> $productB->getName();
+        return ($productA->getName() < $productB->getName()) ? -1 :
+            (($productA->getName() > $productB->getName()) ? 1 : 0);
     }
 
     /**
@@ -52,6 +55,7 @@ class NameSort implements SortInterface
      */
     public function sortDesc(Product $productA, Product $productB): int
     {
-        return ($productA->getName() < $productB->getName()) ? 1 : (($productA->getName() > $productB->getName()) ? -1 : 0);
+        return ($productA->getName() < $productB->getName()) ? 1 :
+            (($productA->getName() > $productB->getName()) ? -1 : 0);
     }
 }

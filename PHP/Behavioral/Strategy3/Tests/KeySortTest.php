@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * (c) BeautyFastCode.com
  *
@@ -72,7 +74,7 @@ class KeySortTest extends TestCase
      *
      * @dataProvider provideProductsKeyAsc
      */
-    public function testSortKeyAsc($products, $expected)
+    public function testSortKeyAsc(array $products, array $expected): void
     {
         $basket = new Basket();
 
@@ -84,6 +86,8 @@ class KeySortTest extends TestCase
 
         $result = $basket->sortProductsBy(new KeySort(), Order::ASC);
         $this->assertEquals($expected, $result);
+
+        return;
     }
 
     /**
@@ -134,7 +138,7 @@ class KeySortTest extends TestCase
      *
      * @dataProvider provideProductsKeyDesc
      */
-    public function testSortKeyDesc($products, $expected)
+    public function testSortKeyDesc(array $products, array $expected): void
     {
         $basket = new Basket();
 
@@ -146,5 +150,7 @@ class KeySortTest extends TestCase
 
         $result = $basket->sortProductsBy(new KeySort(), Order::DESC);
         $this->assertEquals($expected, $result);
+
+        return;
     }
 }

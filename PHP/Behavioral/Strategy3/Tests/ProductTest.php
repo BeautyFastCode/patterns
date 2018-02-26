@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * (c) BeautyFastCode.com
  *
@@ -21,7 +23,7 @@ use PHPUnit\Framework\TestCase;
  */
 class ProductTest extends TestCase
 {
-    public function testCreateProduct()
+    public function testCreateProduct(): void
     {
         $date = new DateTime('2019-03-16');
         $product = new Product(1, 'milky', 4.99, $date);
@@ -30,5 +32,7 @@ class ProductTest extends TestCase
         $this->assertEquals('milky', $product->getName());
         $this->assertEquals(4.99, $product->getPrice());
         $this->assertEquals($date, $product->getDate());
+
+        return;
     }
 }

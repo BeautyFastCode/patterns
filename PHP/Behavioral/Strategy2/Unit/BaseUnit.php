@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * (c) BeautyFastCode.com
  *
@@ -41,10 +43,10 @@ abstract class BaseUnit
     private $behavior;
 
     /**
-     * @param string $name     The name of the Unit
-     * @param        $behavior
+     * @param string            $name     The name of the Unit
+     * @param BehaviorInterface $behavior What behavior have unit
      */
-    public function __construct($name, BehaviorInterface $behavior)
+    public function __construct(string $name, BehaviorInterface $behavior)
     {
         $this->name = $name;
         $this->className = $this->getClassName();

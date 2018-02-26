@@ -3,6 +3,16 @@
 | Lp. | Pattern | Category | PHP |
 | --- | ------- | -------- | --- |
 | 1. | Strategy | Behavioral | 3x |
+| 2. | Observer or Publish/Subscribe | Behavioral | 2x |
+| 3. | Decorator | Structural | x |
+| 4. | Factory method | Creation | x |
+| 5. | Static Factory | Creation | x |
+| 6. | Simple Factory | Creation | x |
+| 7. | Abstract Factory | Creation | x |
+| 8. | Singleton | Creation | x |
+| 9. | Command | Behavioral | x |
+| 10. | Adapter, Wrapper, Translator | Structural | x |
+| 11. | Facade | Structural | x |
 
 ---
 
@@ -12,6 +22,7 @@
 
 ```
 $ vendor/bin/phpunit
+$ PHP/vendor/bin/phpunit -c PHP/phpunit.xml.dist 
 ```
 
 #### 2. The `PHP Coding Standard Fixer` 
@@ -30,8 +41,8 @@ tokenizes PHP, JavaScript and CSS files and detects violations of a defined set 
 $ vendor/bin/phpcs -h       # detect violations
 $ vendor/bin/phpcbf -h      # automatically correct coding standard violations
 
-$ vendor/bin/phpcs --standard=PSR2 Behavioral
-$ vendor/bin/phpcbf --standard=PSR2 Behavioral
+$ vendor/bin/phpcs --standard=PSR2 Behavioral Creation Structural
+$ vendor/bin/phpcbf --standard=PSR2 Behavioral Creation Structural
 ```
 
 Printing multiple reports to files.
