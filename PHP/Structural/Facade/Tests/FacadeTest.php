@@ -34,10 +34,15 @@ class FacadeTest extends TestCase
         /*
          * The getMockBuilder($type) method customize the test double generation.
          */
-        $system = $this->getMockBuilder(System::class)->getMock();
+        $system = $this->getMockBuilder(System::class)
+            ->setMethods(['login', 'logout', 'setVolume'])
+            ->disableAutoload()
+            ->getMock();
 
         /** @var Browser|MockObject $browser */
-        $browser = $this->getMockBuilder(Browser::class)->getMock();
+        $browser = $this->getMockBuilder(Browser::class)
+            ->setMethods(['start', 'close', 'searchMovie', 'getTitle', 'pressPlay', 'pressStop'])
+            ->getMock();
 
         $browser->method('getTitle')
             ->willReturn('Gladiator');
