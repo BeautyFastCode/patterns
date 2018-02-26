@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +14,7 @@ namespace PHP\Structural\Adapter;
 use PHP\Structural\Adapter\Vendor\RobotInterface;
 
 /**
- * CyborgAdapter
+ * CyborgAdapter.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -27,7 +29,7 @@ class CyborgAdapter implements CyborgInterface
     private $robot;
 
     /**
-     * Class constructor
+     * Class constructor.
      *
      * @param RobotInterface $robot A robot that needs to be adapted
      */
@@ -37,20 +39,20 @@ class CyborgAdapter implements CyborgInterface
     }
 
     /**
-     * Transform robot->canWalk() to robot->move()
+     * Transform robot->canWalk() to robot->move().
      *
      * {@inheritdoc}
      */
     public function move(): string
     {
         $walk = $this->robot->canWalk();
-        $nameSpace = explode("\\", $walk[0]);
+        $nameSpace = explode('\\', $walk[0]);
 
         return sprintf('%s moves.', $nameSpace[4]);
     }
 
     /**
-     * Transform robot->canSpeak() to robot->says()
+     * Transform robot->canSpeak() to robot->says().
      *
      * {@inheritdoc}
      */

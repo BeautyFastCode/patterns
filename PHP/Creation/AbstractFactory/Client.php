@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -27,7 +29,7 @@ class Client
     private $pizzaFactory;
 
     /**
-     * Class constructor
+     * Class constructor.
      *
      * @param PizzaFactory $pizzaFactory Factory where the client orders a pizza
      */

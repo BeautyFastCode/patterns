@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -17,7 +19,7 @@ use PHP\Creation\SimpleFactory\Pizza\Pizza;
 use PHP\Creation\SimpleFactory\Pizza\PizzaTypes;
 
 /**
- * SimpleFactory
+ * SimpleFactory.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -30,6 +32,7 @@ class SimpleFactory
      * @param string $pizzaName The pizza name
      *
      * @return Pizza
+     *
      * @throws CreatePizzaNotFoundException
      */
     public function orderPizza(string $pizzaName): Pizza

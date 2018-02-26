@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -10,7 +12,7 @@
 namespace PHP\Creation\StaticFactory\Pizza;
 
 /**
- * HawaiiPizza
+ * HawaiiPizza.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -18,7 +20,7 @@ namespace PHP\Creation\StaticFactory\Pizza;
 class HawaiiPizza extends Pizza
 {
     /**
-     * Pizza constructor
+     * Pizza constructor.
      */
     public function __construct()
     {

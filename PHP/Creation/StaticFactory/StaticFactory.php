@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -17,7 +19,7 @@ use PHP\Creation\StaticFactory\Pizza\Pizza;
 use PHP\Creation\StaticFactory\Pizza\PizzaTypes;
 
 /**
- * StaticFactory
+ * StaticFactory.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -30,6 +32,7 @@ final class StaticFactory
      * @param $pizzaName string The pizza name
      *
      * @return Pizza
+     *
      * @throws CreatePizzaNotFoundException
      */
     public static function orderPizza($pizzaName): Pizza
@@ -43,6 +46,7 @@ final class StaticFactory
 
             case PizzaTypes::ITALIAN:
                 $pizza = new ItalianPizza();
+
                 return $pizza;
         }
         throw new CreatePizzaNotFoundException($pizzaName);

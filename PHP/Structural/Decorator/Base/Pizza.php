@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -10,7 +12,7 @@
 namespace PHP\Structural\Decorator\Base;
 
 /**
- * Pizza
+ * Pizza.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -18,7 +20,7 @@ namespace PHP\Structural\Decorator\Base;
 class Pizza extends PizzaDecorator
 {
     /**
-     * Class constructor
+     * Class constructor.
      *
      * @param string $description The description of the pizza
      */

@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -14,7 +16,7 @@ use PHP\Structural\Entity\Laptop;
 use PHP\Structural\Entity\System;
 
 /**
- * CinemaFacade
+ * CinemaFacade.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -37,7 +39,7 @@ class CinemaFacade
     private $browser;
 
     /**
-     * Class constructor
+     * Class constructor.
      *
      * @param System  $system
      * @param Laptop  $laptop

@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -14,7 +16,7 @@ use PHP\Creation\AbstractFactory\Ingredient\Sauce;
 use PHP\Creation\AbstractFactory\Ingredient\Topping;
 
 /**
- * Pizza
+ * Pizza.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -50,7 +52,7 @@ abstract class Pizza
     private $topping;
 
     /**
-     * Pizza constructor
+     * Pizza constructor.
      *
      * @param string $name The Name of pizza
      */
@@ -64,7 +66,7 @@ abstract class Pizza
      *
      * @return Pizza
      */
-    abstract public function prepare(): Pizza;
+    abstract public function prepare(): self;
 
     /**
      * Returns list of ingredients.
@@ -75,16 +77,16 @@ abstract class Pizza
     {
         $listIngredients = '';
 
-        if ($this->name !== null) {
+        if (null !== $this->name) {
             $listIngredients = sprintf('%s:', $this->name);
         }
-        if ($this->dough !== null) {
+        if (null !== $this->dough) {
             $listIngredients = sprintf('%s %s,', $listIngredients, $this->dough);
         }
-        if ($this->topping !== null) {
+        if (null !== $this->topping) {
             $listIngredients = sprintf('%s %s,', $listIngredients, $this->topping);
         }
-        if ($this->sauce !== null) {
+        if (null !== $this->sauce) {
             $listIngredients = sprintf('%s %s.', $listIngredients, $this->sauce);
         }
 
@@ -92,11 +94,11 @@ abstract class Pizza
     }
 
     /**
-     * Returns the pizza name
+     * Returns the pizza name.
      *
      * @return string
      */
-    public function getName():string
+    public function getName(): string
     {
         return $this->name;
     }

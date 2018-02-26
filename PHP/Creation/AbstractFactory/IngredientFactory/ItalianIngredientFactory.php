@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -17,7 +19,7 @@ use PHP\Creation\AbstractFactory\Ingredient\TomatoSauce;
 use PHP\Creation\AbstractFactory\Ingredient\Topping;
 
 /**
- * ItalianIngredientFactory
+ * ItalianIngredientFactory.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -27,7 +29,7 @@ class ItalianIngredientFactory implements IngredientFactory
     /**
      * {@inheritdoc}
      */
-    function createDough(): Dough
+    public function createDough(): Dough
     {
         return new ThickDough();
     }
@@ -35,7 +37,7 @@ class ItalianIngredientFactory implements IngredientFactory
     /**
      * {@inheritdoc}
      */
-    function createTopping(): Topping
+    public function createTopping(): Topping
     {
         return new PepperoniTopping();
     }
@@ -43,7 +45,7 @@ class ItalianIngredientFactory implements IngredientFactory
     /**
      * {@inheritdoc}
      */
-    function createSauce(): Sauce
+    public function createSauce(): Sauce
     {
         return new TomatoSauce();
     }

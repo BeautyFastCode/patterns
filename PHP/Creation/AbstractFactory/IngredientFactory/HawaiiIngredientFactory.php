@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -8,6 +10,7 @@
  */
 
 namespace PHP\Creation\AbstractFactory\IngredientFactory;
+
 use PHP\Creation\AbstractFactory\Ingredient\DiabloSauce;
 use PHP\Creation\AbstractFactory\Ingredient\Dough;
 use PHP\Creation\AbstractFactory\Ingredient\PineappleTopping;
@@ -16,7 +19,7 @@ use PHP\Creation\AbstractFactory\Ingredient\ThinDough;
 use PHP\Creation\AbstractFactory\Ingredient\Topping;
 
 /**
- * HawaiiIngredientFactory
+ * HawaiiIngredientFactory.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -26,7 +29,7 @@ class HawaiiIngredientFactory implements IngredientFactory
     /**
      * {@inheritdoc}
      */
-    function createDough(): Dough
+    public function createDough(): Dough
     {
         return new ThinDough();
     }
@@ -34,7 +37,7 @@ class HawaiiIngredientFactory implements IngredientFactory
     /**
      * {@inheritdoc}
      */
-    function createTopping(): Topping
+    public function createTopping(): Topping
     {
         return new PineappleTopping();
     }
@@ -42,7 +45,7 @@ class HawaiiIngredientFactory implements IngredientFactory
     /**
      * {@inheritdoc}
      */
-    function createSauce(): Sauce
+    public function createSauce(): Sauce
     {
         return new DiabloSauce();
     }

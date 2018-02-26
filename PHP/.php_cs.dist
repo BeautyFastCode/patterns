@@ -1,7 +1,9 @@
 <?php
 
 $finder = PhpCsFixer\Finder::create()
-    ->in('Behavioral');
+    ->in('Behavioral')
+    ->in('Creation')
+    ->in('Structural');
 
 return PhpCsFixer\Config::create()
     ->setRules([

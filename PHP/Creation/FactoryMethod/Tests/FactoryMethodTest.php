@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -50,7 +52,7 @@ class FactoryMethodTest extends TestCase
     }
 
     /**
-     * Tests Exception in Italian Factory
+     * Tests Exception in Italian Factory.
      */
     public function testNotFoundHawaii(): void
     {
@@ -65,7 +67,7 @@ class FactoryMethodTest extends TestCase
     }
 
     /**
-     * Tests Exception in American Factory
+     * Tests Exception in American Factory.
      */
     public function testNotFoundRimini(): void
     {

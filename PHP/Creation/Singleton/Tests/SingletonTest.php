@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +14,7 @@ namespace PHP\Creation\Singleton;
 use PHPUnit\Framework\TestCase;
 
 /**
- * SingletonTest, test cases for singleton design anti-pattern ;)
+ * SingletonTest, test cases for singleton design anti-pattern ;).
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com

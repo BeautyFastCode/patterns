@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -10,7 +12,7 @@
 namespace PHP\Structural\Decorator\Base;
 
 /**
- * PizzaDecorator
+ * PizzaDecorator.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -32,11 +34,11 @@ abstract class PizzaDecorator
     private $pizza;
 
     /**
-     * Class constructor
+     * Class constructor.
      *
      * @param PizzaDecorator $pizza The pizza plus ingredients
      */
-    public function __construct(PizzaDecorator $pizza)
+    public function __construct(self $pizza)
     {
         $this->pizza = $pizza;
     }
@@ -49,7 +51,7 @@ abstract class PizzaDecorator
     abstract public function calculateCost(): float;
 
     /**
-     * Return the list of the pizza ingredients
+     * Return the list of the pizza ingredients.
      *
      * @return string
      */
@@ -58,7 +60,7 @@ abstract class PizzaDecorator
         $ingredients = sprintf('%s', $this->getDescription());
         $pizza = $this->pizza;
 
-        while ($pizza !== null && $pizza instanceof PizzaDecorator) {
+        while (null !== $pizza && $pizza instanceof self) {
             $ingredients = sprintf('%s, %s', $pizza->getDescription(), $ingredients);
             $pizza = $pizza->pizza;
         }
@@ -76,10 +78,11 @@ abstract class PizzaDecorator
         $count = 1;
         $pizza = $this->pizza;
 
-        while ($pizza !== null && $pizza instanceof PizzaDecorator) {
-            $count++;
+        while (null !== $pizza && $pizza instanceof self) {
+            ++$count;
             $pizza = $pizza->pizza;
         }
+
         return $count;
     }
 
@@ -110,7 +113,7 @@ abstract class PizzaDecorator
      *
      * @param PizzaDecorator|null $pizza
      */
-    public function setPizza(PizzaDecorator $pizza = null): void
+    public function setPizza(self $pizza = null): void
     {
         $this->pizza = $pizza;
 
@@ -122,7 +125,7 @@ abstract class PizzaDecorator
      *
      * @return PizzaDecorator
      */
-    public function getPizza(): PizzaDecorator
+    public function getPizza(): self
     {
         return $this->pizza;
     }

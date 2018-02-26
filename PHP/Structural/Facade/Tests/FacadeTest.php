@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -14,7 +16,6 @@ use PHP\Structural\Entity\Laptop;
 use PHP\Structural\Entity\System;
 use PHP\Structural\Facade\CinemaFacade;
 use PHPUnit\Framework\TestCase;
-
 use PHPUnit_Framework_MockObject_MockObject as MockObject;
 
 /**

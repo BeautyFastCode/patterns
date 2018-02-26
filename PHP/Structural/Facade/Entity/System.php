@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -10,7 +12,7 @@
 namespace PHP\Structural\Entity;
 
 /**
- * System
+ * System.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -19,15 +21,11 @@ interface System
 {
     /**
      * Login to the system.
-     *
-     * @return void
      */
     public function login(): void;
 
     /**
      * Log out from the system.
-     *
-     * @return void
      */
     public function logout(): void;
 
@@ -35,8 +33,6 @@ interface System
      * Sets the sound volume.
      *
      * @param $volume int
-     *
-     * @return void
      */
     public function setVolume(int $volume): void;
 }

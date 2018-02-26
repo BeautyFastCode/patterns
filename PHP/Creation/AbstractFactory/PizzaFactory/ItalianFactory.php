@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -17,7 +19,7 @@ use PHP\Creation\AbstractFactory\Pizza\Pizza;
 use PHP\Creation\AbstractFactory\Pizza\PizzaTypes;
 
 /**
- * ItalianFactory
+ * ItalianFactory.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com

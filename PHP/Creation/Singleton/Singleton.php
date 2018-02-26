@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -10,7 +12,7 @@
 namespace PHP\Creation\Singleton;
 
 /**
- * Singleton, classic example
+ * Singleton, classic example.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -27,9 +29,9 @@ class Singleton
     /***
      * Creates (first usage) and return the instance, lazy initialization.
      */
-    public static function getInstance(): Singleton
+    public static function getInstance(): self
     {
-        if (static::$uniqueInstance === null) {
+        if (null === static::$uniqueInstance) {
             static::$uniqueInstance = new static();
         }
 

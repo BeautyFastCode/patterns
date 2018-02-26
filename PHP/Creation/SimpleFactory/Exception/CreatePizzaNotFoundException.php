@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -20,7 +22,7 @@ use Exception;
 class CreatePizzaNotFoundException extends Exception
 {
     /**
-     * Class constructor
+     * Class constructor.
      *
      * @param string $pizzaName The Pizza name
      */

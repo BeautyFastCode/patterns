@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +14,7 @@ namespace PHP\Structural\Decorator\Ingredient;
 use PHP\Structural\Decorator\Base\PizzaDecorator;
 
 /**
- * Mushrooms
+ * Mushrooms.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com

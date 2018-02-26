@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -13,7 +15,7 @@ use PHP\Creation\FactoryMethod\Exception\CreatePizzaNotFoundException;
 use PHP\Creation\FactoryMethod\Pizza\Pizza;
 
 /**
- * FactoryMethod
+ * FactoryMethod.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -26,6 +28,7 @@ abstract class FactoryMethod
      * @param string $pizzaName The Pizza name
      *
      * @return Pizza
+     *
      * @throws CreatePizzaNotFoundException
      */
     abstract protected function createPizza(string $pizzaName): Pizza;

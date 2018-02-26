@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -10,7 +12,7 @@
 namespace PHP\Structural\Entity;
 
 /**
- * Laptop
+ * Laptop.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -19,15 +21,11 @@ interface Laptop
 {
     /**
      * Turn on laptop.
-     *
-     * @return void
      */
     public function on(): void;
 
     /**
      * Turn off laptop.
-     *
-     * @return void
      */
     public function off(): void;
 }

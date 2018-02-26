@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -10,7 +12,7 @@
 namespace PHP\Creation\SimpleFactory\Pizza;
 
 /**
- * Pizza
+ * Pizza.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -18,21 +20,21 @@ namespace PHP\Creation\SimpleFactory\Pizza;
 abstract class Pizza
 {
     /**
-     * The Name of pizza
+     * The Name of pizza.
      *
      * @var string
      */
     private $name;
 
     /**
-     * The Price of pizza
+     * The Price of pizza.
      *
      * @var float
      */
-    private  $price;
+    private $price;
 
     /**
-     * Pizza constructor
+     * Pizza constructor.
      *
      * @param string $name The Name of pizza
      */
@@ -42,7 +44,7 @@ abstract class Pizza
     }
 
     /**
-     * Returns pizza price
+     * Returns pizza price.
      *
      * @return float
      */
@@ -52,7 +54,7 @@ abstract class Pizza
     }
 
     /**
-     * Sets pizza name
+     * Sets pizza name.
      *
      * @param float $price
      */
@@ -64,11 +66,11 @@ abstract class Pizza
     }
 
     /**
-     * Returns pizza name
+     * Returns pizza name.
      *
      * @return string
      */
-    public function getName():string
+    public function getName(): string
     {
         return $this->name;
     }

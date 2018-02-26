@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -15,7 +17,7 @@ use PHP\Creation\FactoryMethod\Pizza\Pizza;
 use PHP\Creation\FactoryMethod\Pizza\PizzaTypes;
 
 /**
- * ItalianFactory
+ * ItalianFactory.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -29,7 +31,7 @@ class ItalianFactory extends FactoryMethod
      */
     protected function createPizza(string $pizzaName): Pizza
     {
-        if($pizzaName == PizzaTypes::ITALIAN) {
+        if (PizzaTypes::ITALIAN == $pizzaName) {
             return new ItalianPizza();
         }
         throw new CreatePizzaNotFoundException($pizzaName);

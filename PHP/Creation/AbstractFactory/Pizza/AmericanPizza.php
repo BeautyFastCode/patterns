@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +14,7 @@ namespace PHP\Creation\AbstractFactory\Pizza;
 use PHP\Creation\AbstractFactory\IngredientFactory\IngredientFactory;
 
 /**
- * AmericanPizza
+ * AmericanPizza.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -27,7 +29,7 @@ class AmericanPizza extends Pizza
     private $ingredientFactory;
 
     /**
-     * Pizza constructor
+     * Pizza constructor.
      *
      * @param IngredientFactory $ingredientFactory
      */

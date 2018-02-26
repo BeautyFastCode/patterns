@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -10,7 +12,7 @@
 namespace PHP\Structural\Entity;
 
 /**
- * Browser
+ * Browser.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -19,15 +21,11 @@ interface Browser
 {
     /**
      * Turn on browser.
-     *
-     * @return void
      */
     public function start(): void;
 
     /**
      * Turn off browser.
-     *
-     * @return void
      */
     public function close(): void;
 
@@ -35,8 +33,6 @@ interface Browser
      * Search for the movie.
      *
      * @param $title string The title of the movie
-     *
-     * @return void
      */
     public function searchMovie($title): void;
 
@@ -49,15 +45,11 @@ interface Browser
 
     /**
      * Pres play in the browser.
-     *
-     * @return void
      */
     public function pressPlay(): void;
 
     /**
      * Press stop in the browser.
-     *
-     * @return void
      */
     public function pressStop(): void;
 }

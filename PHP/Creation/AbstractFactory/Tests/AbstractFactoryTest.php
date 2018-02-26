@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -55,7 +57,7 @@ class AbstractFactoryTest extends TestCase
     }
 
     /**
-     * Tests the client
+     * Tests the client.
      */
     public function testClient(): void
     {
@@ -72,7 +74,7 @@ class AbstractFactoryTest extends TestCase
     }
 
     /**
-     * Tests Exception in Italian Factory
+     * Tests Exception in Italian Factory.
      */
     public function testNotFoundHawaii(): void
     {
@@ -88,7 +90,7 @@ class AbstractFactoryTest extends TestCase
     }
 
     /**
-     * Tests Exception in American Factory
+     * Tests Exception in American Factory.
      */
     public function testNotFoundRimini(): void
     {

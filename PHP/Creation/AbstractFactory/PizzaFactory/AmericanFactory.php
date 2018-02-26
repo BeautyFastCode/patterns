@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -20,7 +22,7 @@ use PHP\Creation\AbstractFactory\Pizza\Pizza;
 use PHP\Creation\AbstractFactory\Pizza\PizzaTypes;
 
 /**
- * AmericanFactory
+ * AmericanFactory.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -43,6 +45,7 @@ class AmericanFactory extends PizzaFactory
 
             case PizzaTypes::ITALIAN:
                 $pizza = new ItalianPizza(new ItalianIngredientFactory());
+
                 return $pizza;
         }
         throw new CreatePizzaNotFoundException($pizzaName);

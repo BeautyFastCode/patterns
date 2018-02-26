@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +14,7 @@ namespace PHP\Creation\AbstractFactory\PizzaFactory;
 use PHP\Creation\AbstractFactory\Pizza\Pizza;
 
 /**
- * PizzaFactory
+ * PizzaFactory.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com

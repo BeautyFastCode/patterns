@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -20,10 +22,10 @@ class Robot implements RobotInterface
     /**
      * {@inheritdoc}
      */
-    public function canWalk():array
+    public function canWalk(): array
     {
         return [
-            Robot::class,
+            self::class,
             'walk',
         ];
     }

@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -14,7 +16,7 @@ use PHP\Creation\AbstractFactory\Ingredient\Sauce;
 use PHP\Creation\AbstractFactory\Ingredient\Topping;
 
 /**
- * IngredientFactory
+ * IngredientFactory.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com

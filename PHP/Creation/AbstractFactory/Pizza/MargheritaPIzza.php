@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -8,10 +10,11 @@
  */
 
 namespace PHP\Creation\AbstractFactory\Pizza;
+
 use PHP\Creation\AbstractFactory\IngredientFactory\IngredientFactory;
 
 /**
- * MargheritaPizza
+ * MargheritaPizza.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -26,7 +29,7 @@ class MargheritaPizza extends Pizza
     private $ingredientFactory;
 
     /**
-     * Pizza constructor
+     * Pizza constructor.
      *
      * @param IngredientFactory $ingredientFactory
      */
@@ -45,4 +48,5 @@ class MargheritaPizza extends Pizza
         $this->setSauce($this->ingredientFactory->createSauce());
 
         return $this;
-    }}
+    }
+}
