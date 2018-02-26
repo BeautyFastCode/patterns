@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -23,7 +23,7 @@ class AdapterTest extends TestCase
     /**
      * Tests the adapter design pattern.
      */
-    public function testMain()
+    public function testMain(): void
     {
         $cyborg = new Cyborg();
         $this->assertEquals('Cyborg moves.', $cyborg->move());
@@ -41,5 +41,7 @@ class AdapterTest extends TestCase
         $adaptedRobot = new CyborgAdapter($robot);
         $this->assertEquals('Robot moves.', $adaptedRobot->move());
         $this->assertEquals('I\'m the Robot.', $adaptedRobot->says());
+
+        return;
     }
 }

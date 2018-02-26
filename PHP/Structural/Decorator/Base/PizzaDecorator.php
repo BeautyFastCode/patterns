@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -20,7 +20,7 @@ abstract class PizzaDecorator
     /**
      * The description of the pizza.
      *
-     * @var array
+     * @var string
      */
     private $description;
 
@@ -98,9 +98,11 @@ abstract class PizzaDecorator
      *
      * @param string $description
      */
-    public function setDescription($description)
+    public function setDescription(string $description): void
     {
         $this->description = $description;
+
+        return;
     }
 
     /**
@@ -108,9 +110,11 @@ abstract class PizzaDecorator
      *
      * @param PizzaDecorator|null $pizza
      */
-    public function setPizza($pizza)
+    public function setPizza(PizzaDecorator $pizza = null): void
     {
         $this->pizza = $pizza;
+
+        return;
     }
 
     /**

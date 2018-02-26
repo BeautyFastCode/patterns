@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -28,7 +28,7 @@ class FacadeTest extends TestCase
     /**
      * Tests the facade design pattern.
      */
-    public function testMain()
+    public function testMain(): void
     {
         /*
          * The createMock($type) method immediately returns a test double object.
@@ -56,5 +56,7 @@ class FacadeTest extends TestCase
         $facade->stopWatchMovie();
 
         $this->assertEquals('Gladiator', $browser->getTitle());
+
+        return;
     }
 }

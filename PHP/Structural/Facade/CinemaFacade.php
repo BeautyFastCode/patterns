@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -55,7 +55,7 @@ class CinemaFacade
      *
      * @param $title string The title of the movie
      */
-    public function startWatchMovie($title)
+    public function startWatchMovie(string $title): void
     {
         $this->laptop->on();
         $this->system->login();
@@ -63,17 +63,20 @@ class CinemaFacade
         $this->browser->searchMovie($title);
         $this->browser->pressPlay();
         $this->system->setVolume(7);
+
+        return;
     }
 
     /**
      * Stop watch the movie.
-     *
      */
-    public function stopWatchMovie()
+    public function stopWatchMovie(): void
     {
         $this->browser->pressStop();
         $this->browser->close();
         $this->system->logout();
         $this->laptop->off();
+
+        return;
     }
 }

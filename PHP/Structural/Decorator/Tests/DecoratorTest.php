@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -27,7 +27,7 @@ class DecoratorTest extends TestCase
     /**
      * Tests the decorator design pattern.
      */
-    public function testMain()
+    public function testMain(): void
     {
         $pizza = new Pizza('Pizza');
 
@@ -65,5 +65,7 @@ class DecoratorTest extends TestCase
             'Extra Hot, Salami, Mushrooms, Jalapeno Sauce',
             $extraHot->listIngredients()
         );
+
+        return;
     }
 }

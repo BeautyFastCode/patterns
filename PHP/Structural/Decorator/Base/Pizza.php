@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -22,7 +22,7 @@ class Pizza extends PizzaDecorator
      *
      * @param string $description The description of the pizza
      */
-    public function __construct($description)
+    public function __construct(string $description)
     {
         parent::__construct($this);
 

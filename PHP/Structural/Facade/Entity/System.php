@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -38,5 +38,5 @@ interface System
      *
      * @return void
      */
-    public function setVolume($volume): void;
+    public function setVolume(int $volume): void;
 }
