@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -22,7 +22,7 @@ class KeySort implements SortInterface
     /**
      * {@inheritdoc}
      */
-    public function sort($products, $criteria): array
+    public function sort(array $products, string $criteria): array
     {
         if (Order::ASC == $criteria) {
             usort($products, [
@@ -45,11 +45,9 @@ class KeySort implements SortInterface
     public function sortAsc(Product $productA, Product $productB): int
     {
         /*
-         * <=> spaceship operator
-         *
-         * return ($a < $b) ? -1 : (($a > $b) ? 1 : 0);
+         * Ternary Operators (?:) - shorthand for if else
          */
-        return $productA->getKey() <=> $productB->getKey();
+        return ($productA->getKey() < $productB->getKey()) ? -1 : (($productA->getKey() > $productB->getKey()) ? 1 : 0);
     }
 
     /**

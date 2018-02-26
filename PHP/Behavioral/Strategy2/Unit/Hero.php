@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -31,7 +31,7 @@ class Hero extends BaseUnit
      *
      * @param string $power The power of the Hero
      */
-    public function __construct($name, $power)
+    public function __construct(string $name, int $power)
     {
         parent::__construct($name, new DoNothing());
 

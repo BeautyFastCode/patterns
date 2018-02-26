@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -29,7 +29,7 @@ class Strategy2Test extends TestCase
     /**
      * Main loop.
      */
-    public function testMain()
+    public function testMain(): void
     {
         $expected = [
             "Ship says: I'm the Galactic Destructor\n",
@@ -62,5 +62,7 @@ class Strategy2Test extends TestCase
 
         $robot->setLuck(new SmallLuck());
         $this->assertEquals($expected[8], $robot->getLuck());
+
+        return;
     }
 }

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -44,7 +44,7 @@ class Unit
      * @param string            $name     The name of the Unit
      * @param BehaviorInterface $behavior The behavior of the Unit
      */
-    public function __construct($name, BehaviorInterface $behavior)
+    public function __construct(string $name, BehaviorInterface $behavior)
     {
         $this->name = $name;
         $this->className = $this->getClassName();

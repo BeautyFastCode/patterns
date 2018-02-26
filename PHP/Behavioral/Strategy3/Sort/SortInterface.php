@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -27,7 +27,7 @@ interface SortInterface
      *
      * @return array
      */
-    public function sort($products, $criteria): array;
+    public function sort(array $products, string $criteria): array;
 
     /**
      * Sort ascending the Product property.

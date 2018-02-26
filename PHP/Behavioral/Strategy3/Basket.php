@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -39,9 +39,11 @@ class Basket
      *
      * @param Product $product
      */
-    public function addProduct(Product $product)
+    public function addProduct(Product $product): void
     {
         $this->products[] = $product;
+
+        return;
     }
 
     /**

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -53,7 +53,7 @@ class Product
      * @param float    $price The product price
      * @param DateTime $date  The product usefulness date
      */
-    public function __construct($key, $name, $price, $date)
+    public function __construct(int $key, string $name, float $price, DateTime $date)
     {
         $this->key = $key;
         $this->name = $name;
