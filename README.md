@@ -14,6 +14,8 @@
 | 10. | Adapter, Wrapper, Translator | Structural | x |
 | 11. | Facade | Structural | x |
 | 12. | Template method | Behavioral | x |
+| 13. | Iterator | Behavioral | x |
+| 14. | Composite | Structural | x |
 
 ---
 
