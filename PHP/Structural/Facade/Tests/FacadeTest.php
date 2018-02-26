@@ -32,18 +32,16 @@ class FacadeTest extends TestCase
     public function testMain(): void
     {
         /*
-         * The createMock($type) method immediately returns a test double object.
-         */
-        $system = $this->createMock(System::class);
-
-        /** @var Browser|MockObject $browser */
-        $browser = $this->createMock(Browser::class);
-        $browser->method('getTitle')
-            ->will($this->returnValue('Gladiator'));
-
-        /*
          * The getMockBuilder($type) method customize the test double generation.
          */
+        $system = $this->getMockBuilder(System::class)->getMock();
+
+        /** @var Browser|MockObject $browser */
+        $browser = $this->getMockBuilder(Browser::class)->getMock();
+
+        $browser->method('getTitle')
+            ->willReturn('Gladiator');
+
         $laptop = $this->getMockBuilder(Laptop::class)
             ->setMethods(['on', 'off'])
             ->disableAutoload()
