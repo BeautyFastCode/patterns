@@ -52,6 +52,7 @@ class NameSort implements SortInterface
      */
     public function sortDesc(Product $productA, Product $productB): int
     {
-        return ($productA->getName() < $productB->getName()) ? 1 : (($productA->getName() > $productB->getName()) ? -1 : 0);
+        return ($productA->getName() < $productB->getName()) ? 1 :
+            (($productA->getName() > $productB->getName()) ? -1 : 0);
     }
 }
