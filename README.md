@@ -22,6 +22,7 @@
 
 ```
 $ vendor/bin/phpunit
+$ PHP/vendor/bin/phpunit -c PHP/phpunit.xml.dist 
 ```
 
 #### 2. The `PHP Coding Standard Fixer` 

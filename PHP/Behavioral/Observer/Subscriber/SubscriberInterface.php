@@ -10,7 +10,7 @@
 namespace PHP\Behavioral\Observer\Subscriber;
 
 /**
- * SubscriberInterface
+ * SubscriberInterface.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -25,14 +25,14 @@ interface SubscriberInterface
     public function getNumMessages(): int;
 
     /**
-     * Set the message
+     * Set the message.
      *
      * @param $message
      */
     public function setMessage($message);
 
     /**
-     * Remove all messages
+     * Remove all messages.
      */
     public function removeMessages();
 

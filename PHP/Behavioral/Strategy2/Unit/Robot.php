@@ -44,7 +44,6 @@ class Robot extends BaseUnit
         $message = sprintf("I don't have luck\n");
 
         if ($this->luck instanceof LuckInterface && null !== $this->luck) {
-
             $luck = 'small';
             if ($this->luck->random() > 10) {
                 $luck = 'big';

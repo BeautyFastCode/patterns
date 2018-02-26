@@ -10,7 +10,7 @@
 namespace PHP\Behavioral\Command\Commands;
 
 /**
- * CommandInterface
+ * CommandInterface.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com

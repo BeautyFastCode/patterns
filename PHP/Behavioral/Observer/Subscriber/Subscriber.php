@@ -10,7 +10,7 @@
 namespace PHP\Behavioral\Observer\Subscriber;
 
 /**
- * Subscriber
+ * Subscriber.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com

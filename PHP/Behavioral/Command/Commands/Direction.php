@@ -10,7 +10,7 @@
 namespace PHP\Behavioral\Command\Commands;
 
 /**
- * Direction
+ * Direction.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com

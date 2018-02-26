@@ -14,7 +14,7 @@ use PHP\Behavioral\Observer\Subscriber\Subscriber;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ObserverTest
+ * ObserverTest.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com

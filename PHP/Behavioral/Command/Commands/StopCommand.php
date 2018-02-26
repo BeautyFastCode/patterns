@@ -12,7 +12,7 @@ namespace PHP\Behavioral\Command\Commands;
 use PHP\Behavioral\Command\Android;
 
 /**
- * StopCommand
+ * StopCommand.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -27,7 +27,7 @@ class StopCommand implements CommandInterface
     private $android;
 
     /**
-     * Class constructor
+     * Class constructor.
      *
      * @param Android $android Who executes the command
      */
@@ -39,7 +39,7 @@ class StopCommand implements CommandInterface
     /**
      * {@inheritdoc}
      */
-    public function execute():string
+    public function execute(): string
     {
         return $this->android->stop();
     }

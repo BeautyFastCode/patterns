@@ -14,7 +14,7 @@ use SplObserver;
 use SplSubject;
 
 /**
- * Publisher
+ * Publisher.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -66,7 +66,7 @@ class Publisher implements SplSubject
      */
     public function detach(SplObserver $observer)
     {
-        /** @var Subscriber $observer */
+        /* @var Subscriber $observer */
         $observer->removeMessages();
         $this->subscribers->detach($observer);
     }
@@ -82,7 +82,7 @@ class Publisher implements SplSubject
     }
 
     /**
-     * Create message for subscribers, and notify them
+     * Create message for subscribers, and notify them.
      *
      * @param $message
      */
@@ -93,7 +93,7 @@ class Publisher implements SplSubject
     }
 
     /**
-     * Returns the amount of subscribers
+     * Returns the amount of subscribers.
      *
      * @return int
      */
@@ -103,7 +103,7 @@ class Publisher implements SplSubject
     }
 
     /**
-     * Get the message
+     * Get the message.
      *
      * @return string
      */

@@ -8,10 +8,11 @@
  */
 
 namespace PHP\Behavioral\Observer\Publisher;
+
 use PHP\Behavioral\Observer\Subscriber\SubscriberInterface;
 
 /**
- * Publisher
+ * Publisher.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com

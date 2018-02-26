@@ -43,7 +43,7 @@ class CommandTest extends TestCase
     }
 
     /**
-     * Test undoable command
+     * Test undoable command.
      */
     public function testUndo()
     {

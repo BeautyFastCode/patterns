@@ -13,7 +13,7 @@ use SplObserver;
 use SplSubject;
 
 /**
- * Subscriber
+ * Subscriber.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -50,7 +50,7 @@ class Subscriber implements SplObserver
      */
     public function update(SplSubject $subject)
     {
-        /** @var Publisher $subject */
+        /* @var Publisher $subject */
         $this->messages[] = $subject->getMessage();
     }
 

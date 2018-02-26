@@ -12,7 +12,7 @@ namespace PHP\Behavioral\Command\Commands;
 use PHP\Behavioral\Command\Android;
 
 /**
- * RotateCommand
+ * RotateCommand.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -34,7 +34,7 @@ class RotateCommand implements UndoableCommandInterface
     private $direction;
 
     /**
-     * Class constructor
+     * Class constructor.
      *
      * @param Android $android   Who executes the command
      * @param string  $direction Rotate direction
@@ -60,7 +60,7 @@ class RotateCommand implements UndoableCommandInterface
     {
         $undoDirection = Direction::LEFT;
 
-        if ($this->direction === Direction::LEFT) {
+        if (Direction::LEFT === $this->direction) {
             $undoDirection = Direction::RIGHT;
         }
 

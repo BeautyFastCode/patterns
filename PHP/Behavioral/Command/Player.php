@@ -44,9 +44,10 @@ class Player
      */
     public function undo(): string
     {
-        if($this->command instanceof UndoableCommandInterface) {
+        if ($this->command instanceof UndoableCommandInterface) {
             return $this->command->undo();
         }
+
         return sprintf('This command cannot be undone.');
     }
 

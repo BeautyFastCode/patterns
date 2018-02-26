@@ -12,7 +12,7 @@ namespace PHP\Behavioral\Observer\Publisher;
 use PHP\Behavioral\Observer\Subscriber\SubscriberInterface;
 
 /**
- * PublisherInterface
+ * PublisherInterface.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -20,7 +20,7 @@ use PHP\Behavioral\Observer\Subscriber\SubscriberInterface;
 interface PublisherInterface
 {
     /**
-     * Add subscriber to list
+     * Add subscriber to list.
      *
      * @param SubscriberInterface $subscriber The Subscriber
      *
@@ -29,7 +29,7 @@ interface PublisherInterface
     public function addSubscriber(SubscriberInterface $subscriber): string;
 
     /**
-     * Remove subscriber from list
+     * Remove subscriber from list.
      *
      * @param SubscriberInterface $subscriber The Subscriber
      *
@@ -38,7 +38,7 @@ interface PublisherInterface
     public function removeSubscriber(SubscriberInterface $subscriber): string;
 
     /**
-     * Create message for subscribers - change object state
+     * Create message for subscribers - change object state.
      *
      * @param $message string The message for subscribers
      */
