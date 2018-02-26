@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 /*
  * (c) BeautyFastCode.com
@@ -39,11 +39,11 @@ class Client
     /**
      * The client is tasting a pizza.
      *
-     * @param $pizzaName string The Pizza name
+     * @param string $pizzaName The Pizza name
      *
      * @return string
      */
-    public function pizzaTasting($pizzaName)
+    public function pizzaTasting(string $pizzaName): string
     {
         $pizza = $this->pizzaFactory->orderPizza($pizzaName);
 

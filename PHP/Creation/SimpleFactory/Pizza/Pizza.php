@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -34,9 +34,9 @@ abstract class Pizza
     /**
      * Pizza constructor
      *
-     * @param $name string The Name of pizza
+     * @param string $name The Name of pizza
      */
-    public function __construct($name)
+    public function __construct(string $name)
     {
         $this->name = $name;
     }
@@ -56,9 +56,11 @@ abstract class Pizza
      *
      * @param float $price
      */
-    public function setPrice($price)
+    public function setPrice(float $price): void
     {
         $this->price = $price;
+
+        return;
     }
 
     /**

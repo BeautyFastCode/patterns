@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 /*
  * (c) BeautyFastCode.com
@@ -27,12 +27,12 @@ class SimpleFactory
     /**
      * Creates different types of pizzas.
      *
-     * @param $pizzaName string The pizza name
+     * @param string $pizzaName The pizza name
      *
      * @return Pizza
      * @throws CreatePizzaNotFoundException
      */
-    public function orderPizza($pizzaName): Pizza
+    public function orderPizza(string $pizzaName): Pizza
     {
         switch ($pizzaName) {
             case PizzaTypes::AMERICAN:
@@ -43,6 +43,7 @@ class SimpleFactory
 
             case PizzaTypes::ITALIAN:
                 $pizza = new ItalianPizza();
+
                 return $pizza;
         }
         throw new CreatePizzaNotFoundException($pizzaName);

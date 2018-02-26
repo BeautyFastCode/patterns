@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 /*
  * (c) BeautyFastCode.com
@@ -27,7 +27,7 @@ class ItalianFactory extends FactoryMethod
      *
      * {@inheritdoc}
      */
-    protected function createPizza($pizzaName): Pizza
+    protected function createPizza(string $pizzaName): Pizza
     {
         if($pizzaName == PizzaTypes::ITALIAN) {
             return new ItalianPizza();

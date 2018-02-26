@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 /*
  * (c) BeautyFastCode.com
@@ -22,20 +22,20 @@ abstract class PizzaFactory
     /**
      * Creates pizza.
      *
-     * @param $pizzaName string The Pizza name
+     * @param string $pizzaName The Pizza name
      *
      * @return Pizza
      */
-    abstract protected function createPizza($pizzaName): Pizza;
+    abstract protected function createPizza(string $pizzaName): Pizza;
 
     /**
      * What type of pizza you want?
      *
-     * @param $pizzaName string The Pizza name
+     * @param string $pizzaName The Pizza name
      *
      * @return Pizza
      */
-    public function orderPizza($pizzaName): Pizza
+    public function orderPizza(string $pizzaName): Pizza
     {
         $pizza = $this->createPizza($pizzaName);
 

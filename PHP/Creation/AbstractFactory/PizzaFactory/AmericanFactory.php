@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 /*
  * (c) BeautyFastCode.com
@@ -32,7 +32,7 @@ class AmericanFactory extends PizzaFactory
      *
      * {@inheritdoc}
      */
-    protected function createPizza($pizzaName): Pizza
+    protected function createPizza(string $pizzaName): Pizza
     {
         switch ($pizzaName) {
             case PizzaTypes::AMERICAN:

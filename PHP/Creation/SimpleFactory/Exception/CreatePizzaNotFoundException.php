@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 /*
  * (c) BeautyFastCode.com
@@ -24,7 +24,7 @@ class CreatePizzaNotFoundException extends Exception
      *
      * @param string $pizzaName The Pizza name
      */
-    public function __construct($pizzaName)
+    public function __construct(string $pizzaName)
     {
         $message = sprintf('I don\'t have \'%s\' type Pizza in an offer.', $pizzaName);
         parent::__construct($message);

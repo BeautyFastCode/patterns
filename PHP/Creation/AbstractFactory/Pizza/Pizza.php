@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 /*
  * (c) BeautyFastCode.com
@@ -52,9 +52,9 @@ abstract class Pizza
     /**
      * Pizza constructor
      *
-     * @param $name string The Name of pizza
+     * @param string $name The Name of pizza
      */
-    public function __construct($name)
+    public function __construct(string $name)
     {
         $this->name = $name;
     }
@@ -106,9 +106,11 @@ abstract class Pizza
      *
      * @param Dough $dough
      */
-    public function setDough(Dough $dough)
+    public function setDough(Dough $dough): void
     {
         $this->dough = $dough;
+
+        return;
     }
 
     /**
@@ -116,9 +118,11 @@ abstract class Pizza
      *
      * @param Sauce $sauce
      */
-    public function setSauce(Sauce $sauce)
+    public function setSauce(Sauce $sauce): void
     {
         $this->sauce = $sauce;
+
+        return;
     }
 
     /**
@@ -126,8 +130,10 @@ abstract class Pizza
      *
      * @param Topping $topping
      */
-    public function setTopping(Topping $topping)
+    public function setTopping(Topping $topping): void
     {
         $this->topping = $topping;
+
+        return;
     }
 }

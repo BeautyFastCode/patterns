@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -22,12 +22,14 @@ class SingletonTest extends TestCase
     /**
      * Tests the singleton design anti-pattern.
      */
-    public function testMain()
+    public function testMain(): void
     {
         $instanceA = Singleton::getInstance();
         $instanceB = Singleton::getInstance();
 
         $this->assertInstanceOf(Singleton::class, $instanceA);
         $this->assertSame($instanceA, $instanceB);
+
+        return;
     }
 }

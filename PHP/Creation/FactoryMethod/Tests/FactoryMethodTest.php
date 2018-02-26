@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -25,7 +25,7 @@ class FactoryMethodTest extends TestCase
     /**
      * Test the factory method design pattern.
      */
-    public function testMain()
+    public function testMain(): void
     {
         $americanFactory = new AmericanFactory();
         $italianFactory = new ItalianFactory();
@@ -45,12 +45,14 @@ class FactoryMethodTest extends TestCase
         $pizza = $italianFactory->orderPizza('Italian');
         $this->assertEquals('Italian', $pizza->getName());
         $this->assertEquals(7.50, $pizza->getPrice());
+
+        return;
     }
 
     /**
      * Tests Exception in Italian Factory
      */
-    public function testNotFoundHawaii()
+    public function testNotFoundHawaii(): void
     {
         $noHawaii = 'I don\'t have \'Hawaii\' type Pizza in an offer.';
         $italianFactory = new ItalianFactory();
@@ -58,12 +60,14 @@ class FactoryMethodTest extends TestCase
         $this->expectException(CreatePizzaNotFoundException::class);
         $this->expectExceptionMessage($noHawaii);
         $italianFactory->orderPizza('Hawaii');
+
+        return;
     }
 
     /**
      * Tests Exception in American Factory
      */
-    public function testNotFoundRimini()
+    public function testNotFoundRimini(): void
     {
         $noRimini = 'I don\'t have \'Rimini\' type Pizza in an offer.';
         $americanFactory = new AmericanFactory();
@@ -71,5 +75,7 @@ class FactoryMethodTest extends TestCase
         $this->expectException(CreatePizzaNotFoundException::class);
         $this->expectExceptionMessage($noRimini);
         $americanFactory->orderPizza('Rimini');
+
+        return;
     }
 }

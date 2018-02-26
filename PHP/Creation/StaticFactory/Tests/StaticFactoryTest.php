@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -26,7 +26,7 @@ class StaticFactoryTest extends TestCase
     /**
      * Tests the static factory design pattern.
      */
-    public function testMain()
+    public function testMain(): void
     {
         $pizza = StaticFactory::orderPizza('American');
 
@@ -45,12 +45,14 @@ class StaticFactoryTest extends TestCase
         $this->assertInstanceOf(HawaiiPizza::class, $pizza);
         $this->assertEquals('Hawaii', $pizza->getName());
         $this->assertEquals(15.50, $pizza->getPrice());
+
+        return;
     }
 
     /**
      * Tests the Exception.
      */
-    public function testNotFoundException()
+    public function testNotFoundException(): void
     {
         $noRimini = 'I don\'t have \'Rimini\' type Pizza in an offer.';
 
@@ -58,5 +60,7 @@ class StaticFactoryTest extends TestCase
         $this->expectExceptionMessage($noRimini);
 
         StaticFactory::orderPizza('Rimini');
+
+        return;
     }
 }
