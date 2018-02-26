@@ -13,6 +13,7 @@
 | 9. | Command | Behavioral | x |
 | 10. | Adapter, Wrapper, Translator | Structural | x |
 | 11. | Facade | Structural | x |
+| 12. | Template method | Behavioral | x |
 
 ---
 
