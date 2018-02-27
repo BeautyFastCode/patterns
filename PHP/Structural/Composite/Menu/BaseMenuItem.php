@@ -20,41 +20,35 @@ namespace PHP\Structural\Composite\Menu;
 abstract class BaseMenuItem
 {
     /**
+     * The label of menu item.
+     *
      * @var string
      */
     private $label;
 
+    /**
+     * Class constructor
+     *
+     * @param string $label The label of menu item
+     */
     public function __construct(string $label)
     {
         $this->label = $label;
     }
 
-    public function addItem(BaseMenuItem $menuItem): BaseMenuItem
+    /**
+     * Returns the menu item as an array.
+     *
+     * @return array
+     */
+    public function renderItem(): array
     {
-        return $this;
-    }
-
-    public function removeItem(BaseMenuItem $menuItem): BaseMenuItem
-    {
-        return $this;
-    }
-
-    public function getChildItem(int $childItem): BaseMenuItem
-    {
-        return $this;
-    }
-
-    public function getNumChildItems(): int
-    {
-        return 1;
-    }
-
-    public function render(): array
-    {
-        return [];
+        return [PropertyType::LABEL => $this->label];
     }
 
     /**
+     * Returns the label of menu item.
+     *
      * @return string
      */
     public function getLabel(): string
@@ -63,8 +57,9 @@ abstract class BaseMenuItem
     }
 
     /**
-     * @param string $label
+     * Set the label on menu item.
      *
+     * @param string $label
      * @return BaseMenuItem
      */
     public function setLabel(string $label): self

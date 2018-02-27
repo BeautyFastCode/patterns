@@ -17,13 +17,18 @@ namespace PHP\Structural\Composite\Menu;
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-class Menu extends BaseMenuItem
+class Menu extends BaseMenuItem implements ChildrenInterface
 {
     /**
+     * An array of child items.
+     *
      * @var array
      */
     private $items;
 
+    /**
+     * {@inheritdoc}
+     */
     public function __construct(string $label)
     {
         parent::__construct($label);
@@ -31,42 +36,75 @@ class Menu extends BaseMenuItem
         $this->items = [];
     }
 
-    public function addItem(BaseMenuItem $menuItem): BaseMenuItem
+    /**
+     * {@inheritdoc}
+     */
+    public function addItem(BaseMenuItem $menuItem): ChildrenInterface
     {
         $this->items[] = $menuItem;
 
         return $this;
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function removeItem(BaseMenuItem $menuItem): ChildrenInterface
+    {
+        foreach ($this->items as $key => $item) {
+            if($item === $menuItem) {
+                unset($this->items[$key]);
+            }
+        }
+
+        /*
+         * Re-indexing the array
+         */
+        $this->items = array_values($this->items);
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getItem(int $itemKey): BaseMenuItem
     {
         return $this->items[$itemKey];
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getNumChildItems(): int
     {
         return count($this->items);
     }
 
-    public function render(): array
+    /**
+     * {@inheritdoc}
+     */
+    public function renderChildren(): array
     {
-        $render = [
-            $this->getLabel(),
-            []
-        ];
+        $children = [];
 
-        /**@var BaseMenuItem $item **/
+        /**@var $item BaseMenuItem */
         foreach ($this->items as $item) {
-
-            if($item instanceof Menu) {
-                $render[1][] = $item->render();
-            }
-            else {
-                $render[1][] = $item->getLabel();
-            }
+            $children[] = $item->renderItem();
         }
 
-        return $render;
+        return $children;
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function renderItem(): array
+    {
+        return
+            [
+                PropertyType::LABEL    => $this->getLabel(),
+                PropertyType::CHILDREN => $this->renderChildren(),
+            ];
+    }
 }

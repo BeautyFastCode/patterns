@@ -12,18 +12,25 @@ declare(strict_types = 1);
 namespace PHP\Structural\Composite\Menu;
 
 /**
- * LabelItem
+ * PropertyType
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-class LabelItem extends BaseMenuItem
+class PropertyType
 {
     /**
-     * {@inheritdoc}
+     * @var string
      */
-    public function renderItem(): array
-    {
-        return [PropertyType::LABEL => strtoupper($this->getLabel())];
-    }
+    const LABEL = 'label';
+
+    /**
+     * @var string
+     */
+    const URL = 'url';
+
+    /**
+     * @var string
+     */
+    const CHILDREN = 'children';
 }

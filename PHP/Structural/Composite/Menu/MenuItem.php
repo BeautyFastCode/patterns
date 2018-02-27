@@ -19,5 +19,54 @@ namespace PHP\Structural\Composite\Menu;
  */
 class MenuItem extends BaseMenuItem
 {
+    /**
+     * The URL of the menu item.
+     *
+     * @var string
+     */
+    private $url;
 
+    /**
+     * {@inheritdoc}
+     */
+    public function __construct(string $name, string $url)
+    {
+        parent::__construct($name);
+
+        $this->url = $url;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function renderItem(): array
+    {
+        return [
+            PropertyType::LABEL => $this->getLabel(),
+            PropertyType::URL   => $this->getUrl(),
+        ];
+    }
+
+    /**
+     * Set the URL.
+     *
+     * @param string $url
+     * @return MenuItem
+     */
+    public function setUrl(string $url): self
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    /**
+     * Returns the URL.
+     *
+     * @return string
+     */
+    public function getUrl(): string
+    {
+        return $this->url;
+    }
 }
