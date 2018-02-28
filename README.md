@@ -17,6 +17,7 @@
 | 13. | Iterator | Behavioral | 2x |
 | 14. | Composite | Structural | x |
 | 15. | State | Behavioral | x |
+| 16. | Proxy | Structural | x |
 
 ---
 
