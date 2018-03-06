@@ -18,6 +18,7 @@
 | 14. | Composite | Structural | x |
 | 15. | State | Behavioral | x |
 | 16. | Proxy | Structural | x |
+| 17. | MVC (inside: Repository) | Compound | x |
 
 ---
 
