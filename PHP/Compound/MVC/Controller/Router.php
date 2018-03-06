@@ -47,25 +47,27 @@ class Router
     }
 
     /**
-     * Compares requested URI with the routes array.
+     * Compares requested URI
+     * todo: compare with the routes array.
      *
      * @param string $request_uri The requested URI
      */
     public function dispatch(string $request_uri): void
     {
-        foreach ($this->routes as $route) {
+        $controller = new Controller();
 
-            if ($route['uri'] === '/') {
+        $re = '/(\/post\/)([0-9]+)/';
+        $matches = [];
 
-                $controller = new Controller();
-
-                $controller->read(0);
-            }
-//            if ($route['uri'] === $request_uri) {
-//                return 'ok';
-//            }
+        if (preg_match($re, $request_uri, $matches)) {
+            $controller->read((int)$matches[2]);
+        } else {
+            $controller->list();
         }
-        // nothing to match, return not found
+
+        /*
+         * nothing to match, return not found
+         */
 //        throw new \Exception('No route matched.', 404);
 //        return '404 No route matched.';
 

@@ -29,13 +29,14 @@ class PostFixtures
     public static function loadFixtures(PostRepository $postRepository):array
     {
         $ids = [];
-        $amountOfPosts = 5;
+        $amountOfPosts = 6;
         $loremIpsum = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             'Nunc massa orci, tristique sed libero at.',
             'Donec vulputate accumsan vestibulum.',
             'Aliquam eu velit eget massa blandit aliquam.',
             'Proin lobortis nisl ac purus fringilla facilisis.',
+            ' Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
         ];
 
         for ($i = 0; $i < $amountOfPosts; $i++) {

@@ -33,7 +33,7 @@ $router->add([
     'action' => 'list',
 ]);
 $router->add([
-    'uri' => '/post/0',
+    'uri' => '/post/{id}',
     'action' => 'read',
 ]);
 

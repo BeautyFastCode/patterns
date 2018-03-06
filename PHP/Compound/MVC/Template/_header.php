@@ -15,16 +15,24 @@
         body {
             margin-top: 1rem;
         }
+        h2 span {
+            font-size: smaller;
+            color: lightgray;
+        }
+        .card {
+            margin-bottom: 1rem;
+        }
+
     </style>
 </head>
 <body>
 
 <div class="container">
     <h1>An example of the Model View Controller - Design Pattern.</h1>
-    <div>
+
+    <?php if ($_SERVER['REQUEST_URI'] !== '/') { ?>
         <a href="/" class="btn btn-primary">All Posts </a>
-        <a href="/post/0" class="btn btn-primary">First Post</a>
-        <p>Request URI: <?php echo $_SERVER['REQUEST_URI']; ?></p>
-    </div>
+    <?php } ?>
+
     <hr>
 </div>
