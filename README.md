@@ -20,6 +20,7 @@
 | 16. | Proxy | Structural | x |
 | 17. | MVC (inside: Repository) | Compound | x |
 | 18. | Dependency Injection | Structural | x |
+| 19. | Mediator | Behavioral | x |
 
 ---
 
