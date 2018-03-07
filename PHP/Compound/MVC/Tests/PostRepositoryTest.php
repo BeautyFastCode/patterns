@@ -31,7 +31,7 @@ class PostRepositoryTest extends TestCase
     {
         $repository = new PostRepository();
 
-        $this->assertEquals(5, count(PostFixtures::loadFixtures($repository)));
+        $this->assertEquals(6, count(PostFixtures::loadFixtures($repository)));
         $this->assertInstanceOf(Post::class, $repository->findById(0));
 
         // Find One
@@ -46,7 +46,7 @@ class PostRepositoryTest extends TestCase
 
         // Find All
         $posts = $repository->findAll();
-        $this->assertEquals(5, count($posts));
+        $this->assertEquals(6, count($posts));
 
         /**@var Post $postB */
         $postB = $posts[3];
@@ -103,12 +103,12 @@ class PostRepositoryTest extends TestCase
         PostFixtures::loadFixtures($repository);
 
         $posts = $repository->findAll();
-        $this->assertEquals(5, count($posts));
+        $this->assertEquals(6, count($posts));
 
         $repository->remove($posts[3]);
-        $this->assertEquals(4, count($repository->findAll()));
+        $this->assertEquals(5, count($repository->findAll()));
 
         $repository->remove($posts[1]);
-        $this->assertEquals(3, count($repository->findAll()));
+        $this->assertEquals(4, count($repository->findAll()));
     }
 }

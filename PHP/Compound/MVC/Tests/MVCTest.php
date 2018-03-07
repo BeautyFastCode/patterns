@@ -12,9 +12,10 @@ declare(strict_types = 1);
 namespace PHP\Compound\MVC\Tests;
 
 use PHPUnit\Framework\TestCase;
+use GuzzleHttp\Client;
 
 /**
- * MVCTest, test cases for the Model View Controller Design Pattern
+ * MVCTest, integration test cases for the Model View Controller Design Pattern
  *
  * First, start the PHP build-in server:
  * php -S 127.0.0.1:8000 -t PHP/Compound/MVC/Public
@@ -25,12 +26,104 @@ use PHPUnit\Framework\TestCase;
 class MVCTest extends TestCase
 {
     /**
-     * Tests for the MVC Design Pattern
+     * @var Client
      */
-    public function testMain(): void
+    private $client;
+
+    /**
+     * Test connection to the web page.
+     */
+    public function testConnection(): void
     {
-        $this->assertEquals(true, true);
+        $response = $this->client->request('GET');
+        $this->assertEquals(200, $response->getStatusCode());
 
         return;
+    }
+
+    /**
+     * Test index page, list of all posts.
+     */
+    public function testIndex(): void
+    {
+        $response = $this->client->request('GET', '/');
+        $this->assertEquals(200, $response->getStatusCode());
+
+        $body = $response->getBody();
+        $content = $body->getContents();
+
+        /*
+         * Match the title of the page.
+         */
+        $this->assertRegExp('/<title>MVC Design Pattern!<\/title>/', $content);
+
+        /*
+         * Match the header of the page.
+         *
+         * <h1>An example of the Model View Controller - Design Pattern.</h1>
+         */
+        $this->assertRegExp('/<h1>[a-zA-Z -.]+<\/h1>/', $content);
+
+        /*
+         * Match all cards.
+         */
+        $re = "/<div class=\"card\">/";
+        $matches = [];
+
+        preg_match_all($re, $content, $matches);
+
+        $this->assertEquals(6, count($matches[0]));
+
+        return;
+    }
+
+    /**
+     * Test show one post page.
+     */
+    public function testOnePost()
+    {
+        $response = $this->client->request('GET', '/post/0');
+        $this->assertEquals(200, $response->getStatusCode());
+
+        $body = $response->getBody();
+        $content = $body->getContents();
+
+        /*
+         * Match post title.
+         */
+        $this->assertRegExp('/<h2>[\n a-zA-Z]+<span>/', $content);
+
+        /*
+         * Match post ID.
+         */
+        $re = "/(<span>[\n <]+ID:)(.)([ ]+<\/span>)/";
+        $matches = [];
+
+        preg_match_all($re, $content, $matches);
+
+        $this->assertEquals(4, count($matches));
+        $this->assertEquals(0, $matches[2][0]);
+
+        /*
+         * Match post content.
+         */
+        $this->assertRegExp('/<p>[\na-zA-Z ,.]+<\/p>/', $content);
+
+    }
+
+    /**
+     * Runs always before test.
+     */
+    public function setUp()
+    {
+        $this->client = new Client(['base_uri' => 'http://127.0.0.1:8000/']);
+    }
+
+    /**
+     * Runs always after test.
+     */
+    public function tearDown()
+    {
+        $this->client = null;
     }
 }
