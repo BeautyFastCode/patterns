@@ -13,12 +13,10 @@ namespace PHP\Compound\MVC\Tests;
 
 use PHPUnit\Framework\TestCase;
 use GuzzleHttp\Client;
+use Symfony\Component\Process\Process;
 
 /**
  * MVCTest, integration test cases for the Model View Controller Design Pattern
- *
- * First, start the PHP build-in server:
- * php -S 127.0.0.1:8000 -t PHP/Compound/MVC/Public
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -29,6 +27,13 @@ class MVCTest extends TestCase
      * @var Client
      */
     private $client;
+
+    /**
+     * For auto start the PHP built-in server.
+     *
+     * @var Process
+     */
+    private static $process;
 
     /**
      * Test connection to the web page.
@@ -125,5 +130,31 @@ class MVCTest extends TestCase
     public function tearDown()
     {
         $this->client = null;
+    }
+
+    /**
+     * Runs always before first test.
+     */
+    public static function setUpBeforeClass()
+    {
+        /*
+         * First, start the PHP build-in server:
+         * php -S 127.0.0.1:8000 -t PHP/Compound/MVC/Public
+         */
+        self::$process = new Process("php -S 127.0.0.1:8000 -t PHP/Compound/MVC/Public");
+        self::$process->start();
+
+        /*
+         * Wait for server
+         */
+        usleep(100000);
+    }
+
+    /**
+     * Runs always after last test.
+     */
+    public static function tearDownAfterClass()
+    {
+        self::$process->stop();
     }
 }
