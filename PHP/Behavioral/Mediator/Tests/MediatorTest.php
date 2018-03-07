@@ -11,7 +11,7 @@ declare(strict_types = 1);
 
 namespace PHP\Behavioral\Mediator\Tests;
 
-use PHP\Behavioral\Mediator\Calendar;
+use PHP\Behavioral\Mediator\Mediator;
 use PHP\Behavioral\Mediator\SmartHouse\Clock;
 use PHP\Behavioral\Mediator\SmartHouse\CoffeeMachine;
 use PHPUnit\Framework\TestCase;
@@ -32,15 +32,19 @@ class MediatorTest extends TestCase
         $clock = new Clock();
         $coffeeMachine = new CoffeeMachine();
 
-        $calendar = new Calendar($clock, $coffeeMachine);
+        new Mediator($clock, $coffeeMachine);
 
-        $calendar->runSchedule('monday');
-        $this->assertEquals(true, $clock->isEnable());
-        $this->assertEquals('Strong Coffee', $coffeeMachine->getCoffee());
+        $clock->turnOn();
+        $this->assertEquals('Strong Coffee', $coffeeMachine->getCoffeeKind());
 
-        $calendar->runSchedule('weekend');
+        $coffeeMachine->make('Cappuccino');
         $this->assertEquals(false, $clock->isEnable());
-        $this->assertEquals('Cappuccino', $coffeeMachine->getCoffee());
+
+        $coffeeMachine->make('Strong Coffee');
+        $this->assertEquals(true, $clock->isEnable());
+
+        $clock->turnOff();
+        $this->assertEquals('Cappuccino', $coffeeMachine->getCoffeeKind());
 
         return;
     }

@@ -11,6 +11,8 @@ declare(strict_types = 1);
 
 namespace PHP\Behavioral\Mediator;
 
+use PHP\Behavioral\Mediator\SmartHouse\Colleague;
+
 /**
  * MediatorInterface
  *
@@ -20,9 +22,9 @@ namespace PHP\Behavioral\Mediator;
 interface MediatorInterface
 {
     /**
-     * Run the schedule for the day.
+     * Synchronization between the Colleague objects.
      *
-     * @param string $day
+     * @param Colleague $changingInClass The class whose state has changed
      */
-    public function runSchedule(string $day): void;
+    public function change(Colleague $changingInClass): void;
 }

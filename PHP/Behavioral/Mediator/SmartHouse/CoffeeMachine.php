@@ -20,20 +20,52 @@ namespace PHP\Behavioral\Mediator\SmartHouse;
 class CoffeeMachine extends Colleague
 {
     /**
+     * The kind of coffee.
+     *
      * @var string
      */
-    private $coffee;
+    private $coffeeKind;
 
-    public function make(string $coffee)
+    /**
+     * Class constructor
+     */
+    public function __construct()
     {
-        $this->coffee = $coffee;
+        $this->coffeeKind = '';
     }
 
     /**
+     * Make the coffee.
+     *
+     * @param string $coffeeKind
+     */
+    public function make(string $coffeeKind): void
+    {
+        $this->coffeeKind = $coffeeKind;
+        $this->getMediator()->change($this);
+
+        return;
+    }
+
+    /**
+     * Set the kind of coffee to the machine.
+     *
+     * @param string $coffeeKind
+     */
+    public function setCoffeeKind(string $coffeeKind): void
+    {
+        $this->coffeeKind = $coffeeKind;
+
+        return;
+    }
+
+    /**
+     * Returns the kind of coffee from the machine.
+     *
      * @return string
      */
-    public function getCoffee(): string
+    public function getCoffeeKind(): string
     {
-        return $this->coffee;
+        return $this->coffeeKind;
     }
 }

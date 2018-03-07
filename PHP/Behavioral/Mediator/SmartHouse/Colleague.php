@@ -13,7 +13,7 @@ namespace PHP\Behavioral\Mediator\SmartHouse;
 use PHP\Behavioral\Mediator\MediatorInterface;
 
 /**
- * Colleague
+ * Colleagues works together but only knows the Mediator, not other colleagues.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -21,15 +21,31 @@ use PHP\Behavioral\Mediator\MediatorInterface;
 abstract class Colleague
 {
     /**
+     * The MediatorInterface.
+     *
      * @var MediatorInterface
      */
     protected $mediatorInterface;
 
     /**
+     * Set the MediatorInterface.
+     *
      * @param MediatorInterface $mediatorInterface
      */
-    public function setMediator(MediatorInterface $mediatorInterface)
+    public function setMediator(MediatorInterface $mediatorInterface): void
     {
         $this->mediatorInterface = $mediatorInterface;
+
+        return;
+    }
+
+    /**
+     * Returns the MediatorInterface.
+     *
+     * @return MediatorInterface
+     */
+    public function getMediator(): MediatorInterface
+    {
+        return $this->mediatorInterface;
     }
 }

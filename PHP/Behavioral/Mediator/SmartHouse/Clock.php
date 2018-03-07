@@ -20,6 +20,8 @@ namespace PHP\Behavioral\Mediator\SmartHouse;
 class Clock extends Colleague
 {
     /**
+     * State of clock.
+     *
      * @var bool
      */
     private $enable;
@@ -29,26 +31,40 @@ class Clock extends Colleague
      */
     public function __construct()
     {
-        $this->turnOff();
-    }
-
-    /**
-     *
-     */
-    public function turnOn()
-    {
-        $this->enable = true;
-    }
-
-    /**
-     *
-     */
-    public function turnOff()
-    {
         $this->enable = false;
     }
 
     /**
+     * Turn on the clock.
+     */
+    public function turnOn()
+    {
+        $this->enable = true;
+        $this->getMediator()->change($this);
+    }
+
+    /**
+     * Turn off the clock.
+     */
+    public function turnOff()
+    {
+        $this->enable = false;
+        $this->getMediator()->change($this);
+    }
+
+    /**
+     * Set the state of the clock.
+     *
+     * @param boolean $enable
+     */
+    public function setEnable(bool $enable)
+    {
+        $this->enable = $enable;
+    }
+
+    /**
+     * Returns the state of the clock.
+     *
      * @return boolean
      */
     public function isEnable(): bool
