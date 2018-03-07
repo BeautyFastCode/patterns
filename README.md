@@ -19,6 +19,7 @@
 | 15. | State | Behavioral | x |
 | 16. | Proxy | Structural | x |
 | 17. | MVC (inside: Repository) | Compound | x |
+| 18. | Dependency Injection | Structural | x |
 
 ---
 
