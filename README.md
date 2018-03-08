@@ -22,6 +22,7 @@
 | 18. | Dependency Injection | Structural | x |
 | 19. | Mediator | Behavioral | x |
 | 20. | Builder | Creation | x |
+| 21. | Flyweight | Structural | x |
 
 ---
 
