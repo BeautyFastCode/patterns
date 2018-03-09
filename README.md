@@ -23,6 +23,7 @@
 | 19. | Mediator | Behavioral | x |
 | 20. | Builder | Creation | x |
 | 21. | Flyweight | Structural | x |
+| 22. | Unit of Work & Repository | Behavioral | x |
 
 ---
 
