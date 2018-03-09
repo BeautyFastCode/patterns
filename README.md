@@ -24,6 +24,7 @@
 | 20. | Builder | Creation | x |
 | 21. | Flyweight | Structural | x |
 | 22. | Unit of Work & Repository | Behavioral | x |
+| 23. | Fluent Interface | Structural | x |
 
 ---
 
