@@ -2,15 +2,15 @@
 
 | Lp. | Pattern | Category | PHP |
 | --- | ------- | -------- | --- |
-| 1. | Strategy | Behavioral | 3x |
-| 2. | Observer or Publish/Subscribe | Behavioral | 2x |
-| 3. | Decorator | Structural | x |
-| 4. | Factory method | Creation | x |
-| 5. | Static Factory | Creation | x |
-| 6. | Simple Factory | Creation | x |
-| 7. | Abstract Factory | Creation | x |
-| 8. | Singleton | Creation | x |
-| 9. | Command | Behavioral | x |
+| 01. | Strategy | Behavioral | 3x |
+| 02. | Observer or Publish/Subscribe | Behavioral | 2x |
+| 03. | Decorator | Structural | x |
+| 04. | Factory method | Creation | x |
+| 05. | Static Factory | Creation | x |
+| 06. | Simple Factory | Creation | x |
+| 07. | Abstract Factory | Creation | x |
+| 08. | Singleton | Creation | x |
+| 09. | Command | Behavioral | x |
 | 10. | Adapter, Wrapper, Translator | Structural | x |
 | 11. | Facade | Structural | x |
 | 12. | Template method | Behavioral | x |
@@ -25,6 +25,7 @@
 | 21. | Flyweight | Structural | x |
 | 22. | Unit of Work & Repository | Behavioral | x |
 | 23. | Fluent Interface | Structural | x |
+| 24. | Entity-Attribute-Value (EAV) | Other | x |
 
 ---
 

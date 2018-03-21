@@ -6,7 +6,7 @@
             <directory suffix="Test.php">Behavioral/*/Tests</directory>
             <directory suffix="Test.php">Compound/*/Tests</directory>
             <directory suffix="Test.php">Creation/*/Tests</directory>
-            <directory suffix="Test.php">More/*/Tests</directory>
+            <directory suffix="Test.php">Other/*/Tests</directory>
             <directory suffix="Test.php">Structural/*/Tests</directory>
         </testsuite>
     </testsuites>
@@ -16,6 +16,7 @@
             <directory suffix=".php">Behavioral/</directory>
             <directory suffix=".php">Compound/</directory>
             <directory suffix=".php">Creation/</directory>
+            <directory suffix=".php">Other/</directory>
             <directory suffix=".php">Structural/</directory>
 
             <exclude>
@@ -24,7 +25,7 @@
                 <directory>Compound/MVC/Public/</directory>
                 <directory>Compound/MVC/Template/</directory>
                 <directory suffix="Test.php">Creation/*/Tests</directory>
-                <directory suffix="Test.php">More/*/Tests</directory>
+                <directory suffix="Test.php">Other/*/Tests</directory>
                 <directory suffix="Test.php">Structural/*/Tests</directory>
             </exclude>
         </whitelist>
