@@ -48,19 +48,6 @@ class MenuItem extends BaseMenuItem
     }
 
     /**
-     * Set the URL.
-     *
-     * @param string $url
-     * @return MenuItem
-     */
-    public function setUrl(string $url): self
-    {
-        $this->url = $url;
-
-        return $this;
-    }
-
-    /**
      * Returns the URL.
      *
      * @return string

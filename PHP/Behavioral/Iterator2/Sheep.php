@@ -45,18 +45,4 @@ class Sheep
     {
         return $this->name;
     }
-
-    /**
-     * Sets the sheep name.
-     *
-     * @param string $name
-     *
-     * @return Sheep
-     */
-    public function setName(string $name): self
-    {
-        $this->name = $name;
-
-        return $this;
-    }
 }

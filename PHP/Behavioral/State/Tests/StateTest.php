@@ -117,6 +117,31 @@ class StateTest extends TestCase
             ]
             , $stateMachine->readGameLog());
 
+        $stateMachine->change('Main Menu');
+        $stateMachine->update(6);
+
+        $this->assertEquals(
+            [
+                'You go to the Main Menu',
+                'Displays Main Menu',
+                'You are leaving the Main Menu',
+                'You enter the village',
+                'You spend 2h in the village',
+                'You exit the village',
+                'Your life is 100',
+                'You are in the middle of the battle',
+                'Your life is 99',
+                'You enter the village',
+                'You spend 4h in the village',
+                'You exit the village',
+                'You go to the score screen',
+                'Your score is 1',
+                'You are leaving the score screen',
+                'You go to the Main Menu',
+                'Displays Main Menu',
+            ]
+            , $stateMachine->readGameLog());
+
         return;
     }
 }

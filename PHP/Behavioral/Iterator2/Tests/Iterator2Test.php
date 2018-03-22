@@ -37,6 +37,7 @@ class Iterator2Test extends TestCase
             ->addSheep(new Sheep('coco'));
 
         $this->assertEquals(3, $herd->countSheeps());
+        $this->assertEquals(0, $herd->key());
 
         $sheepsNames = '';
         foreach ($herd as $sheep) {

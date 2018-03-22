@@ -41,10 +41,7 @@ abstract class BaseMenuItem
      *
      * @return array
      */
-    public function renderItem(): array
-    {
-        return [PropertyType::LABEL => $this->label];
-    }
+    public abstract function renderItem(): array;
 
     /**
      * Returns the label of menu item.
@@ -54,18 +51,5 @@ abstract class BaseMenuItem
     public function getLabel(): string
     {
         return $this->label;
-    }
-
-    /**
-     * Set the label on menu item.
-     *
-     * @param string $label
-     * @return BaseMenuItem
-     */
-    public function setLabel(string $label): self
-    {
-        $this->label = $label;
-
-        return $this;
     }
 }
