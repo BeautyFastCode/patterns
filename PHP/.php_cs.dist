@@ -2,7 +2,9 @@
 
 $finder = PhpCsFixer\Finder::create()
     ->in('Behavioral')
+    ->in('Compound')
     ->in('Creation')
+    ->in('Other')
     ->in('Structural');
 
 return PhpCsFixer\Config::create()

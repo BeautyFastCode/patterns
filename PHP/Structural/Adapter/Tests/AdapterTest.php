@@ -9,8 +9,10 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace PHP\Structural\Adapter;
+namespace PHP\Structural\Adapter\Tests;
 
+use PHP\Structural\Adapter\Cyborg;
+use PHP\Structural\Adapter\CyborgAdapter;
 use PHP\Structural\Adapter\Vendor\Robot;
 use PHPUnit\Framework\TestCase;
 

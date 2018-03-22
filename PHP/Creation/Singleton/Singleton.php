@@ -47,6 +47,8 @@ class Singleton
 
     /**
      * Prevents from cloning.
+     *
+     * @codeCoverageIgnore
      */
     private function __clone()
     {
@@ -54,6 +56,8 @@ class Singleton
 
     /**
      * Prevents from being unserialized.
+     *
+     * @codeCoverageIgnore
      */
     private function __wakeup()
     {
