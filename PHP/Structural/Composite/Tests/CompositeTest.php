@@ -34,7 +34,9 @@ class CompositeTest extends TestCase
         $this->assertEquals(
             [
                 'label' => 'LABEL',
-            ], $label->renderItem());
+            ],
+            $label->renderItem()
+        );
 
         $item = new MenuItem('All Posts', '/posts');
 
@@ -42,7 +44,9 @@ class CompositeTest extends TestCase
             [
                 'label' => 'All Posts',
                 'url' => '/posts',
-            ], $item->renderItem());
+            ],
+            $item->renderItem()
+        );
 
         return;
     }
@@ -83,7 +87,9 @@ class CompositeTest extends TestCase
                     'label' => 'Categories',
                     'url' => '/categories',
                 ],
-            ], $postMenu->renderChildren());
+            ],
+            $postMenu->renderChildren()
+        );
 
         $this->assertEquals(
             [
@@ -104,7 +110,9 @@ class CompositeTest extends TestCase
                             'url' => '/categories',
                         ],
                     ],
-            ], $postMenu->renderItem());
+            ],
+            $postMenu->renderItem()
+        );
 
         return;
     }
@@ -128,7 +136,9 @@ class CompositeTest extends TestCase
                             'url' => '/posts',
                         ],
                     ],
-            ], $postMenu->renderItem());
+            ],
+            $postMenu->renderItem()
+        );
 
         /*
          * Main Menu
@@ -164,7 +174,9 @@ class CompositeTest extends TestCase
                             'url' => '/comments',
                         ],
                     ],
-            ], $mainMenu->renderItem());
+            ],
+            $mainMenu->renderItem()
+        );
 
         return;
     }

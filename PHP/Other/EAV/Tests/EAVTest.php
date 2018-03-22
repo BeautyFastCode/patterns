@@ -86,7 +86,8 @@ class EAVTest extends TestCase
                     '+99000000000',
                 ],
             ],
-            $entity->toArray());
+            $entity->toArray()
+        );
 
         return;
     }

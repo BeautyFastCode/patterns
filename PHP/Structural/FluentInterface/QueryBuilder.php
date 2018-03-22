@@ -118,7 +118,8 @@ class QueryBuilder
      */
     public function build(): string
     {
-        $this->query = sprintf('SELECT %s FROM %s WHERE %s ORDER %s',
+        $this->query = sprintf(
+            'SELECT %s FROM %s WHERE %s ORDER %s',
             $this->databaseName,
             $this->tableName,
             $this->condition,

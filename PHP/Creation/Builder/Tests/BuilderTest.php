@@ -34,7 +34,8 @@ class BuilderTest extends TestCase
 
         $this->assertEquals(
             '<header>Builder</header><p>Lorem ipsum.</p><p>Donec ut vehicula nisl.</p><footer>(c) 2018</footer>',
-            $pageDirector->buildPage($mainPageBuilder));
+            $pageDirector->buildPage($mainPageBuilder)
+        );
 
         return;
     }
@@ -49,7 +50,8 @@ class BuilderTest extends TestCase
 
         $this->assertEquals(
             '<article>Article Page</article>',
-            $pageDirector->buildPage($articlePageBuilder));
+            $pageDirector->buildPage($articlePageBuilder)
+        );
 
         return;
     }

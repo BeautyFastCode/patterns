@@ -44,7 +44,9 @@ class StateTest extends TestCase
             [
                 'You go to the Main Menu',
                 'Displays Main Menu',
-            ], $stateMachine->readGameLog());
+            ],
+            $stateMachine->readGameLog()
+        );
 
         $stateMachine->change('Map');
         $stateMachine->update(2);
@@ -56,7 +58,9 @@ class StateTest extends TestCase
                 'You are leaving the Main Menu',
                 'You enter the village',
                 'You spend 2h in the village',
-            ], $stateMachine->readGameLog());
+            ],
+            $stateMachine->readGameLog()
+        );
 
         $stateMachine->change('Battle');
         $stateMachine->update(3);
@@ -71,7 +75,9 @@ class StateTest extends TestCase
                 'You exit the village',
                 'Your life is 100',
                 'You are in the middle of the battle',
-            ], $stateMachine->readGameLog());
+            ],
+            $stateMachine->readGameLog()
+        );
 
         $stateMachine->change('Map');
         $stateMachine->update(4);
@@ -89,7 +95,9 @@ class StateTest extends TestCase
                 'Your life is 99',
                 'You enter the village',
                 'You spend 4h in the village',
-            ], $stateMachine->readGameLog());
+            ],
+            $stateMachine->readGameLog()
+        );
 
         $stateMachine->change('Score');
         $stateMachine->update(5);
@@ -110,7 +118,9 @@ class StateTest extends TestCase
                 'You exit the village',
                 'You go to the score screen',
                 'Your score is 1',
-            ], $stateMachine->readGameLog());
+            ],
+            $stateMachine->readGameLog()
+        );
 
         $stateMachine->change('Main Menu');
         $stateMachine->update(6);
@@ -134,7 +144,9 @@ class StateTest extends TestCase
                 'You are leaving the score screen',
                 'You go to the Main Menu',
                 'Displays Main Menu',
-            ], $stateMachine->readGameLog());
+            ],
+            $stateMachine->readGameLog()
+        );
 
         return;
     }

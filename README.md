@@ -54,8 +54,8 @@ tokenizes PHP, JavaScript and CSS files and detects violations of a defined set 
 $ vendor/bin/phpcs -h       # detect violations
 $ vendor/bin/phpcbf -h      # automatically correct coding standard violations
 
-$ vendor/bin/phpcs --standard=PSR2 Behavioral Creation Structural
-$ vendor/bin/phpcbf --standard=PSR2 Behavioral Creation Structural
+$ vendor/bin/phpcs --standard=PSR2 Behavioral Compound Creation Other Structural
+$ vendor/bin/phpcbf --standard=PSR2 Behavioral Compound Creation Other Structural
 ```
 
 Printing multiple reports to files.

@@ -31,7 +31,9 @@ class ProxyTest extends TestCase
         $image = new Image('big-cat.jpg');
 
         $this->assertEquals(
-            'The big-cat.jpg image is shown on the screen.', $image->show());
+            'The big-cat.jpg image is shown on the screen.',
+            $image->show()
+        );
 
         return;
     }
@@ -44,10 +46,14 @@ class ProxyTest extends TestCase
         $image = new ProxyImage('big-cat.jpg');
 
         $this->assertEquals(
-            'Lazy Loading the big-cat.jpg ...', $image->show());
+            'Lazy Loading the big-cat.jpg ...',
+            $image->show()
+        );
 
         $this->assertEquals(
-            'The big-cat.jpg image is shown on the screen.', $image->show());
+            'The big-cat.jpg image is shown on the screen.',
+            $image->show()
+        );
 
         return;
     }

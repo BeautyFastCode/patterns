@@ -46,7 +46,8 @@ abstract class PageBuilder implements PageBuilderInterface
         foreach ($this->page->getElements() as $element) {
             /** @var Element $element */
             if ($element instanceof Element) {
-                $htmlPage = sprintf('%s%s%s%s',
+                $htmlPage = sprintf(
+                    '%s%s%s%s',
                     $htmlPage,
                     $element->getStartTag(),
                     $element->getContent(),

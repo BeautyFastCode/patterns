@@ -58,7 +58,8 @@ class Tree
             'The $s Tree is showing on position: %s, %s.',
             $color,
             $this->positionX,
-            $this->positionY);
+            $this->positionY
+        );
     }
 
     /**
