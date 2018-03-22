@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Other\EAV;
 
 /**
- * Entity
+ * Entity.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -32,7 +32,7 @@ class Entity
     private $name;
 
     /**
-     * Class constructor
+     * Class constructor.
      *
      * @param string $name The name of the entity
      */
@@ -59,12 +59,12 @@ class Entity
      *
      * @return array
      */
-    public function toArray():array
+    public function toArray(): array
     {
         $entity = [$this->name];
 
         foreach ($this->values as $value) {
-            /**@var Value $value */
+            /** @var Value $value */
             $entity[] = $value->toArray();
         }
 

@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -16,7 +16,7 @@ use PHP\Compound\MVC\Model\PostRepository;
 use PHP\Compound\MVC\View\View;
 
 /**
- * Controller
+ * Controller.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -67,8 +67,7 @@ class Controller
      */
     private function getRepository(): PostRepository
     {
-        if ($this->postRepository === null) {
-
+        if (null === $this->postRepository) {
             $this->postRepository = new PostRepository();
             PostFixtures::loadFixtures($this->postRepository);
         }

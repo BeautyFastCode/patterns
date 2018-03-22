@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -27,7 +27,7 @@ class Router
     private $routes;
 
     /**
-     * Class constructor
+     * Class constructor.
      */
     public function __construct()
     {
@@ -60,7 +60,7 @@ class Router
         $matches = [];
 
         if (preg_match($re, $request_uri, $matches)) {
-            $controller->read((int)$matches[2]);
+            $controller->read((int) $matches[2]);
         } else {
             $controller->list();
         }

@@ -5,7 +5,8 @@ include '_header.php';
 <div class="container">
     <div class="row">
 
-        <?php foreach ($posts as $post) { ?>
+        <?php foreach ($posts as $post) {
+    ?>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="card">
                     <div class="card-body">
@@ -22,7 +23,8 @@ include '_header.php';
                     </div>
                 </div>
             </div>
-        <?php } ?> <!-- end for -->
+        <?php
+} ?> <!-- end for -->
 
     </div>
 </div>

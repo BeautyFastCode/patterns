@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Structural\Flyweight;
 
 /**
- * Tree
+ * Tree.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -34,7 +34,7 @@ class Tree
     private $positionY;
 
     /**
-     * Class constructor
+     * Class constructor.
      *
      * @param int $positionX The X position of the tree
      * @param int $positionY The Y position of the tree

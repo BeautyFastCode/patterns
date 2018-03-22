@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Structural\Composite\Menu;
 
 /**
- * ChildrenInterface
+ * ChildrenInterface.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -23,22 +23,25 @@ interface ChildrenInterface
      * Add child item to the menu.
      *
      * @param BaseMenuItem $menuItem
+     *
      * @return ChildrenInterface
      */
-    public function addItem(BaseMenuItem $menuItem): ChildrenInterface;
+    public function addItem(BaseMenuItem $menuItem): self;
 
     /**
      * Remove child item from the menu.
      *
      * @param BaseMenuItem $menuItem
+     *
      * @return ChildrenInterface
      */
-    public function removeItem(BaseMenuItem $menuItem): ChildrenInterface;
+    public function removeItem(BaseMenuItem $menuItem): self;
 
     /**
-     * Returns a child item based on a child key
+     * Returns a child item based on a child key.
      *
      * @param int $itemKey
+     *
      * @return BaseMenuItem
      */
     public function getItem(int $itemKey): BaseMenuItem;

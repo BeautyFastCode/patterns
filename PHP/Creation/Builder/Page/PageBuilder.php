@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -14,7 +14,7 @@ namespace PHP\Creation\Builder\Page;
 use PHP\Creation\Builder\Element\Element;
 
 /**
- * PageBuilder
+ * PageBuilder.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -29,7 +29,7 @@ abstract class PageBuilder implements PageBuilderInterface
     protected $page;
 
     /**
-     * Class constructor
+     * Class constructor.
      */
     public function __construct()
     {
@@ -44,10 +44,8 @@ abstract class PageBuilder implements PageBuilderInterface
         $htmlPage = '';
 
         foreach ($this->page->getElements() as $element) {
-
-            /**@var Element $element */
+            /** @var Element $element */
             if ($element instanceof Element) {
-
                 $htmlPage = sprintf('%s%s%s%s',
                     $htmlPage,
                     $element->getStartTag(),

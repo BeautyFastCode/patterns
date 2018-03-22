@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Compound\MVC\Model;
 
 /**
- * PostFixtures
+ * PostFixtures.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -26,7 +26,7 @@ class PostFixtures
      *
      * @return array Returns the loaded posts ID
      */
-    public static function loadFixtures(PostRepository $postRepository):array
+    public static function loadFixtures(PostRepository $postRepository): array
     {
         $ids = [];
         $amountOfPosts = 6;
@@ -39,8 +39,7 @@ class PostFixtures
             ' Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
         ];
 
-        for ($i = 0; $i < $amountOfPosts; $i++) {
-
+        for ($i = 0; $i < $amountOfPosts; ++$i) {
             $post = new Post();
 
             $post->setId($i)

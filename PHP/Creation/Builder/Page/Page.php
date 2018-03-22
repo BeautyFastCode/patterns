@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -14,7 +14,7 @@ namespace PHP\Creation\Builder\Page;
 use PHP\Creation\Builder\Element\Element;
 
 /**
- * Page
+ * Page.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -29,7 +29,7 @@ class Page
     private $elements;
 
     /**
-     * Class constructor
+     * Class constructor.
      */
     public function __construct()
     {
@@ -39,11 +39,11 @@ class Page
     /**
      * Adds element to the page.
      *
-     * @param Element $element The Page element.
+     * @param Element $element The Page element
      *
      * @return Page
      */
-    public function addElement(Element $element): Page
+    public function addElement(Element $element): self
     {
         $this->elements[] = $element;
 

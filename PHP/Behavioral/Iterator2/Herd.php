@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -14,7 +14,7 @@ namespace PHP\Behavioral\Iterator2;
 use Iterator;
 
 /**
- * Herd
+ * Herd.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -22,21 +22,21 @@ use Iterator;
 class Herd implements Iterator
 {
     /**
-     * The herd of sheeps
+     * The herd of sheeps.
      *
      * @var array
      */
     private $herd;
 
     /**
-     * Pointer to current sheep
+     * Pointer to current sheep.
      *
      * @var int
      */
     private $currentSheep;
 
     /**
-     * Class constructor
+     * Class constructor.
      */
     public function __construct()
     {
@@ -48,6 +48,7 @@ class Herd implements Iterator
      * Adds sheep to the herd.
      *
      * @param Sheep $sheep
+     *
      * @return Herd
      */
     public function addSheep(Sheep $sheep): self
@@ -61,13 +62,13 @@ class Herd implements Iterator
      * Remove sheep from the herd.
      *
      * @param string $sheepName The name of the sheep to be removed
+     *
      * @return Herd
      */
     public function removeSheep(string $sheepName): self
     {
         foreach ($this->herd as $key => $sheep) {
-
-            /**@var Sheep $sheep */
+            /** @var Sheep $sheep */
             if ($sheep->getName() === $sheepName) {
                 unset($this->herd[$key]);
             }
@@ -104,7 +105,7 @@ class Herd implements Iterator
      */
     public function next(): void
     {
-        $this->currentSheep++;
+        ++$this->currentSheep;
 
         return;
     }

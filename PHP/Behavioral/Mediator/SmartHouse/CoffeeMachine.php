@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Behavioral\Mediator\SmartHouse;
 
 /**
- * CoffeeMachine
+ * CoffeeMachine.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -27,7 +27,7 @@ class CoffeeMachine extends Colleague
     private $coffeeKind;
 
     /**
-     * Class constructor
+     * Class constructor.
      */
     public function __construct()
     {

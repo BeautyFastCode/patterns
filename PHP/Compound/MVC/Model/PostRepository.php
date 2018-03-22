@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -14,7 +14,7 @@ namespace PHP\Compound\MVC\Model;
 use PHP\Compound\MVC\Database\DataStorage;
 
 /**
- * PostRepository
+ * PostRepository.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -29,7 +29,7 @@ class PostRepository
     private $dataStorage;
 
     /**
-     * Class constructor
+     * Class constructor.
      */
     public function __construct()
     {

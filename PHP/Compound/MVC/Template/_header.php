@@ -30,9 +30,11 @@
 <div class="container">
     <h1>An example of the Model View Controller - Design Pattern.</h1>
 
-    <?php if ($_SERVER['REQUEST_URI'] !== '/') { ?>
+    <?php if ('/' !== $_SERVER['REQUEST_URI']) {
+    ?>
         <a href="/" class="btn btn-primary">All Posts </a>
-    <?php } ?>
+    <?php
+}   ?>
 
     <hr>
 </div>

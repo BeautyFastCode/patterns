@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Structural\Composite\Menu;
 
 /**
- * MenuItem
+ * MenuItem.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -43,7 +43,7 @@ class MenuItem extends BaseMenuItem
     {
         return [
             PropertyType::LABEL => $this->getLabel(),
-            PropertyType::URL   => $this->getUrl(),
+            PropertyType::URL => $this->getUrl(),
         ];
     }
 

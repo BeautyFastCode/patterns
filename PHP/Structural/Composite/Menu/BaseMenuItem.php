@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Structural\Composite\Menu;
 
 /**
- * BaseMenuItem
+ * BaseMenuItem.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -27,7 +27,7 @@ abstract class BaseMenuItem
     private $label;
 
     /**
-     * Class constructor
+     * Class constructor.
      *
      * @param string $label The label of menu item
      */
@@ -41,7 +41,7 @@ abstract class BaseMenuItem
      *
      * @return array
      */
-    public abstract function renderItem(): array;
+    abstract public function renderItem(): array;
 
     /**
      * Returns the label of menu item.

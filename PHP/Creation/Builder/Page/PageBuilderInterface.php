@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Creation\Builder\Page;
 
 /**
- * PageBuilderInterface
+ * PageBuilderInterface.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -24,21 +24,21 @@ interface PageBuilderInterface
      *
      * @return PageBuilderInterface
      */
-    public function setHeading(): PageBuilderInterface;
+    public function setHeading(): self;
 
     /**
      * Build the content.
      *
      * @return PageBuilderInterface
      */
-    public function setContent(): PageBuilderInterface;
+    public function setContent(): self;
 
     /**
      * Build the footer.
      *
      * @return PageBuilderInterface
      */
-    public function setFooter(): PageBuilderInterface;
+    public function setFooter(): self;
 
     /**
      * Build and return page in string format.

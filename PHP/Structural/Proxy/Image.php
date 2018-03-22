@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Structural\Proxy;
 
 /**
- * Image
+ * Image.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -27,7 +27,7 @@ class Image implements ImageInterface
     private $filename;
 
     /**
-     * Class constructor
+     * Class constructor.
      *
      * @param string $filename The name of the image file
      */

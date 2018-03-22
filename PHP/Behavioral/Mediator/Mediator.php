@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -16,7 +16,7 @@ use PHP\Behavioral\Mediator\SmartHouse\CoffeeMachine;
 use PHP\Behavioral\Mediator\SmartHouse\Colleague;
 
 /**
- * Mediator
+ * Mediator.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -38,7 +38,7 @@ class Mediator implements MediatorInterface
     private $coffeeMachine;
 
     /**
-     * Class constructor
+     * Class constructor.
      *
      * @param Clock         $clock         The smart clock from the smart house
      * @param CoffeeMachine $coffeeMachine The smart coffee machine from the smart house
@@ -58,8 +58,7 @@ class Mediator implements MediatorInterface
     public function change(Colleague $changingInClass): void
     {
         if ($changingInClass instanceof Clock) {
-
-            /**@var Clock $changingInClass */
+            /** @var Clock $changingInClass */
             if ($changingInClass->isEnable()) {
                 $this->coffeeMachine->setCoffeeKind('Strong Coffee');
             } else {
@@ -68,9 +67,8 @@ class Mediator implements MediatorInterface
         }
 
         if ($changingInClass instanceof CoffeeMachine) {
-
-            /**@var CoffeeMachine $changingInClass */
-            if ($changingInClass->getCoffeeKind() === 'Strong Coffee') {
+            /** @var CoffeeMachine $changingInClass */
+            if ('Strong Coffee' === $changingInClass->getCoffeeKind()) {
                 $this->clock->setEnable(true);
             } else {
                 $this->clock->setEnable(false);

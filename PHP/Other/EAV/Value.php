@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Other\EAV;
 
 /**
- * Value
+ * Value.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -34,7 +34,7 @@ class Value
     private $name;
 
     /**
-     * Class constructor
+     * Class constructor.
      *
      * @param Attribute $attribute The attribute of the value
      * @param string    $name      The name of the value
@@ -52,11 +52,11 @@ class Value
      *
      * @return array
      */
-    public function toArray():array
+    public function toArray(): array
     {
         return [
             $this->attribute->getName(),
-            $this->name
+            $this->name,
         ];
     }
 }

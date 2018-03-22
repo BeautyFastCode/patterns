@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -72,6 +72,7 @@ class Post implements EntityInterface
      * Set the Post title.
      *
      * @param string $title
+     *
      * @return Post
      */
     public function setTitle(string $title): self
@@ -95,6 +96,7 @@ class Post implements EntityInterface
      * Set the Post content.
      *
      * @param string $content
+     *
      * @return Post
      */
     public function setContent(string $content): self
@@ -112,8 +114,8 @@ class Post implements EntityInterface
     public function toArray(): array
     {
         return [
-            'id'      => $this->getId(),
-            'title'   => $this->getTitle(),
+            'id' => $this->getId(),
+            'title' => $this->getTitle(),
             'content' => $this->getContent(),
         ];
     }

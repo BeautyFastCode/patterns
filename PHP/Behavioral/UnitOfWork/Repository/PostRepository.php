@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -32,7 +32,7 @@ class PostRepository implements RepositoryInterface
     private $dataStorage;
 
     /**
-     * Class constructor
+     * Class constructor.
      */
     public function __construct()
     {
@@ -78,7 +78,7 @@ class PostRepository implements RepositoryInterface
      */
     public function add(EntityInterface $entity): int
     {
-        /**@var Post $entity */
+        /** @var Post $entity */
         return $this->dataStorage->persist($entity->toArray());
     }
 

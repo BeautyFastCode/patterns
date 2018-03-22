@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -16,7 +16,7 @@ use GuzzleHttp\Client;
 use Symfony\Component\Process\Process;
 
 /**
- * MVCTest, integration test cases for the Model View Controller Design Pattern
+ * MVCTest, integration test cases for the Model View Controller Design Pattern.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -72,7 +72,7 @@ class MVCTest extends TestCase
         /*
          * Match all cards.
          */
-        $re = "/<div class=\"card\">/";
+        $re = '/<div class="card">/';
         $matches = [];
 
         preg_match_all($re, $content, $matches);
@@ -113,7 +113,6 @@ class MVCTest extends TestCase
          * Match post content.
          */
         $this->assertRegExp('/<p>[\na-zA-Z ,.]+<\/p>/', $content);
-
     }
 
     /**
@@ -141,7 +140,7 @@ class MVCTest extends TestCase
          * First, start the PHP build-in server:
          * php -S 127.0.0.1:8000 -t PHP/Compound/MVC/Public
          */
-        self::$process = new Process("php -S 127.0.0.1:8000 -t PHP/Compound/MVC/Public");
+        self::$process = new Process('php -S 127.0.0.1:8000 -t PHP/Compound/MVC/Public');
         self::$process->start();
 
         /*

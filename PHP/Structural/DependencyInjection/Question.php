@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Structural\DependencyInjection;
 
 /**
- * Question
+ * Question.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -50,6 +50,7 @@ class Question
      * Set the author of the question.
      *
      * @param Author $author
+     *
      * @return Question
      */
     public function setAuthor(Author $author): self
@@ -73,9 +74,10 @@ class Question
      * Set the question.
      *
      * @param string $question
+     *
      * @return Question
      */
-    public function setQuestion(string $question): Question
+    public function setQuestion(string $question): self
     {
         $this->question = $question;
 

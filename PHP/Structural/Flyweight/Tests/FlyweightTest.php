@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -29,8 +29,7 @@ class FlyweightTest extends TestCase
     {
         $treeFactory = new TreeFactory();
 
-        for ($i = 0; $i < 100; $i++) {
-
+        for ($i = 0; $i < 100; ++$i) {
             $tree = $treeFactory->getHeavyTree(rand(0, 3), rand(0, 3));
 
             /*
@@ -51,8 +50,7 @@ class FlyweightTest extends TestCase
     {
         $treeFactory = new TreeFactory();
 
-        for ($i = 0; $i < 100; $i++) {
-
+        for ($i = 0; $i < 100; ++$i) {
             $tree = $treeFactory->getFlyweightTree(rand(0, 3), rand(0, 3));
 
             /*

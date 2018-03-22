@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -54,6 +54,7 @@ class Post
      * Sets the ID.
      *
      * @param int $id
+     *
      * @return Post
      */
     public function setId(int $id): self
@@ -77,6 +78,7 @@ class Post
      * Set the Post title.
      *
      * @param string $title
+     *
      * @return Post
      */
     public function setTitle(string $title): self
@@ -100,6 +102,7 @@ class Post
      * Set the Post content.
      *
      * @param string $content
+     *
      * @return Post
      */
     public function setContent(string $content): self
@@ -117,8 +120,8 @@ class Post
     public function toArray(): array
     {
         return [
-            'id'      => null,
-            'title'   => $this->getTitle(),
+            'id' => null,
+            'title' => $this->getTitle(),
             'content' => $this->getContent(),
         ];
     }

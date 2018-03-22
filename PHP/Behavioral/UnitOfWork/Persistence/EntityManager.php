@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -45,7 +45,7 @@ class EntityManager
     private $repositoryInterface;
 
     /**
-     * Class constructor
+     * Class constructor.
      */
     public function __construct()
     {
@@ -65,14 +65,13 @@ class EntityManager
      *
      * @return EntityManager
      */
-    public function persist(EntityInterface $entity): EntityManager
+    public function persist(EntityInterface $entity): self
     {
         $repository = $this->repositoryInterface[0];
 
-        /**@var $oldEntity EntityInterface */
+        /** @var $oldEntity EntityInterface */
         foreach ($repository->findAll() as $oldEntity) {
             if ($oldEntity->getId() === $entity->getId()) {
-
                 $this->changed[] = $entity;
 
                 return $this;

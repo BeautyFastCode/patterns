@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Behavioral\UnitOfWork\Entity;
 
 /**
- * EntityInterface
+ * EntityInterface.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -23,9 +23,10 @@ interface EntityInterface
      * Sets the ID.
      *
      * @param int $id
+     *
      * @return EntityInterface
      */
-    public function setId(int $id): EntityInterface;
+    public function setId(int $id): self;
 
     /**
      * Returns the ID.

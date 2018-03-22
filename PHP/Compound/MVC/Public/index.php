@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -14,7 +14,7 @@ use PHP\Compound\MVC\Controller\Router;
 /*
  * Composer
  */
-require __DIR__ . '/../../../vendor/autoload.php';
+require __DIR__.'/../../../vendor/autoload.php';
 
 /**
  * The main entrance to this Model View Controller (MVC) example.
@@ -25,7 +25,6 @@ require __DIR__ . '/../../../vendor/autoload.php';
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
  */
-
 $router = new Router();
 
 $router->add([

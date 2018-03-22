@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -14,7 +14,7 @@ namespace PHP\Behavioral\State;
 use PHP\Behavioral\State\States\StateInterface;
 
 /**
- * StateMachine
+ * StateMachine.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -22,28 +22,28 @@ use PHP\Behavioral\State\States\StateInterface;
 class StateMachine
 {
     /**
-     * The current active state
+     * The current active state.
      *
      * @var StateInterface
      */
     private $currentState;
 
     /**
-     * Array of states
+     * Array of states.
      *
      * @var array
      */
     private $states;
 
     /**
-     * The game log
+     * The game log.
      *
      * @var array
      */
     private $gameLog;
 
     /**
-     * Class constructor
+     * Class constructor.
      */
     public function __construct()
     {
@@ -53,7 +53,7 @@ class StateMachine
     }
 
     /**
-     * Update the State Machine
+     * Update the State Machine.
      *
      * @param int $elapsedTime How much time has elapsed
      *
@@ -69,7 +69,7 @@ class StateMachine
     }
 
     /**
-     * Changes the current state
+     * Changes the current state.
      *
      * @param string $stateName The name of the state to activate
      *
@@ -77,7 +77,7 @@ class StateMachine
      */
     public function change(string $stateName): self
     {
-        if ($this->currentState !== null) {
+        if (null !== $this->currentState) {
             $this->gameLog[] = $this->currentState->exit();
         }
 
@@ -90,7 +90,7 @@ class StateMachine
     }
 
     /**
-     * Adds new state to the State Machine
+     * Adds new state to the State Machine.
      *
      * @param string         $stateName The state name
      * @param StateInterface $state     The state object
@@ -105,7 +105,7 @@ class StateMachine
     }
 
     /**
-     * Returns the game log
+     * Returns the game log.
      *
      * @return array
      */

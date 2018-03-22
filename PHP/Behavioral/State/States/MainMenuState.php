@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Behavioral\State\States;
 
 /**
- * MainMenuState
+ * MainMenuState.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -34,7 +34,7 @@ class MainMenuState implements StateInterface
      */
     public function render(): string
     {
-       return sprintf('Displays Main Menu');
+        return sprintf('Displays Main Menu');
     }
 
     /**

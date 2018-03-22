@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -53,7 +53,6 @@ class EAVTest extends TestCase
 
         $phoneNumber = new Value($mobile, '+31999999');
         $phoneNumber2 = new Value($mobile, '+99000000000');
-
 
         $entity = new Entity('Jon');
 

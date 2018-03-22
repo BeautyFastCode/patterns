@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Behavioral\State\States;
 
 /**
- * ScoreState
+ * ScoreState.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -20,14 +20,14 @@ namespace PHP\Behavioral\State\States;
 class ScoreState implements StateInterface
 {
     /**
-     * Yor score
+     * Yor score.
      *
      * @var int
      */
     private $score;
 
     /**
-     * Class constructor
+     * Class constructor.
      */
     public function __construct()
     {
@@ -39,7 +39,7 @@ class ScoreState implements StateInterface
      */
     public function update(int $elapsedTime): void
     {
-        $this->score++;
+        ++$this->score;
 
         return;
     }

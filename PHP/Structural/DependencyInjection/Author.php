@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Structural\DependencyInjection;
 
 /**
- * Author
+ * Author.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -34,7 +34,7 @@ class Author
     private $lastName;
 
     /**
-     * Class constructor
+     * Class constructor.
      *
      * @param string $firstName The Author first name
      * @param string $lastName  The Author last name
@@ -50,6 +50,7 @@ class Author
      * Set the first name of the author.
      *
      * @param string $firstName
+     *
      * @return Author
      */
     public function setFirstName(string $firstName): self
@@ -73,6 +74,7 @@ class Author
      * Set the last name of the author.
      *
      * @param string $lastName
+     *
      * @return Author
      */
     public function setLastName(string $lastName): self

@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Behavioral\TemplateMethod\GameEngine;
 
 /**
- * GameEngine
+ * GameEngine.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -43,7 +43,7 @@ abstract class GameEngine
     }
 
     /**
-     * The game loads assets
+     * The game loads assets.
      *
      * @return string
      */
@@ -60,7 +60,7 @@ abstract class GameEngine
     abstract protected function create(): string;
 
     /**
-     * Game works
+     * Game works.
      *
      * @return string
      */

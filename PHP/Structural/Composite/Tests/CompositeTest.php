@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -34,17 +34,15 @@ class CompositeTest extends TestCase
         $this->assertEquals(
             [
                 'label' => 'LABEL',
-            ]
-            , $label->renderItem());
+            ], $label->renderItem());
 
         $item = new MenuItem('All Posts', '/posts');
 
         $this->assertEquals(
             [
                 'label' => 'All Posts',
-                'url'   => '/posts',
-            ]
-            , $item->renderItem());
+                'url' => '/posts',
+            ], $item->renderItem());
 
         return;
     }
@@ -73,54 +71,49 @@ class CompositeTest extends TestCase
             [
                 [
                     'label' => 'All Posts',
-                    'url'   => '/posts',
+                    'url' => '/posts',
                 ],
 
                 [
                     'label' => 'Add New',
-                    'url'   => '/posts/new',
+                    'url' => '/posts/new',
                 ],
 
                 [
                     'label' => 'Categories',
-                    'url'   => '/categories',
+                    'url' => '/categories',
                 ],
-
-            ]
-            , $postMenu->renderChildren());
+            ], $postMenu->renderChildren());
 
         $this->assertEquals(
             [
-                'label'    => 'Posts',
-                'children' =>
-                    [
+                'label' => 'Posts',
+                'children' => [
                         [
                             'label' => 'All Posts',
-                            'url'   => '/posts',
+                            'url' => '/posts',
                         ],
 
                         [
                             'label' => 'Add New',
-                            'url'   => '/posts/new',
+                            'url' => '/posts/new',
                         ],
 
                         [
                             'label' => 'Categories',
-                            'url'   => '/categories',
+                            'url' => '/categories',
                         ],
                     ],
-            ]
-            , $postMenu->renderItem());
+            ], $postMenu->renderItem());
 
         return;
     }
 
     /**
-     * Tests main menu, sub-menu and children
+     * Tests main menu, sub-menu and children.
      */
     public function testMain(): void
     {
-
         $postMenu = new Menu('Posts');
 
         $postMenu->addItem(new MenuItem('All Posts', '/posts'));
@@ -128,16 +121,14 @@ class CompositeTest extends TestCase
         $this->assertEquals(1, $postMenu->getNumChildItems());
         $this->assertEquals(
             [
-                'label'    => 'Posts',
-                'children' =>
-                    [
+                'label' => 'Posts',
+                'children' => [
                         [
                             'label' => 'All Posts',
-                            'url'   => '/posts',
+                            'url' => '/posts',
                         ],
                     ],
-            ]
-            , $postMenu->renderItem());
+            ], $postMenu->renderItem());
 
         /*
          * Main Menu
@@ -154,29 +145,26 @@ class CompositeTest extends TestCase
 
         $this->assertEquals(
             [
-                'label'    => 'Main Menu',
-                'children' =>
-                    [
+                'label' => 'Main Menu',
+                'children' => [
                         [
                             'label' => 'DASHBOARD',
                         ],
                         [
-                            'label'    => 'Posts',
-                            'children' =>
-                                [
+                            'label' => 'Posts',
+                            'children' => [
                                     [
                                         'label' => 'All Posts',
-                                        'url'   => '/posts',
+                                        'url' => '/posts',
                                     ],
                                 ],
                         ],
                         [
                             'label' => 'Comments',
-                            'url'   => '/comments',
+                            'url' => '/comments',
                         ],
                     ],
-            ]
-            , $mainMenu->renderItem());
+            ], $mainMenu->renderItem());
 
         return;
     }

@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -18,7 +18,7 @@ use PHP\Creation\Builder\Page\PageBuilder;
 use PHP\Creation\Builder\Page\PageBuilderInterface;
 
 /**
- * MainPageBuilder
+ * MainPageBuilder.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com

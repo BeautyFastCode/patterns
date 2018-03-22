@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Behavioral\Mediator\SmartHouse;
 
 /**
- * Clock
+ * Clock.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -27,7 +27,7 @@ class Clock extends Colleague
     private $enable;
 
     /**
-     * Class constructor
+     * Class constructor.
      */
     public function __construct()
     {
@@ -55,7 +55,7 @@ class Clock extends Colleague
     /**
      * Set the state of the clock.
      *
-     * @param boolean $enable
+     * @param bool $enable
      */
     public function setEnable(bool $enable)
     {
@@ -65,7 +65,7 @@ class Clock extends Colleague
     /**
      * Returns the state of the clock.
      *
-     * @return boolean
+     * @return bool
      */
     public function isEnable(): bool
     {

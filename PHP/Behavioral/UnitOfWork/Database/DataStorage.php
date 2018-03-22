@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Behavioral\UnitOfWork\Database;
 
 /**
- * DataStorage
+ * DataStorage.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -34,7 +34,7 @@ class DataStorage
     private $currentId;
 
     /**
-     * Class constructor
+     * Class constructor.
      */
     public function __construct()
     {
@@ -46,6 +46,7 @@ class DataStorage
      * Save data.
      *
      * @param array $data
+     *
      * @return int
      */
     public function persist(array $data): int
@@ -61,8 +62,6 @@ class DataStorage
      *
      * @param int   $id
      * @param array $data
-     *
-     * @return void
      */
     public function update(int $id, array $data): void
     {
@@ -101,9 +100,10 @@ class DataStorage
      * Delete data by ID.
      *
      * @param int $id
+     *
      * @return bool
      */
-    public function delete(int $id):bool
+    public function delete(int $id): bool
     {
         if (!isset($this->data[$id])) {
             // exception

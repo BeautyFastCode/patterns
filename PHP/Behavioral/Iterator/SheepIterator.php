@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Behavioral\Iterator;
 
 /**
- * SheepIterator
+ * SheepIterator.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -20,14 +20,14 @@ namespace PHP\Behavioral\Iterator;
 interface SheepIterator
 {
     /**
-     * Checks if the next sheep exist
+     * Checks if the next sheep exist.
      *
      * @return bool
      */
     public function hasNext(): bool;
 
     /**
-     * Returns the next sheep
+     * Returns the next sheep.
      *
      * @return Sheep
      */

@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Structural\FluentInterface;
 
 /**
- * QueryBuilder
+ * QueryBuilder.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -61,7 +61,7 @@ class QueryBuilder
      *
      * @return QueryBuilder
      */
-    public function select(string $databaseName):self
+    public function select(string $databaseName): self
     {
         $this->databaseName = $databaseName;
 
@@ -75,7 +75,7 @@ class QueryBuilder
      *
      * @return QueryBuilder
      */
-    public function from(string $tableName):self
+    public function from(string $tableName): self
     {
         $this->tableName = $tableName;
 
@@ -89,7 +89,7 @@ class QueryBuilder
      *
      * @return QueryBuilder
      */
-    public function where(string $condition):self
+    public function where(string $condition): self
     {
         $this->condition = $condition;
 
@@ -104,7 +104,7 @@ class QueryBuilder
      *
      * @return QueryBuilder
      */
-    public function orderBy(string $propertyName, string $order):self
+    public function orderBy(string $propertyName, string $order): self
     {
         $this->order = sprintf('%s = %s', $propertyName, $order);
 

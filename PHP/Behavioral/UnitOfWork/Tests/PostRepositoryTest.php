@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -40,7 +40,7 @@ class PostRepositoryTest extends TestCase
         /*
          * Find One
          */
-        /**@var Post $post */
+        /** @var Post $post */
         $post = $repository->findById(3);
 
         $this->assertEquals(3, $post->getId());
@@ -56,7 +56,7 @@ class PostRepositoryTest extends TestCase
         $posts = $repository->findAll();
         $this->assertEquals(6, count($posts));
 
-        /**@var Post $postB */
+        /** @var Post $postB */
         $postB = $posts[3];
         $this->assertInstanceOf(Post::class, $postB);
 
@@ -101,7 +101,7 @@ class PostRepositoryTest extends TestCase
         /*
          * Find that Post.
          */
-        /**@var Post $postC */
+        /** @var Post $postC */
         $postC = $repository->findById(1);
 
         $this->assertEquals(1, $postC->getId());

@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Compound\MVC\View;
 
 /**
- * View
+ * View.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -36,7 +36,7 @@ class View
         /*
          * Include template
          */
-        $template = dirname(__DIR__) . "/Template/$view";
+        $template = dirname(__DIR__)."/Template/$view";
 
         if (is_readable($template)) {
             include $template;

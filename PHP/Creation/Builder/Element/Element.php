@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Creation\Builder\Element;
 
 /**
- * Base class for elements
+ * Base class for elements.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -41,7 +41,7 @@ abstract class Element
     private $content;
 
     /**
-     * Class constructor
+     * Class constructor.
      */
     public function __construct()
     {
@@ -54,9 +54,10 @@ abstract class Element
      * Sets the start tag.
      *
      * @param string $startTag
+     *
      * @return Element
      */
-    public function setStartTag(string $startTag): Element
+    public function setStartTag(string $startTag): self
     {
         $this->startTag = $startTag;
 
@@ -77,9 +78,10 @@ abstract class Element
      * Sets the end tag.
      *
      * @param string $endTag
+     *
      * @return Element
      */
-    public function setEndTag(string $endTag): Element
+    public function setEndTag(string $endTag): self
     {
         $this->endTag = $endTag;
 
@@ -100,9 +102,10 @@ abstract class Element
      * Sets the content.
      *
      * @param string $content
+     *
      * @return Element
      */
-    public function setContent(string $content): Element
+    public function setContent(string $content): self
     {
         $this->content = $content;
 

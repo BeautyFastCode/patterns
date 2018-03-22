@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /*
  * (c) BeautyFastCode.com
@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace PHP\Structural\Composite\Menu;
 
 /**
- * Menu
+ * Menu.
  *
  * @author    Bogumił Brzeziński <beautyfastcode@gmail.com>
  * @copyright BeautyFastCode.com
@@ -52,7 +52,7 @@ class Menu extends BaseMenuItem implements ChildrenInterface
     public function removeItem(BaseMenuItem $menuItem): ChildrenInterface
     {
         foreach ($this->items as $key => $item) {
-            if($item === $menuItem) {
+            if ($item === $menuItem) {
                 unset($this->items[$key]);
             }
         }
@@ -88,7 +88,7 @@ class Menu extends BaseMenuItem implements ChildrenInterface
     {
         $children = [];
 
-        /**@var $item BaseMenuItem */
+        /** @var $item BaseMenuItem */
         foreach ($this->items as $item) {
             $children[] = $item->renderItem();
         }
@@ -103,7 +103,7 @@ class Menu extends BaseMenuItem implements ChildrenInterface
     {
         return
             [
-                PropertyType::LABEL    => $this->getLabel(),
+                PropertyType::LABEL => $this->getLabel(),
                 PropertyType::CHILDREN => $this->renderChildren(),
             ];
     }
