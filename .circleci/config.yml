@@ -26,10 +26,16 @@ jobs:
             php -r "unlink('composer-setup.php');"
 
       - run:
-          name: Display PHP information
+          name: Display OS and PHP information
           command: |
+            cat /etc/*release
+            echo
+            pwd
+            echo
             php -v
+            echo
             php composer.phar --version
+            echo
 
       # Download and cache dependencies
       - restore_cache:
