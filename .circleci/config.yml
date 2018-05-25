@@ -36,6 +36,8 @@ jobs:
             echo
             php composer.phar --version
             echo
+            ls -al
+            echo
 
       # Download and cache dependencies
       - restore_cache:
