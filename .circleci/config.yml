@@ -40,7 +40,7 @@ jobs:
 
       - run:
           name: Install project dependencies
-          command: php composer.phar -d=PHP install
+          command: php composer.phar -d=./PHP install
 
       - save_cache:
           paths:
