@@ -1,7 +1,7 @@
 [![CircleCI](https://circleci.com/gh/BeautyFastCode/patterns.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/BeautyFastCode/patterns)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/BeautyFastCode/patterns/blob/master/LICENSE)
 
-# Design Patterns in PHP7
+# Design Patterns in PHP 7.2
 
 | Lp. | Pattern | Category | PHP |
 | --- | ------- | -------- | --- |
